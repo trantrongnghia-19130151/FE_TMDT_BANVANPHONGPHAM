@@ -1,0 +1,23 @@
+.header .header-top {
+  width: 100%;
+  justify-content: space-between;
+}
+.header .header-top .search {
+  width: 20%;
+  margin-left: 30px;
+}
+.header .header-top .right {
+  width: 30%;
+}
+.header .header-top .right .header-top-right {
+  width: 80%;
+  justify-content: right;
+}
+.header .header-bot {
+  width: 100vw;
+}
+.header .header-bot .header-bot-item {
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=header.component.css.map */

@@ -46,9 +46,10 @@ import { MdbTransferModule } from 'mdb-angular-transfer';
 import { MdbMentionModule } from 'mdb-angular-mention';
 import { MdbCookiesManagementService } from 'mdb-angular-cookies-management';
 import { MdbStorageManagementService } from 'mdb-angular-storage-management';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, HeaderComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
