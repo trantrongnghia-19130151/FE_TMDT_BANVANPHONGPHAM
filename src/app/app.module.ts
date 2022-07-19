@@ -46,13 +46,16 @@ import { MdbTransferModule } from 'mdb-angular-transfer';
 import { MdbMentionModule } from 'mdb-angular-mention';
 import { MdbCookiesManagementService } from 'mdb-angular-cookies-management';
 import { MdbStorageManagementService } from 'mdb-angular-storage-management';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './component/header/header.component';
+import { AppRoutingModule } from './app-routing.module';
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    AppRoutingModule,
     MdbAccordionModule,
     MdbAutocompleteModule,
     MdbCarouselModule,
@@ -94,6 +97,8 @@ import { HeaderComponent } from './header/header.component';
     MdbTreeviewModule,
     MdbTransferModule,
     MdbMentionModule,
+    AppRoutingModule,
+    RouterModule,
   ],
   providers: [MdbCookiesManagementService, MdbStorageManagementService],
   bootstrap: [AppComponent],
