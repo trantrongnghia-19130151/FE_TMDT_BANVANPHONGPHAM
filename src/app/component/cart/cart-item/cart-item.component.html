@@ -1,0 +1,16 @@
+<td class="w-50">
+  <div class="d-flex  align-items-center ">
+    <i class="fa-solid fa-circle-xmark h4"></i>
+    <img src="{{item.product.imgUrl}}" alt="" class="img-fluid w-25 me-2 ms-2">
+    <a href="" class="text-dark">{{item.product.name}} </a>
+  </div>
+</td>
+<td class="align-middle">{{item.product.price | currency: 'EUR'}}</td>
+<td class="align-middle">
+  <input type="button" value="-" class="d-inline-block   border" style="min-width: 25px">
+  <input type="number" name="0" id="" value="{{item.quantity}}" class="d-inline-block border outline text-center"
+         style="outline:none; width: 40px">
+  <input type="button" value="+" class="d-inline-block border" style="min-width: 25px">
+
+</td>
+<td class="align-middle">{{item.getTotal() | currency:"EUR"}}</td>
