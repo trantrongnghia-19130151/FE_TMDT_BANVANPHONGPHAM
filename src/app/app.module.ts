@@ -46,11 +46,16 @@ import { MdbTransferModule } from 'mdb-angular-transfer';
 import { MdbMentionModule } from 'mdb-angular-mention';
 import { MdbCookiesManagementService } from 'mdb-angular-cookies-management';
 import { MdbStorageManagementService } from 'mdb-angular-storage-management';
+
+import { LoginComponent } from './component/login/login.component';
+
+
 import { CartComponent } from './component/cart/cart.component';
 import { CartItemComponent } from './component/cart/cart-item/cart-item.component';
 
 @NgModule({
-  declarations: [AppComponent, CartComponent, CartItemComponent],
+  declarations: [AppComponent, LoginComponent, CartComponent, CartItemComponent],
+
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
