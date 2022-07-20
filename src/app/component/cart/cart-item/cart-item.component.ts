@@ -7,7 +7,7 @@ import {Item} from "../../../model/item";
   styleUrls: ['./cart-item.component.scss']
 })
 export class CartItemComponent implements OnInit {
-  @Input() item?: Item;
+  @Input() item!: Item;
   constructor() { }
 
   ngOnInit(): void {

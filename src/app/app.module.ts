@@ -48,9 +48,10 @@ import { MdbCookiesManagementService } from 'mdb-angular-cookies-management';
 import { MdbStorageManagementService } from 'mdb-angular-storage-management';
 import { CartComponent } from './component/cart/cart.component';
 import { CartItemComponent } from './component/cart/cart-item/cart-item.component';
+import { CheckoutComponent } from './component/checkout/checkout.component';
 
 @NgModule({
-  declarations: [AppComponent, CartComponent, CartItemComponent],
+  declarations: [AppComponent, CartComponent, CartItemComponent, CheckoutComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
