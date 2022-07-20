@@ -1,0 +1,66 @@
+<form class="container-fluid m-5 form">
+  <div><span class="fs-6">Bạn đã có tài khoản?</span> <a href="" class="text-dark"> Ấn vào đây để đăng nhập</a></div>
+  <div class="mb-3"><i class="fa-solid fa-tag me-2 "></i> <a href="" class="text-dark"> Ấn vào đây để nhập mã của
+    ban</a></div>
+  <div class="d-flex gap-5">
+    <div class="col-6 border-top pt-3">
+      <span class="fs-5 w-100 text-uppercase d-block">Thông tin thanh toán</span>
+      <div class="d-flex gap-3">
+        <mdb-form-control class="w-50">
+          <input mdbInput type="text" id="fname" class="form-control "/>
+          <label mdbLabel class="form-label" for="fname">Họ</label>
+        </mdb-form-control>
+        <mdb-form-control class="w-50">
+          <input mdbInput type="text" id="lname" class="form-control"/>
+          <label mdbLabel class="form-label" for="lname">Tên</label>
+        </mdb-form-control>
+      </div>
+      <mdb-form-control>
+        <input mdbInput type="text" id="city" class="form-control"/>
+        <label mdbLabel class="form-label" for="city">Tỉnh/Thành phố</label>
+      </mdb-form-control>
+      <mdb-form-control>
+        <input mdbInput type="text" id="address" class="form-control"/>
+        <label mdbLabel class="form-label" for="address">Địa chỉ</label>
+      </mdb-form-control>
+      <mdb-form-control>
+        <input mdbInput type="number" id="phone" class="form-control"/>
+        <label mdbLabel class="form-label" for="phone">Địa chỉ</label>
+      </mdb-form-control>
+      <mdb-form-control>
+        <textarea mdbInput class="form-control" id="textAreaExample" rows="4"></textarea>
+        <label mdbLabel class="form-label" for="textAreaExample">Message</label>
+      </mdb-form-control>
+    </div>
+    <div class="col-6 border">
+      <div class="p-3">
+        <table class="table">
+          <thead>
+          <tr>
+            <span class="fs-5  text-uppercase">Đơn hàng của bạn</span>
+          </tr>
+          <tr>
+            <th class="fs-6 font-weight-normal text-uppercase " scope="col">Sản phẩm</th>
+            <th class="fs-6 font-weight-normal text-uppercase" scope="col">Tổng cộng</th>
+          </tr>
+          </thead>
+
+          <tbody>
+          <tr>
+            <td><span class="fs-6">Bộ bàn ghế ăn gỗ sồi</span> <span class="ms-2">x3</span></td>
+            <td><span class="fs-6">300</span></td>
+          </tr>
+          <tr>
+            <th class="fs-6 " scope="col">Tổng cộng</th>
+            <th class="fs-6 " scope="col">300</th>
+
+          </tr>
+          </tbody>
+
+        </table>
+        <button type="submit" class="btn btn-warning shadow-none d-inline-block ms-3">Đặt hàng</button>
+      </div>
+    </div>
+  </div>
+
+</form>
