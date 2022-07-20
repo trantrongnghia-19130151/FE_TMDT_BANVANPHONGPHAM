@@ -50,11 +50,10 @@ import { MdbStorageManagementService } from 'mdb-angular-storage-management';
 import { LoginComponent } from './component/login/login.component';
 
 
-import { CartComponent } from './component/cart/cart.component';
-import { CartItemComponent } from './component/cart/cart-item/cart-item.component';
-
 @NgModule({
-  declarations: [AppComponent, LoginComponent, CartComponent, CartItemComponent],
+
+  declarations: [AppComponent, HeaderComponent, LoginComponent, CartComponent, CartItemComponent],
+
 
   imports: [
     BrowserModule,
