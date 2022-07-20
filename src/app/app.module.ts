@@ -52,11 +52,8 @@ import { AppRoutingModule } from './app-routing.module';
 import {RouterModule} from "@angular/router";
 
 
-import { CartComponent } from './component/cart/cart.component';
-import { CartItemComponent } from './component/cart/cart-item/cart-item.component';
-
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, CartComponent, CartItemComponent],
+  declarations: [AppComponent, HeaderComponent],
 
   imports: [
     BrowserModule,
