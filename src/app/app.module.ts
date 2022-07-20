@@ -47,12 +47,13 @@ import { MdbMentionModule } from 'mdb-angular-mention';
 import { MdbCookiesManagementService } from 'mdb-angular-cookies-management';
 import { MdbStorageManagementService } from 'mdb-angular-storage-management';
 
-import { LoginComponent } from './component/login/login.component';
+import { HeaderComponent} from "./component/header/header.component";
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
 
-  declarations: [AppComponent, HeaderComponent, LoginComponent, CartComponent, CartItemComponent],
+  declarations: [AppComponent, HeaderComponent],
 
 
   imports: [
@@ -99,6 +100,7 @@ import { LoginComponent } from './component/login/login.component';
     MdbTreeviewModule,
     MdbTransferModule,
     MdbMentionModule,
+    AppRoutingModule,
   ],
   providers: [MdbCookiesManagementService, MdbStorageManagementService],
   bootstrap: [AppComponent],
