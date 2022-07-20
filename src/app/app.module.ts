@@ -53,12 +53,14 @@ import { AppRoutingModule } from './app-routing.module';
 
 
 
+import {LoginComponent} from'./component/login/login.component';
 import { CartComponent } from './component/cart/cart.component';
 import { CartItemComponent } from './component/cart/cart-item/cart-item.component';
 import { CheckoutComponent } from './component/checkout/checkout.component';
 
 @NgModule({
-  declarations: [AppComponent,HeaderComponent, CartComponent, CartItemComponent, CheckoutComponent],
+  declarations: [AppComponent,HeaderComponent, LoginComponent, CartComponent, CartItemComponent, CheckoutComponent],
+
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
