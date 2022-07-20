@@ -58,6 +58,9 @@ import { CartComponent } from './component/cart/cart.component';
 import { CartItemComponent } from './component/cart/cart-item/cart-item.component';
 import { CheckoutComponent } from './component/checkout/checkout.component';
 
+
+
+
 @NgModule({
   declarations: [AppComponent,HeaderComponent, LoginComponent, CartComponent, CartItemComponent, CheckoutComponent],
 
