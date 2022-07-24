@@ -1,0 +1,17 @@
+.sticky::before {
+  content: " ";
+  display: table;
+}
+
+.fillter {
+  position: sticky;
+  top: 120px;
+}
+
+.sticky::after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+
+/*# sourceMappingURL=product.component.css.map */

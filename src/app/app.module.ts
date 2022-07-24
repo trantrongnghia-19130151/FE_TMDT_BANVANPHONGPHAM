@@ -58,13 +58,14 @@ import { CartComponent } from './component/cart/cart.component';
 import { CartItemComponent } from './component/cart/cart-item/cart-item.component';
 import { CheckoutComponent } from './component/checkout/checkout.component';
 import { RegisterComponent } from './component/register/register.component';
+import {ProductComponent} from "./component/product/product.component";
 import {RouterModule} from "@angular/router";
 
 
 
 
 @NgModule({
-  declarations: [AppComponent,HeaderComponent, LoginComponent, CartComponent, CartItemComponent, CheckoutComponent, RegisterComponent],
+  declarations: [AppComponent,HeaderComponent, LoginComponent, CartComponent, CartItemComponent, CheckoutComponent, RegisterComponent, ProductComponent],
 
   imports: [
     BrowserModule,
