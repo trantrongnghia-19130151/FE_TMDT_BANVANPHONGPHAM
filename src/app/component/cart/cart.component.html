@@ -7,12 +7,9 @@
           <th class="text-uppercase" *ngFor="let head of headElements" scope="col">{{ head }} </th>
         </tr>
         </thead>
-        <tbody >
-        <tr *ngFor="let item of items" [item]="item" app-cart-item >
+        <tbody>
+        <tr *ngFor="let item of items" [item]="item" app-cart-item>
         </tr>
-
-
-
         </tbody>
       </table>
       <div class="button-group">
@@ -31,9 +28,9 @@
       </tr>
       </thead>
       <tbody>
-      <tr>
-        <td class="d-flex justify-content-start">123</td>
-        <td>123</td>
+      <tr *ngFor="let item of items">
+        <td class="d-flex justify-content-start">{{item.product.name}} x {{item.quantity}}</td>
+        <td>{{item.getTotal() | currency : "EUR"}}</td>
       </tr>
       <tr>
         <td class="d-flex justify-content-start">Giao hang</td>
