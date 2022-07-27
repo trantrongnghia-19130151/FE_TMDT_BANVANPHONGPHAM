@@ -19,7 +19,8 @@ export class CartItemComponent implements OnInit {
     let cart = this.cartService.items
     let index = cart.indexOf(item,0);
     this.cartService.items.splice(index,1);
-    this.cartService.subjectItem.next(cart);
+    this.cartService.setData();
+    this.cartService.subjectItem.next(this.cartService.items);
   }
 
   minusProduct(item: Item) {
@@ -30,7 +31,8 @@ export class CartItemComponent implements OnInit {
     if(exItem.quantity <=0){
       cart.splice(index,1);
     }
-    this.cartService.subjectItem.next(cart);
+    this.cartService.setData();
+    this.cartService.subjectItem.next(this.cartService.items);
   }
 
   plusProduct(item: Item) {
@@ -38,6 +40,7 @@ export class CartItemComponent implements OnInit {
     let index = cart.indexOf(item,0);
     let exItem = cart[index];
     exItem.quantity++;
-    this.cartService.subjectItem.next(cart);
+    this.cartService.setData();
+    this.cartService.subjectItem.next(this.cartService.items);
   }
 }
