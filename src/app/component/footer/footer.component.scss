@@ -1,0 +1,38 @@
+.footer {
+  margin-top: 400px;
+  background-color:  #ded6d6;
+
+  .container {
+    .row {
+      ul {
+        li {
+          a {
+            color: #484848;
+            font-weight: 500;
+            transition: all 0.5s;
+          }
+          a:hover {
+            color: #ff003b;
+          }
+
+        }
+      }
+      h5{
+        color: #3a3838;
+      }
+    }
+    .footer__mid{
+      p{
+        color: #484848;
+      }
+    }
+    .footer__right{
+      h5{
+        color: #3a3838;
+      }
+      p{
+        color: #484848;
+      }
+    }
+  }
+}

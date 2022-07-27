@@ -1,0 +1,26 @@
+.footer {
+  margin-top: 400px;
+  background-color: #ded6d6;
+}
+.footer .container .row ul li a {
+  color: #484848;
+  font-weight: 500;
+  transition: all 0.5s;
+}
+.footer .container .row ul li a:hover {
+  color: #ff003b;
+}
+.footer .container .row h5 {
+  color: #3a3838;
+}
+.footer .container .footer__mid p {
+  color: #484848;
+}
+.footer .container .footer__right h5 {
+  color: #3a3838;
+}
+.footer .container .footer__right p {
+  color: #484848;
+}
+
+/*# sourceMappingURL=footer.component.css.map */
