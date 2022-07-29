@@ -61,13 +61,14 @@ import { FooterComponent } from './component/footer/footer.component';
 import { RegisterComponent } from './component/register/register.component';
 import {ProductComponent} from "./component/product/product.component";
 import {RouterModule} from "@angular/router";
+import { ProductDetailsComponent } from './component/product/product-details/product-details.component';
 
 
 
 
 @NgModule({
 
-  declarations: [AppComponent,HeaderComponent, FooterComponent, LoginComponent, CartComponent, CartItemComponent, CheckoutComponent, RegisterComponent, ProductComponent],
+  declarations: [AppComponent,HeaderComponent, FooterComponent, LoginComponent, CartComponent, CartItemComponent, CheckoutComponent, RegisterComponent, ProductComponent, ProductDetailsComponent],
 
   imports: [
     BrowserModule,
