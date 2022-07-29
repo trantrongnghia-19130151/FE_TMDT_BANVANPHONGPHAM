@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Product} from '../../model/product';
 import {Category} from "../../model/category";
+import {Manufactur} from "../../model/manufactur";
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -8,7 +9,8 @@ import {Category} from "../../model/category";
 })
 export class ProductComponent implements OnInit {
   @Input() product! : Product;
-  @Input() category!: Category;
+   category: Category[] = [];
+   nsx : Manufactur[] =[];
   options = [
     { value: '1', label: 'Sản phẩm mới nhất' },
     { value: '2', label: 'Sản phẩm giảm giá' },

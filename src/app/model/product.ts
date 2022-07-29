@@ -5,15 +5,15 @@ export class Product {
   private _img:string;
   private _price:number;
   private _discount:number;
-  private _nsx:string;
+  private _idNsx:number;
 
-  constructor(id: string, name: string, img: string, price: number, discount:number, nsx:string) {
+  constructor(id: string, name: string, img: string, price: number, discount:number, idNsx:number) {
     this._id = id;
     this._name = name;
     this._img = img;
     this._price = price;
     this._discount = discount;
-    this. _nsx = nsx;
+    this._idNsx = idNsx;
 
   }
 
@@ -55,11 +55,11 @@ export class Product {
     return this._discount;
   }
 
-  get nsx(): string {
-    return this._nsx;
+  get idNsx(): number {
+    return this._idNsx;
   }
 
-  set nsx(value: string) {
-    this._nsx = value;
+  set idNsx(value: number) {
+    this._idNsx = value;
   }
 }

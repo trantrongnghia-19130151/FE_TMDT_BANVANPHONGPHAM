@@ -67,7 +67,7 @@ import {RouterModule} from "@angular/router";
 
 @NgModule({
 
-  declarations: [AppComponent,HeaderComponent, FooterComponent, LoginComponent, CartComponent, CartItemComponent, CheckoutComponent, RegisterComponent],
+  declarations: [AppComponent,HeaderComponent, FooterComponent, LoginComponent, CartComponent, CartItemComponent, CheckoutComponent, RegisterComponent, ProductComponent],
 
   imports: [
     BrowserModule,

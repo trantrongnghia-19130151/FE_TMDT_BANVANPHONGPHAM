@@ -1,64 +1,16 @@
-<main class="mb-6 mt-5">
+<main class="shop">
   <div class="container">
     <div class="sticky row gx-lg-5">
       <div class="fillter col-lg-3 d-block">
         <!-- Section: Filters -->
         <section class="">
-          <!-- Section: Search -->
-          <section class="mb-5">
-            <div class="d-flex">
-              <input type="search" class="form-control rounded me-1" placeholder="Search" aria-label="Search" aria-describedby="search-addon"/>
-              <a href="#!" role="button" class=" btn btn-link btn-floating text-reset overflow-visible ">
-                <i class="fas fa-search"></i>
-              </a>
-            </div>
-          </section>
-          <!-- Section: Search -->
-
           <!-- Section: Categories -->
           <section class="mb-5">
-            <h5 class="fw-bold mb-4">Subcategories</h5>
+            <h5 class="fw-bold mb-4">Danh mục sản phẩm</h5>
 
-            <div class="text-muted small text-uppercase">
-              <p class="mb-3">
-                <a href="#!" class="text-reset">Dresses</a>
-              </p>
-              <p class="mb-3">
-                <a href="#!" class="text-reset">Tops, Tees & Blouses</a>
-              </p>
-              <p class="mb-3">
-                <a href="#!" class="text-reset">Sweaters</a>
-              </p>
-              <p class="mb-3">
-                <a href="#!" class="text-reset"
-                >Fashion Hoodies & Sweatshirts</a
-                >
-              </p>
-              <p class="mb-3"><a href="#!" class="text-reset">Jeans</a></p>
-              <p class="mb-3"><a href="#!" class="text-reset">Pants</a></p>
-              <p class="mb-3"><a href="#!" class="text-reset">Skirts</a></p>
-              <p class="mb-3"><a href="#!" class="text-reset">Shorts</a></p>
-              <p class="mb-3">
-                <a href="#!" class="text-reset">Leggings</a>
-              </p>
-              <p class="mb-3"><a href="#!" class="text-reset">Active</a></p>
-              <p class="mb-3">
-                <a href="#!" class="text-reset">Swimsuits & Cover Ups</a>
-              </p>
-              <p class="mb-3">
-                <a href="#!" class="text-reset">Lingerie, Sleep & Lounge</a>
-              </p>
-              <p class="mb-3">
-                <a href="#!" class="text-reset">Jumpsuits, Rompers & Overalls</a>
-              </p>
-              <p class="mb-3">
-                <a href="#!" class="text-reset">Coats, Jackets & Vests</a>
-              </p>
-              <p class="mb-3">
-                <a href="#!" class="text-reset">Suiting & Blazers</a>
-              </p>
+            <div *ngFor=" let cate of category" [id]="cate.cateId"  class="text-muted small text-uppercase">
               <p class="mb-0">
-                <a href="#!" class="text-reset">Socks & Hosiery</a>
+                <a href="#!" class="text-reset">{{cate.name}}</a>
               </p>
             </div>
           </section>
@@ -66,44 +18,18 @@
 
           <!-- Section: Condition -->
           <section class="mb-5">
-            <h5 class="fw-bold mb-4">Condition</h5>
+            <h5 class="fw-bold mb-4">Hãng sản xuất</h5>
 
-            <div class="form-check mb-3">
-              <input class="form-check-input" type="checkbox" value="" id="condition1" checked/>
-              <label class="form-check-label" for="condition1"> New </label>
-            </div>
-
-            <div class="form-check mb-3">
-              <input class="form-check-input" type="checkbox" value="" id="condition2"/>
-              <label class="form-check-label" for="condition2">
-                Used
-              </label>
-            </div>
-
-            <div class="form-check mb-3">
-              <input class="form-check-input" type="checkbox" value="" id="condition3"/>
-              <label class="form-check-label" for="condition3">
-                Collectible
-              </label>
-            </div>
-
-            <div class="form-check mb-3">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value=""
-                id="condition4"
-              />
-              <label class="form-check-label" for="condition4">
-                Renewed
-              </label>
+            <div *ngFor="let nsx of nsx" [id]="nsx.id"  class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="" id="condition1" />
+              <label class="form-check-label" for="condition1"> {{nsx.name}} </label>
             </div>
           </section>
           <!-- Section: Condition -->
 
           <!-- Section: Price - radio -->
           <section class="mb-5">
-            <h5 class="fw-bold mb-4">Price radio</h5>
+            <h5 class="fw-bold mb-4">Giá</h5>
 
             <div class="form-check mb-3">
               <input
@@ -114,7 +40,7 @@
                 checked
               />
               <label class="form-check-label" for="radioCondition1">
-                Under $25
+                Dưới 20.000 VNĐ
               </label>
             </div>
 
@@ -126,7 +52,7 @@
                 id="radioCondition2"
               />
               <label class="form-check-label" for="radioCondition2">
-                $25 to $50
+                Từ 20.000 - 50.000 VNĐ
               </label>
             </div>
 
@@ -137,8 +63,8 @@
                 name="radioForm"
                 id="radioCondition3"
               />
-              <label class="form-check-label" for="radioCondition2">
-                $50 to $100
+              <label class="form-check-label" for="radioCondition3">
+                Từ 50.000 - 100.000 VNĐ
               </label>
             </div>
 
@@ -149,103 +75,15 @@
                 name="radioForm"
                 id="radioCondition4"
               />
-              <label class="form-check-label" for="radioCondition2">
-                $100 to $200
-              </label>
-            </div>
-
-            <div class="form-check mb-3">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="radioForm"
-                id="radioCondition5"
-              />
-              <label class="form-check-label" for="radioCondition2">
-                $200 & Above
+              <label class="form-check-label" for="radioCondition4">
+                Trên 100.000 VNĐ
               </label>
             </div>
           </section>
           <!-- Section:  Price - radio -->
 
           <!-- Section: Condition -->
-          <section class="mb-5">
-            <h5 class="fw-bold mb-4">Colors</h5>
 
-            <!-- Colors -->
-            <input
-              type="radio"
-              class="btn-check"
-              name="options"
-              id="color-primary"
-              autocomplete="off"
-              checked
-            />
-            <label
-              class="btn btn-primary btn-floating me-2 mb-2 shadow-0"
-              for="color-primary"
-            ></label>
-
-            <input
-              type="radio"
-              class="btn-check"
-              name="options"
-              id="color-danger"
-              autocomplete="off"
-            />
-            <label
-              class="btn btn-danger btn-floating me-2 mb-2 shadow-0"
-              for="color-danger"
-            ></label>
-
-            <input
-              type="radio"
-              class="btn-check"
-              name="options"
-              id="color-secondary"
-              autocomplete="off"
-            />
-            <label
-              class="btn btn-secondary btn-floating me-2 mb-2 shadow-0"
-              for="color-secondary"
-            ></label>
-
-            <input
-              type="radio"
-              class="btn-check"
-              name="options"
-              id="color-success"
-              autocomplete="off"
-            />
-            <label
-              class="btn btn-success btn-floating me-2 mb-2 shadow-0"
-              for="color-success"
-            ></label>
-
-            <input
-              type="radio"
-              class="btn-check"
-              name="options"
-              id="color-warning"
-              autocomplete="off"
-            />
-            <label
-              class="btn btn-warning btn-floating me-2 mb-2 shadow-0"
-              for="color-warning"
-            ></label>
-
-            <input
-              type="radio"
-              class="btn-check"
-              name="options"
-              id="color-info"
-              autocomplete="off"
-            />
-            <label
-              class="btn btn-info btn-floating me-2 mb-2 shadow-0"
-              for="color-info"
-            ></label>
-          </section>
           <!-- Section: Condition -->
         </section>
         <!-- Section: Filters -->
@@ -260,14 +98,14 @@
             </div>
 
             <div class="col-4">
-            <mdb-form-control>
-              <mdb-select class="select">
-                <mdb-option *ngFor="let option of options" [value]="option.value">{{
-                  option.label
-                  }}</mdb-option>
-              </mdb-select>
-              <label mdbLabel class="form-label">Sort</label>
-            </mdb-form-control>
+              <mdb-form-control>
+                <mdb-select class="select">
+                  <mdb-option *ngFor="let option of options" [value]="option.value">{{
+                    option.label
+                    }}</mdb-option>
+                </mdb-select>
+                <label mdbLabel class="form-label">Sort</label>
+              </mdb-form-control>
             </div>
 
           </div>
@@ -344,8 +182,8 @@
                     </li>
                   </ul>
                   <h5 class="mb-2">
-                    <s class="text-muted me-2 small align-middle">{{product.price}}</s>
-                    <span class="align-middle">{{product.price -(product.price*product.discount)}}</span>
+                    <s class="text-muted me-2 small align-middle">{{product.price | currency : 'VNĐ'}}</s>
+                    <span class="align-middle">{{product.price -(product.price*product.discount) | currency : 'VNĐ'}}</span>
                   </h5>
                 </a>
                 <!-- Product content -->
@@ -366,16 +204,19 @@
                   <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a
                   >
                 </li>
-                <li class="page-item">
-                  <a class="page-link" href="#">1</a>
-                </li>
-                <li class="page-item active" aria-current="page">
-                  <a class="page-link" href="#">2<span class="sr-only">(current)</span></a
-                  >
-                </li>
-                <li class="page-item">
-                  <a class="page-link" href="#">3</a>
-                </li>
+                <div class="d-flex">
+                  <li class="page-item">
+                    <a class="page-link" href="#">1</a>
+                  </li>
+                  <li class="page-item active" aria-current="page">
+                    <a class="page-link" href="#">2<span class="sr-only">(current)</span></a
+                    >
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">3</a>
+                  </li>
+                </div>
+
                 <li class="page-item">
                   <a class="page-link" href="#">Next</a>
                 </li>
