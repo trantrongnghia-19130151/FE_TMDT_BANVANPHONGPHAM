@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Item} from "../../model/item";
+import {CartService} from "../../service/cart.service";
 
 @Component({
   selector: 'app-cart',
@@ -10,7 +11,11 @@ export class CartComponent implements OnInit {
   items : Item[] = [];
   headElements = ["Sản phẩm", "Giá", "Số lượng", "Tổng cộng"]
   headBillElements = ["Tổng số lượng",""]
-  constructor() { }
+  constructor(private cartService: CartService) {
+    this.cartService.subjectItem.subscribe(items =>{
+      this.items = items
+    })
+  }
 
   ngOnInit(): void {
   }
