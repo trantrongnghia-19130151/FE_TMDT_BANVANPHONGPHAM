@@ -59,6 +59,7 @@ import { CartItemComponent } from './component/cart/cart-item/cart-item.componen
 import { CheckoutComponent } from './component/checkout/checkout.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { RegisterComponent } from './component/register/register.component';
+import {ProductComponent} from "./component/product/product.component";
 import {RouterModule} from "@angular/router";
 
 
@@ -66,7 +67,7 @@ import {RouterModule} from "@angular/router";
 
 @NgModule({
 
-  declarations: [AppComponent,HeaderComponent, FooterComponent, LoginComponent, CartComponent, CartItemComponent, CheckoutComponent, RegisterComponent],
+  declarations: [AppComponent,HeaderComponent, FooterComponent, LoginComponent, CartComponent, CartItemComponent, CheckoutComponent, RegisterComponent, ProductComponent],
 
   imports: [
     BrowserModule,
