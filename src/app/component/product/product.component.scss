@@ -1,0 +1,38 @@
+.shop{
+  margin-top: 140px;
+}
+.sticky::before {
+  content: " ";
+  display: table;
+}
+
+.fillter {
+  position: sticky;
+  top: 120px;
+}
+
+.sticky::after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+.icons-cart{
+  font-size: 15px;
+  color: black;
+
+}
+.add__cart{
+  background-color: rgba(220, 220, 220, 0.27);
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 5px 0;
+  height: 40px;
+  a{
+    width: 100%;
+    color: black;
+    font-weight: 500;
+    font-size: 17px;
+
+  }
+}

@@ -5,9 +5,13 @@ import {AppComponent} from "./app.component";
 import {RegisterComponent} from "./component/register/register.component";
 import {LoginComponent} from "./component/login/login.component";
 import {HomeComponent} from "./component/home/home.component";
+import {ProductComponent} from "./component/product/product.component";
+import {CartComponent} from "./component/cart/cart.component";
 
 const routes : Routes = [
   {path: '', component: HomeComponent},
+  {path: 'shop', component: ProductComponent},
+  {path: 'cart', component:CartComponent},
   {path: 'register', component:RegisterComponent},
   {path: 'login', component:LoginComponent}
 ]
