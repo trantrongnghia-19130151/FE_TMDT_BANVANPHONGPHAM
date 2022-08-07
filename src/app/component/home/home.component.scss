@@ -1,7 +1,22 @@
 .wrapper{
   .carousel{
-   max-width: 100%;
+    max-width: 100%;
     margin-top: 113px;
+  }
+  .container{
+    .featured__products{
+      .featured__title{
+        h2{
+        color: Black;
+        }
+      }
+    }
+    .row{
+      flex-wrap: nowrap;
+      .cart{
+        border-radius: 19px;
+      }
+    }
   }
 }
 

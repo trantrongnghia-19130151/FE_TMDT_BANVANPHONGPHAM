@@ -1,40 +1,44 @@
-<!--carousel-->
 <div class="wrapper">
-<div class="carousel">
-  <mdb-carousel [controls]="true" [indicators]="true">
-    <mdb-carousel-item>
-      <img
-        src="https://bizweb.dktcdn.net/100/343/563/themes/702842/assets/slider_1.png?1622866510757"
-        class="d-block w-100"
-        alt="..."
-      />
-    </mdb-carousel-item>
-    <mdb-carousel-item>
-      <img
-        src="https://vppvinacom.vn/wp-content/uploads/2020/02/chiet-khau-van-phong-pham-1.jpg"
-        class="d-block w-100"
-        alt="..."
-      />
-    </mdb-carousel-item>
-    <mdb-carousel-item>
-      <img
-        src="https://vanphongphambaoan.vn/wp-content/uploads/2021/08/VAN-PHONG-PHAM-BAO-AN-banner-01-1024x476.jpg"
-        class="d-block w-100"
-        alt="..."
-      />
-    </mdb-carousel-item>
-  </mdb-carousel>
-</div>
-<!--  end carousel-->
-<div class="container">
-  <!--  featured products-->
-  <div class="featured products">
-    <h2>TOP SẢN PHẨM MỚI NHẤT</h2>
-    <div class="card">
+  <!--carousel-->
+  <div class="carousel">
+    <mdb-carousel [controls]="true" [indicators]="true">
+      <mdb-carousel-item>
+        <img
+          src="https://bizweb.dktcdn.net/100/343/563/themes/702842/assets/slider_1.png?1622866510757"
+          class="d-block w-100"
+          alt="..."
+        />
+      </mdb-carousel-item>
+      <mdb-carousel-item>
+        <img
+          src="https://vppvinacom.vn/wp-content/uploads/2020/02/chiet-khau-van-phong-pham-1.jpg"
+          class="d-block w-100"
+          alt="..."
+        />
+      </mdb-carousel-item>
+      <mdb-carousel-item>
+        <img
+          src="https://vanphongphambaoan.vn/wp-content/uploads/2021/08/VAN-PHONG-PHAM-BAO-AN-banner-01-1024x476.jpg"
+          class="d-block w-100"
+          alt="..."
+        />
+      </mdb-carousel-item>
+    </mdb-carousel>
+  </div>
+  <!--  end carousel-->
+
+  <!--  container-->
+  <div class="container my-5">
+    <!--  featured products-->
+    <div class="featured__products">
+      <div class="featured__title d-flex justify-content-between my-5">
+        <h2>TOP SẢN PHẨM MỚI NHẤT</h2>
+        <a href="#!">Xem tất cả</a>
+      </div>
       <!--      row-->
       <div class="row">
         <!--         product card-->
-        <div class="col-3">
+        <div class="cart col-3 p-0 m-1 bg-white">
           <!-- Product image -->
           <div
             class=" bg-image ripple shadow-4-soft rounded-6 mb-4 overflow-hidden d-block" data-ripple-color="light">
@@ -105,7 +109,7 @@
         <!--        end product card -->
 
         <!--        product card-->
-        <div class="col-3">
+        <div class="cart col-3 p-0 m-1 bg-white">
           <!-- Product image -->
           <div
             class=" bg-image ripple shadow-4-soft rounded-6 mb-4 overflow-hidden d-block" data-ripple-color="light">
@@ -184,7 +188,7 @@
         <!--        end product card-->
 
         <!--        product card-->
-        <div class="col-3">
+        <div class="cart col-3 p-0 m-1 bg-white">
           <!-- Product image -->
           <div
             class=" bg-image ripple shadow-4-soft rounded-6 mb-4 overflow-hidden d-block" data-ripple-color="light">
@@ -260,16 +264,15 @@
           </a>
           <!-- end product content -->
         </div>
-        <!--       end product card-->
+        <!--        end product card-->
 
         <!--        product card-->
-        <div class="col-3">
+        <div class="cart col-3 p-0 m-1 bg-white">
           <!-- Product image -->
           <div
             class=" bg-image ripple shadow-4-soft rounded-6 mb-4 overflow-hidden d-block" data-ripple-color="light">
             <img src="https://lzd-img-global.slatic.net/g/p/314f981e7c6397245c931a98f4c857c2.jpg_400x400q75.jpg_.webp"
                  class="w-100" alt=""/>
-
             <div class="mask">
               <div
                 class="d-flex justify-content-start align-items-start h-100 p-3">
@@ -284,9 +287,7 @@
                 </div>
               </div>
             </div>
-
           </div>
-
           <!-- Product content -->
           <a href="" class="px-3 text-reset d-block">
             <p class="fw-bold mb-2">Dresses</p>
@@ -331,28 +332,26 @@
             <h5 class="mb-2">
               <s class="text-muted me-2 small align-middle">$119</s>
               <span class="align-middle">$101</span>
-
-
             </h5>
-
             <a class="icons-cart" routerLink="/cart"><i class="fas fa-shopping-bag"></i></a>
           </a>
           <!-- Product content -->
         </div>
-        <!--   end  product card-->
+        <!--        end  product card-->
       </div>
     </div>
-  </div>
-  <!--  end featured products-->
+    <!--  end featured products-->
 
-  <!--  featured products-->
-  <div class="featured products">
-    <h2>TOP SẢN PHẨM BÁN CHẠY</h2>
-    <div class="card">
+    <!--  featured products-->
+    <div class="featured__products">
+      <div class="featured__title d-flex justify-content-between my-5">
+        <h2>TOP SẢN PHẨM BÁN CHẠY</h2>
+        <a href="#!">Xem tất cả</a>
+      </div>
       <!--      row-->
       <div class="row">
         <!--         product card-->
-        <div class="col-3">
+        <div class="cart col-3 p-0 m-1 bg-white">
           <!-- Product image -->
           <div
             class=" bg-image ripple shadow-4-soft rounded-6 mb-4 overflow-hidden d-block" data-ripple-color="light">
@@ -423,7 +422,7 @@
         <!--        end product card -->
 
         <!--        product card-->
-        <div class="col-3">
+        <div class="cart col-3 p-0 m-1 bg-white">
           <!-- Product image -->
           <div
             class=" bg-image ripple shadow-4-soft rounded-6 mb-4 overflow-hidden d-block" data-ripple-color="light">
@@ -501,7 +500,7 @@
         <!--        end product card-->
 
         <!--        product card-->
-        <div class="col-3">
+        <div class="cart col-3 p-0 m-1 bg-white">
           <!-- Product image -->
           <div
             class=" bg-image ripple shadow-4-soft rounded-6 mb-4 overflow-hidden d-block" data-ripple-color="light">
@@ -570,24 +569,21 @@
             <h5 class="mb-2">
               <s class="text-muted me-2 small align-middle">$119</s>
               <span class="align-middle">$101</span>
-
-
             </h5>
 
             <a class="icons-cart" routerLink="/cart"><i class="fas fa-shopping-bag"></i></a>
           </a>
           <!-- end product content -->
         </div>
-        <!--       end product card-->
+        <!--        end product card-->
 
         <!--        product card-->
-        <div class="col-3">
+        <div class="cart col-3 p-0 m-1 bg-white">
           <!-- Product image -->
           <div
             class=" bg-image ripple shadow-4-soft rounded-6 mb-4 overflow-hidden d-block" data-ripple-color="light">
             <img src="https://lzd-img-global.slatic.net/g/p/c81d5444699ff10dcd5dd61d0b3fddaa.jpg_400x400q75.jpg_.webp"
                  class="w-100" alt=""/>
-
             <div class="mask">
               <div
                 class="d-flex justify-content-start align-items-start h-100 p-3">
@@ -657,20 +653,22 @@
           </a>
           <!-- Product content -->
         </div>
-        <!--   end  product card-->
+        <!--        end  product card-->
       </div>
+      <!--      end row-->
     </div>
-  </div>
-  <!--  end featured products-->
+    <!--  end featured products-->
 
-  <!--  featured products-->
-  <div class="featured products">
-    <h2>TOP SẢN PHẨM GIẢM GIÁ</h2>
-    <div class="card">
+    <!--  featured products-->
+    <div class="featured__products">
+      <div class="featured__title d-flex justify-content-between my-5">
+        <h2>TOP SẢN PHẨM GIẢM GIÁ</h2>
+        <a href="#!">Xem tất cả</a>
+      </div>
       <!--      row-->
       <div class="row">
         <!--         product card-->
-        <div class="col-3">
+        <div class="cart col-3 p-0 m-1 bg-white">
           <!-- Product image -->
           <div
             class=" bg-image ripple shadow-4-soft rounded-6 mb-4 overflow-hidden d-block" data-ripple-color="light">
@@ -741,7 +739,7 @@
         <!--        end product card -->
 
         <!--        product card-->
-        <div class="col-3">
+        <div class="cart col-3 p-0 m-1 bg-white">
           <!-- Product image -->
           <div
             class=" bg-image ripple shadow-4-soft rounded-6 mb-4 overflow-hidden d-block" data-ripple-color="light">
@@ -820,7 +818,7 @@
         <!--        end product card-->
 
         <!--        product card-->
-        <div class="col-3">
+        <div class="cart col-3 p-0 m-1 bg-white">
           <!-- Product image -->
           <div
             class=" bg-image ripple shadow-4-soft rounded-6 mb-4 overflow-hidden d-block" data-ripple-color="light">
@@ -895,10 +893,10 @@
           </a>
           <!-- end product content -->
         </div>
-        <!--       end product card-->
+        <!--        end product card-->
 
         <!--        product card-->
-        <div class="col-3">
+        <div class="cart col-3 p-0 m-1 bg-white">
           <!-- Product image -->
           <div
             class=" bg-image ripple shadow-4-soft rounded-6 mb-4 overflow-hidden d-block" data-ripple-color="light">
@@ -966,30 +964,27 @@
             <h5 class="mb-2">
               <s class="text-muted me-2 small align-middle">$119</s>
               <span class="align-middle">$101</span>
-
-
             </h5>
-
             <a class="icons-cart" routerLink="/cart"><i class="fas fa-shopping-bag"></i></a>
           </a>
           <!-- Product content -->
         </div>
-        <!--   end  product card-->
+        <!--        end product card-->
       </div>
-      <!--      end row -->
+      <!--   end row-->
     </div>
-    <!--    end card-->
-  </div>
-  <!--  end featured products-->
+    <!--  end featured products-->
 
-  <!--  evaluate-->
-  <div class="evaluate">
-    <h2>ĐÁNH GIÁ</h2>
-    <div class="card">
+    <!--  evaluate-->
+    <div class="evaluate">
+      <div class="featured__title d-flex justify-content-between my-5">
+        <h2>ĐÁNH GIÁ</h2>
+        <a href="#!">Xem tất cả</a>
+      </div>
       <!--      row-->
       <div class="row">
         <!--         product card-->
-        <div class="col-3">
+        <div class="cart col-3 p-0 m-1 bg-white">
           <!-- Product image -->
           <div
             class=" bg-image ripple shadow-4-soft rounded-6 mb-4 overflow-hidden d-block" data-ripple-color="light">
@@ -1060,7 +1055,7 @@
         <!--        end product card -->
 
         <!--        product card-->
-        <div class="col-3">
+        <div class="cart col-3 p-0 m-1 bg-white">
           <!-- Product image -->
           <div
             class=" bg-image ripple shadow-4-soft rounded-6 mb-4 overflow-hidden d-block" data-ripple-color="light">
@@ -1139,7 +1134,7 @@
         <!--        end product card-->
 
         <!--        product card-->
-        <div class="col-3">
+        <div class="cart col-3 p-0 m-1 bg-white">
           <!-- Product image -->
           <div
             class=" bg-image ripple shadow-4-soft rounded-6 mb-4 overflow-hidden d-block" data-ripple-color="light">
@@ -1216,10 +1211,10 @@
           </a>
           <!-- end product content -->
         </div>
-        <!--       end product card-->
+        <!--        end product card-->
 
         <!--        product card-->
-        <div class="col-3">
+        <div class="cart col-3 p-0 m-1 bg-white">
           <!-- Product image -->
           <div
             class=" bg-image ripple shadow-4-soft rounded-6 mb-4 overflow-hidden d-block" data-ripple-color="light">
@@ -1295,12 +1290,11 @@
           </a>
           <!-- Product content -->
         </div>
-        <!--   end  product card-->
+        <!--        end  product card-->
       </div>
       <!--      end row -->
     </div>
-    <!--    end card-->
+    <!--  end evaluate-->
   </div>
-  <!--  end evaluate-->
-</div>
+  <!--  end container-->
 </div>
