@@ -2,28 +2,30 @@
   <div class="left col-3 border-end">
     <h5 class="fs-6 text-uppercase">Sản phẩm</h5>
     <div class="col-1 bg-secondary mt-3 mb-3" style="height: 3px"></div>
-    <div class="d-flex">
-      <img src="http://mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/1-2-768x579.jpg"
+    <div class="d-flex" *ngFor="let p of relateProduct | slice:0:4">
+      <img src="{{p.img}}"
            alt=""
            class="img-fluid w-25">
       <div>
-        <span class="d-block ms-2">Kệ Ti vi phòng khách</span>
-        <span class="d-block ms-2 fw-bold"> 45616</span>
+        <span class="d-block ms-2">{{p.name}}</span>
+        <span class="d-block ms-2 fw-bold"> {{p.price | currency: 'VND'}}</span>
       </div>
     </div>
   </div>
   <div class="right col-9">
     <div class="d-flex gap-3 text-dark-50">
-      <img src="http://mauweb.monamedia.net/noithatbanghe/wp-content/uploads/2018/04/1-2-768x579.jpg" alt="" class="img-fluid col-5">
+     <div class="col-4">
+       <img src="{{product.img}}" alt="" class="img-fluid h-75">
+     </div>
       <div >
         <h5 class="fs-6">
           TRANG CHỦ / BÀN GHẾ / BÀN PHÒNG KHÁCH
         </h5>
         <h4 class="fs-3">
-          sofa gỗ sồi
+          {{product.name}}
         </h4>
         <div class="col-1 bg-secondary mt-3 mb-3" style="height: 5px"></div>
-        <span class= "fs-3">15,890,000</span>
+        <span class= "fs-3">{{product.price | currency : 'EUR'}}</span>
         <p>
           Với thiết kế tháo rời, quý khách có thể sử dụng luôn khi mới mua sản phẩm về hoặc có thể bọc thêm nệm tùy theo ý thích của mỗi gia đình. Ngoài ra, nhằm phục vụ khách hàng tốt nhất, chúng tôi còn liên kết với các cơ sở may nệm sofa nhằm mang đến cho quý khách những mẫu nệm với giá rẻ hơn thị trường.
         </p>
@@ -34,7 +36,7 @@
           <input type="button" value="+" class="d-inline-block border" style="min-width: 25px;height: 40px">
           <button type="button" class="btn btn-warning d-inline-block ms-5 shadow-none text-uppercase">Thêm vào giỏ</button>
         </div>
-        <div class="fs-8 border-top mt-5">Danh mục: bàn phòng khách</div>
+        <div class="fs-8 border-top mt-5">Danh mục: {{product.idNsx}}</div>
       </div>
     </div>
   </div>
