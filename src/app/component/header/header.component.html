@@ -23,7 +23,7 @@
             <input
               type="search"
               class="form-control rounded"
-              placeholder="Search"
+              placeholder="Tìm kiếm"
               aria-label="Search"
               aria-describedby="search-addon"
             />
@@ -43,31 +43,28 @@
         <!--        shopping cart, signup, login-->
         <div class="col-4 text-center right">
           <div class="header-top-right d-flex">
-            <a type="button">Login</a> |
-            <a type="button">SignUp</a>
-            <a type="button" class="btn-floating light-green "><i class="fas fa-shopping-bag"></i></a>
+            <a type="button" routerLink="/login">Đăng nhập</a> |
+            <a type="button" routerLink="/register">Đăng ký</a>
+            <a type="button" class="btn-floating light-green" routerLink="/cart"><i class="fas fa-shopping-bag"></i></a>
           </div>
         </div>
         <!--        end shopping cart, signup, login-->
       </div>
         <!--        menu-->
-      <div class="header-bot ">
+      <div class="header-bot">
         <div class="collapse navbar-collapse header-bot-item" id="navbarExample01">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" aria-current="page" href="#">Home</a>
+              <a class="nav-link" aria-current="page" href="#">Trang chủ</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Product</a>
+              <a class="nav-link" routerLink="/shop">Sản phẩm</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="#">Giới thiệu</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">News</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="#">Liên hệ</a>
             </li>
           </ul>
         </div>
