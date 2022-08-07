@@ -62,6 +62,7 @@ import { RegisterComponent } from './component/register/register.component';
 import {ProductComponent} from "./component/product/product.component";
 import {RouterModule} from "@angular/router";
 import { ProductDetailsComponent } from './component/product/product-details/product-details.component';
+import {FormsModule} from "@angular/forms";
 
 
 
@@ -116,6 +117,7 @@ import { ProductDetailsComponent } from './component/product/product-details/pro
     MdbMentionModule,
     AppRoutingModule,
     RouterModule,
+    FormsModule,
   ],
   providers: [MdbCookiesManagementService, MdbStorageManagementService],
   bootstrap: [AppComponent],
