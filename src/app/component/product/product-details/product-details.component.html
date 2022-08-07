@@ -1,4 +1,4 @@
-<div class="container-fluid d-flex gap-2 p-5">
+<div class="container-fluid d-flex gap-2 p-5" *ngIf="product !=null">
   <div class="left col-3 border-end">
     <h5 class="fs-6 text-uppercase">Sản phẩm</h5>
     <div class="col-1 bg-secondary mt-3 mb-3" style="height: 3px"></div>
@@ -8,7 +8,7 @@
            class="img-fluid w-25">
       <div>
         <span class="d-block ms-2">{{p.name}}</span>
-        <span class="d-block ms-2 fw-bold"> {{p.price | currency: 'VND'}}</span>
+        <span class="d-block ms-2 fw-bold"> {{p.price | currency: 'VNĐ'}}</span>
       </div>
     </div>
   </div>
@@ -30,11 +30,11 @@
           Với thiết kế tháo rời, quý khách có thể sử dụng luôn khi mới mua sản phẩm về hoặc có thể bọc thêm nệm tùy theo ý thích của mỗi gia đình. Ngoài ra, nhằm phục vụ khách hàng tốt nhất, chúng tôi còn liên kết với các cơ sở may nệm sofa nhằm mang đến cho quý khách những mẫu nệm với giá rẻ hơn thị trường.
         </p>
         <div class="d-flex ">
-          <input type="button" value="-" class="d-inline-block  border" style="min-width: 25px; height: 40px">
-          <input type="number" name="0" id="" value="1" class="d-inline-block border outline text-center"
+          <input type="button" (click)="minus()" value="-" class="d-inline-block  border" style="min-width: 25px; height: 40px">
+          <input [(ngModel)]="qty" type="number" name="0" id="" value="1" class="d-inline-block border outline text-center"
                  style="outline:none; width: 45px; height: 40px">
-          <input type="button" value="+" class="d-inline-block border" style="min-width: 25px;height: 40px">
-          <button type="button" class="btn btn-warning d-inline-block ms-5 shadow-none text-uppercase">Thêm vào giỏ</button>
+          <input type="button" (click)="plus()" value="+" class="d-inline-block border" style="min-width: 25px;height: 40px">
+          <button type="button" (click)="addToCart()" class="btn btn-warning d-inline-block ms-5 shadow-none text-uppercase">Thêm vào giỏ</button>
         </div>
         <div class="fs-8 border-top mt-5">Danh mục: {{product.idNsx}}</div>
       </div>
