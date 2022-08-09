@@ -8,7 +8,7 @@
         <div class="card bg-glass">
           <div class="card-body px-4 py-5 px-md-5">
             <h1 class="mb-2">Đăng kí</h1>
-            <form id="registerForm" ng-submit="onSubmit(authForm)" #authForm="ngForm">
+            <form id="registerForm" (ngSubmit)="onSubmit(authForm)" #authForm="ngForm">
               <div class="row">
                 <div class="col-md-6">
                   <mdb-form-control class="w-100 mb-3">
@@ -39,21 +39,21 @@
                 <input mdbInput type="password" id="password" class="form-control" minlength="6" required ngModel name="password" #password="ngModel"/>
                 <label mdbLabel class="form-label" for="password">Mật khẩu</label>
               </mdb-form-control>
-                <small id="passVal" class="text-danger mb-3" *ngIf="!password?.valid && (password?.dirty || password?.touched)">
+                <small id="passVal" class="text-danger mb-3" *ngIf="!password?.valid && (password?.dirty||password?.touched) ">
                   *Mật khẩu không hợp lệ
                 </small>
               </div>
               <div class="mb-3">
               <mdb-form-control class="w-100 ">
-                <input mdbInput type="password" id="repassword" ngModel name="prePassword" required #prePassword="ngModel" minlength="6" class="form-control"/>
+                <input mdbInput type="password" id="repassword" ngModel name="prePassword" required #rePassword="ngModel" minlength="6" class="form-control"/>
                 <label mdbLabel class="form-label" for="repassword">Nhập lại mật khẩu</label>
               </mdb-form-control>
-                <small id="prePassVal" class="text-danger mb-3" *ngIf="!prePassword?.valid && (prePassword?.dirty || prePassword?.touched)">
+                <small id="rePassVal" class="text-danger mb-3" *ngIf="!rePassword?.valid && (rePassword?.dirty||rePassword?.touched) || !checkPass(password?.value, rePassword?.value) && authForm.valid ">
                   *Mật khẩu không hợp lệ
                 </small>
               </div>
               <!-- Submit button -->
-              <button type="submit" class="btn btn-danger btn-block mb-4" [disabled]="!authForm.valid">
+              <button type="submit" class="btn btn-danger btn-block mb-4" [disabled]="!authForm.valid &&  rePassword?.dirty || !checkPass(password?.value, rePassword?.value)">
                 Đăng kí
               </button>
              <div class="text-center mb-4">
