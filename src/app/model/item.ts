@@ -9,6 +9,7 @@ export class Item {
     this._quantity = quantity;
   }
 
+
   get product(): Product {
     return this._product;
   }
@@ -24,7 +25,8 @@ export class Item {
   set quantity(value: number) {
     this._quantity = value;
   }
+
   getTotal(){
-    return this.product.price * this.quantity;
+    return this._product.price * this._quantity;
   }
 }
