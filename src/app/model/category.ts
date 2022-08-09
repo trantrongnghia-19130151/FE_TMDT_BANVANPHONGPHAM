@@ -8,7 +8,6 @@ export class Category {
   get cateId(): number {
     return this._cateId;
   }
-
   set cateId(value: number) {
     this._cateId = value;
   }

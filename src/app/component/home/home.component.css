@@ -1,0 +1,15 @@
+.wrapper .carousel {
+  max-width: 100%;
+  margin-top: 113px;
+}
+.wrapper .container .featured__products .featured__title h2 {
+  color: Black;
+}
+.wrapper .container .row {
+  flex-wrap: nowrap;
+}
+.wrapper .container .row .cart {
+  border-radius: 19px;
+}
+
+/*# sourceMappingURL=home.component.css.map */

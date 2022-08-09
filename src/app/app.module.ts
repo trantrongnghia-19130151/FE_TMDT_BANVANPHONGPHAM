@@ -50,9 +50,6 @@ import { MdbStorageManagementService } from 'mdb-angular-storage-management';
 
 import { HeaderComponent} from "./component/header/header.component";
 import { AppRoutingModule } from './app-routing.module';
-
-
-
 import {LoginComponent} from'./component/login/login.component';
 import { CartComponent } from './component/cart/cart.component';
 import { CartItemComponent } from './component/cart/cart-item/cart-item.component';
@@ -61,64 +58,63 @@ import { FooterComponent } from './component/footer/footer.component';
 import { RegisterComponent } from './component/register/register.component';
 import {ProductComponent} from "./component/product/product.component";
 import {RouterModule} from "@angular/router";
-import { ProductDetailsComponent } from './component/product/product-details/product-details.component';
 import {FormsModule} from "@angular/forms";
-
-
-
+import { HomeComponent } from './component/home/home.component';
+import { ProductDetailsComponent } from './component/product/product-details/product-details.component';
 
 @NgModule({
 
-  declarations: [AppComponent,HeaderComponent, FooterComponent, LoginComponent, CartComponent, CartItemComponent, CheckoutComponent, RegisterComponent, ProductComponent, ProductDetailsComponent],
+  declarations: [AppComponent, HomeComponent ,HeaderComponent, FooterComponent, LoginComponent, CartComponent, CartItemComponent, CheckoutComponent, RegisterComponent, ProductComponent, ProductDetailsComponent],
 
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    MdbAccordionModule,
-    MdbAutocompleteModule,
-    MdbCarouselModule,
-    MdbChartModule,
-    MdbCheckboxModule,
-    MdbCollapseModule,
-    MdbDatepickerModule,
-    MdbDropdownModule,
-    MdbFormsModule,
-    MdbInfiniteScrollModule,
-    MdbLazyLoadingModule,
-    MdbLightboxModule,
-    MdbLoadingModule,
-    MdbModalModule,
-    MdbNotificationModule,
-    MdbPopconfirmModule,
-    MdbPopoverModule,
-    MdbRadioModule,
-    MdbRangeModule,
-    MdbRatingModule,
-    MdbRippleModule,
-    MdbScrollbarModule,
-    MdbScrollspyModule,
-    MdbSelectModule,
-    MdbSidenavModule,
-    MdbSmoothScrollModule,
-    MdbStepperModule,
-    MdbStickyModule,
-    MdbTableModule,
-    MdbTabsModule,
-    MdbTimepickerModule,
-    MdbTooltipModule,
-    MdbValidationModule,
-    MdbCalendarModule,
-    MdbWysiwygModule,
-    MdbDragAndDropModule,
-    MdbVectorMapModule,
-    MdbFileUploadModule,
-    MdbTreeviewModule,
-    MdbTransferModule,
-    MdbMentionModule,
-    AppRoutingModule,
-    RouterModule,
-    FormsModule,
-  ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        MdbAccordionModule,
+        MdbAutocompleteModule,
+        MdbCarouselModule,
+        MdbChartModule,
+        MdbCheckboxModule,
+        MdbCollapseModule,
+        MdbDatepickerModule,
+        MdbDropdownModule,
+        MdbFormsModule,
+        MdbInfiniteScrollModule,
+        MdbLazyLoadingModule,
+        MdbLightboxModule,
+        MdbLoadingModule,
+        MdbModalModule,
+        MdbNotificationModule,
+        MdbPopconfirmModule,
+        MdbPopoverModule,
+        MdbRadioModule,
+        MdbRangeModule,
+        MdbRatingModule,
+        MdbRippleModule,
+        MdbScrollbarModule,
+        MdbScrollspyModule,
+        MdbSelectModule,
+        MdbSidenavModule,
+        MdbSmoothScrollModule,
+        MdbStepperModule,
+        MdbStickyModule,
+        MdbTableModule,
+        MdbTabsModule,
+        MdbTimepickerModule,
+        MdbTooltipModule,
+        MdbValidationModule,
+        MdbCalendarModule,
+        MdbWysiwygModule,
+        MdbDragAndDropModule,
+        MdbVectorMapModule,
+        MdbFileUploadModule,
+        MdbTreeviewModule,
+        MdbTransferModule,
+        MdbMentionModule,
+        AppRoutingModule,
+        RouterModule,
+        FormsModule,
+    ],
+
   providers: [MdbCookiesManagementService, MdbStorageManagementService],
   bootstrap: [AppComponent],
 })

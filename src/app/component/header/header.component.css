@@ -23,14 +23,19 @@
   align-items: center;
 }
 .header .header-top .right .header-top-right a {
-  padding-left: 5px;
-}
-.header .header-top .right .header-top-right a i {
   color: #363636;
-  font-size: 20px;
-  transition: all 0.3s;
+  padding-left: 5px;
+  transition: all 0.5s;
 }
-.header .header-top .right .header-top-right a i:hover {
+.header .header-top .right .header-top-right a:hover {
+  color: red;
+}
+.header .header-top .right .header-top-right a:last-child i {
+  font-size: 20px;
+  color: #363636;
+  transition: all 0.5s;
+}
+.header .header-top .right .header-top-right a:last-child i:hover {
   color: red;
   transform: scale(1.2);
 }

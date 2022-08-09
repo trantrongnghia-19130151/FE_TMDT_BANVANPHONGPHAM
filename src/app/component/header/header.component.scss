@@ -27,20 +27,26 @@
         align-items: center;
 
         a {
+          color: #363636;
           padding-left: 5px;
+          transition: all .5s;
 
+        }
+        a:hover{
+          color: red;
+        }
+
+        a:last-child{
           i {
-            color: #363636;
             font-size: 20px;
-            transition: all 0.3s;
+            color: #363636;
+            transition: all .5s;
           }
-
           i:hover {
             color: red;
             transform: scale(1.2);
           }
         }
-
         a:first-child {
           padding-right: 5px;
         }
