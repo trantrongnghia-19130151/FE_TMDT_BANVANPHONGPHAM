@@ -57,8 +57,13 @@
             <li class="nav-item active">
               <a class="nav-link" aria-current="page" href="#">Trang chủ</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" routerLink="/shop">Sản phẩm</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-link" routerLink="/shop">Sản phẩm</a>
+              <div class="dropdown-menu">
+
+                <a routerLink="/shop?category={{cate.cateId}}" *ngFor="let cate of category" [id]="cate.cateId">{{cate.name}}</a>
+
+              </div>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Giới thiệu</a>

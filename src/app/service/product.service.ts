@@ -7,11 +7,18 @@ import {Observable} from "rxjs";
 })
 export class ProductService {
 
-  constructor(private http: HttpClient) { }
-  getProductById(id: string) : Observable<any>{
+  constructor(private http: HttpClient) {
+  }
+
+  getProductById(id: string): Observable<any> {
     return this.http.get<any>("http://localhost:3000/product/" + id);
   }
-  getProductByCateId(cateId : number) : Observable<any>{
+
+  getProductByCateId(cateId: number): Observable<any> {
     return this.http.get<any>('http://localhost:3000/product?idNsx=' + cateId);
+  }
+
+  getAllCategory(): Observable<any> {
+    return this.http.get<any>("http://localhost:3000/category/");
   }
 }
