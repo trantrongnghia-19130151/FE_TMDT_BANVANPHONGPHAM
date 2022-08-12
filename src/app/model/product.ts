@@ -50,11 +50,13 @@ export class Product {
   set price(value: number) {
     this._price = value;
   }
-  set discount(value: number) {
-    this._discount = value;
-  }
+
   get discount(): number {
     return this._discount;
+  }
+
+  set discount(value: number) {
+    this._discount = value;
   }
 
   get idNsx(): number {
@@ -64,6 +66,7 @@ export class Product {
   set idNsx(value: number) {
     this._idNsx = value;
   }
+
 
   get cateId(): number {
     return this._cateId;

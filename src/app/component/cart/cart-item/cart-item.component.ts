@@ -9,38 +9,23 @@ import {CartService} from "../../../service/cart.service";
 })
 export class CartItemComponent implements OnInit {
   @Input() item!: Item;
+
   constructor(private cartService: CartService) {
 
   }
+
   ngOnInit(): void {
   }
 
   removeItem(item: Item) {
-    let cart = this.cartService.items
-    let index = cart.indexOf(item,0);
-    this.cartService.items.splice(index,1);
-    this.cartService.setData();
-    this.cartService.subjectItem.next(this.cartService.items);
+    this.cartService.removeItem(item);
   }
 
   minusProduct(item: Item) {
-    let cart = this.cartService.items
-    let index = cart.indexOf(item,0);
-    let exItem = cart[index];
-    exItem.quantity--;
-    if(exItem.quantity <=0){
-      cart.splice(index,1);
-    }
-    this.cartService.setData();
-    this.cartService.subjectItem.next(this.cartService.items);
+    this.cartService.minusProduct(item)
   }
 
   plusProduct(item: Item) {
-    let cart = this.cartService.items
-    let index = cart.indexOf(item,0);
-    let exItem = cart[index];
-    exItem.quantity++;
-    this.cartService.setData();
-    this.cartService.subjectItem.next(this.cartService.items);
+    this.cartService.plusProduct(item);
   }
 }

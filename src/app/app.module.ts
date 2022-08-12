@@ -62,9 +62,9 @@ import {FormsModule} from "@angular/forms";
 import { HomeComponent } from './component/home/home.component';
 import { ProductDetailsComponent } from './component/product/product-details/product-details.component';
 
-
 @NgModule({
-  declarations: [AppComponent, HomeComponent,HeaderComponent, FooterComponent, LoginComponent, CartComponent, CartItemComponent, CheckoutComponent, RegisterComponent, ProductComponent, ProductDetailsComponent],
+
+  declarations: [AppComponent, HomeComponent ,HeaderComponent, FooterComponent, LoginComponent, CartComponent, CartItemComponent, CheckoutComponent, RegisterComponent, ProductComponent, ProductDetailsComponent],
 
     imports: [
         BrowserModule,
@@ -114,6 +114,7 @@ import { ProductDetailsComponent } from './component/product/product-details/pro
         RouterModule,
         FormsModule,
     ],
+
   providers: [MdbCookiesManagementService, MdbStorageManagementService],
   bootstrap: [AppComponent],
 })
