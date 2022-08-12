@@ -10,7 +10,7 @@
 
             <div *ngFor=" let cate of category" [id]="cate.cateId"  class="text-muted small text-uppercase">
               <p class="mb-0">
-                <a href="#!" class="text-reset">{{cate.name}}</a>
+                <a routerLink="/shop?category=+'{{cate.cateId}}'" class="text-reset">{{cate.name}}</a>
               </p>
             </div>
           </section>
@@ -104,7 +104,7 @@
                     option.label
                     }}</mdb-option>
                 </mdb-select>
-                <label mdbLabel class="form-label">Sort</label>
+                <label mdbLabel class="form-label">Tất cả sản phẩm</label>
               </mdb-form-control>
             </div>
 
@@ -115,18 +115,18 @@
         <!-- Section: Products -->
         <section class="">
           <div class="row gx-xl-5 justify-content-center">
-            <div class="col-lg-4 col-6 mb-4 text-lg-start">
+            <div class="col-lg-4 col-6 mb-4 text-lg-start" *ngFor="let products of product" [id]="products.id">
               <!-- Product card -->
-              <div>
+              <div class="cart bg-white" >
                 <!-- Product image -->
                 <div
                   class=" bg-image ripple shadow-4-soft rounded-6 mb-4 overflow-hidden d-block" data-ripple-color="light">
-                  <img src="{{product.img}}" class="w-100" alt=""/>
+                  <img src="{{products.img}}" class="w-100" alt="" style="width: 280px; height: 280px"/>
 
                     <div class="mask">
                       <div
-                        class="d-flex justify-content-start align-items-start h-100 p-3">
-                        <span class="badge badge-danger rounded-pill me-2">-{{product.discount}}%</span>
+                        class="d-flex justify-content-start align-items-start h-100 p-3" *ngIf="products.discount>0">
+                        <span class="badge badge-danger rounded-pill me-2">-{{products.discount}}%</span>
                       </div>
                     </div>
                     <div class="hover-overlay">
@@ -142,7 +142,7 @@
 
                 <!-- Product content -->
                 <a href="" class="px-3 text-reset d-block">
-                  <p class="fw-bold mb-2">{{product.name}}</p>
+                  <p class="fw-bold mb-2">{{products.name}}</p>
 
                   <ul
                     class="rating mb-2"
@@ -182,8 +182,8 @@
                     </li>
                   </ul>
                   <h5 class="mb-2">
-                    <s class="text-muted me-2 small align-middle">{{product.price | currency : 'VNĐ'}}</s>
-                    <span class="align-middle">{{product.price -(product.price*product.discount) | currency : 'VNĐ'}}</span>
+                    <s class="text-muted me-2 small align-middle" *ngIf="products.discount>0">{{products.price}}</s>
+                    <span class="align-middle">{{products.price - (products.price*products.discount/100)}}</span>
                   </h5>
                 </a>
                 <!-- Product content -->
