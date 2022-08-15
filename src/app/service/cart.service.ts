@@ -27,6 +27,29 @@ export class CartService {
     this.setData();
     this.subjectItem.next(this.items);
   }
+  removeItem(item:Item){
+    let index = this.items.indexOf(item,0);
+    this.items.splice(index,1);
+    this.setData();
+    this.subjectItem.next(this.items);
+  }
+  minusProduct(item: Item) {
+    let index = this.items.indexOf(item,0);
+    let exItem = this.items[index];
+    exItem.quantity--;
+    if(exItem.quantity <=0){
+      this.items.splice(index,1);
+    }
+    this.setData();
+    this.subjectItem.next(this.items);
+  }
+  plusProduct(item: Item) {
+    let index = this.items.indexOf(item,0);
+    let exItem = this.items[index];
+    exItem.quantity++;
+    this.setData();
+    this.subjectItem.next(this.items);
+  }
 
   getData() {
     let jsonCart = localStorage.getItem('cart');
