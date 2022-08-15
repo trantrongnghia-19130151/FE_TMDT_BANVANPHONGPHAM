@@ -27,6 +27,7 @@ export class Authentication {
     const str = localStorage.getItem("expires_at") || "";
     if (str=="") return false;
     const expiresAt = JSON.parse(str);
+
     return moment().isBefore(moment(expiresAt));
   }
 }
