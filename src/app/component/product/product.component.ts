@@ -3,6 +3,7 @@ import {Product} from '../../model/product';
 import {Category} from "../../model/category";
 import {Manufactur} from "../../model/manufactur";
 import {ProductService} from "../../service/product.service";
+import {CartService} from "../../service/cart.service";
 
 @Component({
   selector: 'app-product',
@@ -21,7 +22,7 @@ export class ProductComponent implements OnInit {
     { value: '5', label: 'Giá tăng dần' },
   ];
 
-  constructor(private service: ProductService) { }
+  constructor(private service: ProductService, private cartService: CartService) { }
 
   ngOnInit(): void {
     this.getProduct();
@@ -46,5 +47,7 @@ export class ProductComponent implements OnInit {
       this.nsx = res;
     })
   }
-
+addToCart(p : Product){
+    this.cartService.addToCart(p, 1);
+}
 }
