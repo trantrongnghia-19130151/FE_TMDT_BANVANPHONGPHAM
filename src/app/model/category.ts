@@ -1,10 +1,17 @@
+
 export class Category {
+
   private _cateId:number;
   private _name:string;
-  constructor(cateId: number, name:string) {
+  private _subc:Category[];
+  constructor(cateId: number, name:string, subc:Category[]) {
     this._cateId = cateId;
     this._name = name;
+    this._subc = subc;
   }
+
+
+
   get cateId(): number {
     return this._cateId;
   }
@@ -17,5 +24,13 @@ export class Category {
 
   set name(value: string) {
     this._name = value;
+  }
+
+  get subc(): Category[] {
+    return this._subc;
+  }
+
+  set subc(value: Category[]) {
+    this._subc = value;
   }
 }
