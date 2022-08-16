@@ -1,18 +1,22 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 import {Product} from '../../model/product';
 import {Category} from "../../model/category";
 import {Manufactur} from "../../model/manufactur";
 import {ProductService} from "../../service/product.service";
+import {Subscription} from "rxjs";
+
 
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss']
 })
-export class ProductComponent implements OnInit {
+export class ProductComponent implements OnInit, OnDestroy {
   @Input() product : Product[] = [];
    category: Category[] = [];
    nsx : Manufactur[] =[];
+   pName :any;
+   private valueFromChildSubscription : Subscription | undefined;
   options = [
     { value: '1', label: 'Sản phẩm mới nhất' },
     { value: '2', label: 'Sản phẩm giảm giá' },
@@ -21,12 +25,23 @@ export class ProductComponent implements OnInit {
     { value: '5', label: 'Giá tăng dần' },
   ];
 
+
   constructor(private service: ProductService) { }
 
+  ngOnDestroy(): void {
+        // @ts-ignore
+    this.valueFromChildSubscription.unsubscribe();
+    }
+
   ngOnInit(): void {
-    this.getProduct();
     this.getCategory();
     this.getManufactur();
+    this.getProduct();
+
+    this.valueFromChildSubscription = this.service.ValueFromChild.subscribe(res => {
+  this.pName = res;
+      console.log("this.pName");
+})
 
   }
   getProduct(){
@@ -46,5 +61,4 @@ export class ProductComponent implements OnInit {
       this.nsx = res;
     })
   }
-
 }

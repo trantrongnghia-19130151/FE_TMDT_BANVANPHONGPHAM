@@ -4,6 +4,8 @@
       <div class="fillter col-lg-3 d-block">
         <!-- Section: Filters -->
         <section class="">
+
+
           <!-- Section: Categories -->
           <section class="mb-5">
             <h5 class="fw-bold mb-4">Danh mục sản phẩm</h5>
@@ -131,7 +133,7 @@
         <!-- Section: Products -->
         <section class="">
           <div class="row gx-xl-5 justify-content-center">
-            <div class="col-lg-4 col-6 mb-4 text-lg-start" *ngFor="let products of product" [id]="products.id">
+            <div class="col-lg-4 col-6 mb-4 text-lg-start" *ngFor="let products of product | filter:pName" [id]="products.id">
               <!-- Product card -->
               <div class="cart bg-white" >
                 <!-- Product image -->
