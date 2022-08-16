@@ -1,20 +1,32 @@
 {
   "category": [
-    {"cateId": 100, "name": "Dụng cụ văn phòng"},
-    {"cateId": 101, "name": "Kim bấm"},
-    {"cateId": 102, "name": "Dao kéo"},
-    {"cateId": 103, "name": "Kẹp giấy"},
-    {"cateId": 104, "name": "Thước"},
+    {"cateId": 100, "name": "Dụng cụ văn phòng",
+      "subc": [
+        {"cateId": 101, "name": "Kim bấm"},
+        {"cateId": 102, "name": "Dao kéo"},
+        {"cateId": 103, "name": "Kẹp giấy"},
+        {"cateId": 104, "name": "Thước"}
 
-    {"cateId": 200, "name": "Bút viết"},
-    {"cateId": 201, "name": "Bút chì"},
-    {"cateId": 202, "name": "Bút bi"},
-    {"cateId": 203, "name": "Bút lông"},
+      ]
+    },
 
-    {"cateId": 300, "name": "Tập-Sổ"},
-    {"cateId": 301, "name": "Sổ tay"},
-    {"cateId": 302, "name": "Tập"},
 
+    {"cateId": 200, "name": "Bút viết",
+      "subc": [
+        {"cateId": 201, "name": "Bút chì"},
+        {"cateId": 202, "name": "Bút bi"},
+        {"cateId": 203, "name": "Bút lông"}
+      ]
+
+    },
+
+
+    {"cateId": 300, "name": "Tập-Sổ",
+      "subc": [
+        {"cateId": 301, "name": "Sổ tay"},
+        {"cateId": 302, "name": "Tập"}
+      ]
+    },
     {"cateId": 400, "name": "Sách"}
   ],
 
@@ -383,7 +395,6 @@
     {"id": 1008, "name": "Công ty Thái Silk"},
     {"id": 1009, "name": "Công ty sản xuất bút chì ANT"},
     {"id": 1000, "name": "Công Alibaba.com"}
-
   ],
   "order": [
     {}
