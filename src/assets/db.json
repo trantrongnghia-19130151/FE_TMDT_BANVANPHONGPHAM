@@ -13,11 +13,11 @@
 
     {"cateId": 200, "name": "Bút viết",
       "subc": [
-        {"cateId": 201, "name": "Bút chì"},
-        {"cateId": 202, "name": "Bút bi"},
-        {"cateId": 203, "name": "Bút lông"}
-      ]
 
+      {"cateId": 201, "name": "Bút chì"},
+      {"cateId": 202, "name": "Bút bi"},
+      {"cateId": 203, "name": "Bút lông"}
+    ]
     },
 
 
@@ -35,7 +35,7 @@
       "name": "kim bấm cỡ nhỏ",
       "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
       "price": 13000,
-      "discount": 5000,
+      "discount": 50,
       "idNsx": 123,
       "cateId":101
     },
@@ -43,7 +43,7 @@
       "name": "Kim bấm cỡ lớn",
       "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
       "price": 13000,
-      "discount": 5000,
+      "discount": 5,
       "idNsx": 124,
       "cateId": 101
     },
@@ -51,7 +51,7 @@
       "name": "Kéo cắt giấy",
       "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
       "price": 13000,
-      "discount": 5000,
+      "discount": 15,
       "idNsx": 125,
       "cateId": 102
     },
@@ -59,7 +59,7 @@
       "name": "dao rọc giấy",
       "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
       "price": 13000,
-      "discount": 5000,
+      "discount": 25,
       "idNsx": 123,
       "cateId": 102
     },
@@ -67,7 +67,7 @@
       "name": "máy tính nhanh f580",
       "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
       "price": 13000,
-      "discount": 5000,
+      "discount": 0,
       "idNsx": 124,
       "cateId": 100
     },
@@ -75,7 +75,7 @@
       "name": "kẹp giấy gỗ",
       "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
       "price": 13000,
-      "discount": 5000,
+      "discount": 5,
       "idNsx": 125,
       "cateId": 103
     },
@@ -399,4 +399,5 @@
   "order": [
     {}
   ]
+
 }
