@@ -222,7 +222,7 @@
       "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
       "price": 13000,
       "discount": 5000,
-      "idNsx": 123,
+      "idNsx": 1001,
       "cateId": 202
     },
     {"id": 25,
@@ -230,7 +230,7 @@
       "img": "http://bizweb.dktcdn.net/thumb/grande/100/315/522/products/mygel.jpg?v=1533567261650",
       "price": 13000,
       "discount": 5000,
-      "idNsx": 124,
+      "idNsx": 1001,
       "cateId": 202
     },
     {"id": 26,
@@ -351,7 +351,7 @@
       "price":260000,
       "discount": 5,
       "idNsx": 1006,
-      "cateId": 300
+      "cateId": 400
     },
     {"id": 41,
       "name": "Bộ sách giáo khoa lớp 9",
@@ -359,7 +359,7 @@
       "price": 260000,
       "discount": 5,
       "idNsx": 1006,
-      "cateId": 300
+      "cateId": 400
     },
     {"id": 42,
       "name": "Bộ sách giáo khoa lớp 10",
@@ -367,7 +367,7 @@
       "price": 280000,
       "discount": 5,
       "idNsx": 1006,
-      "cateId": 300
+      "cateId": 400
     },
     {"id": 43,
       "name": "Bộ sách giáo khoa lớp 11",
@@ -375,7 +375,7 @@
       "price": 290000,
       "discount": 5,
       "idNsx": 1006,
-      "cateId": 300
+      "cateId": 400
     },
     {"id": 44,
       "name": "Bộ sách giáo khoa lớp 12 nâng cao",
@@ -383,7 +383,7 @@
       "price": 300000,
       "discount": 0,
       "idNsx": 1006,
-      "cateId": 300
+      "cateId": 400
     }
   ],
   "manufactur": [

@@ -6,6 +6,7 @@
         <section class="">
           <!-- Section: Categories -->
           <section class="mb-5">
+
             <h5 class="fw-bold mb-4">Danh mục sản phẩm</h5>
 
             <div class="" *ngFor=" let cate of category index as i ">
@@ -14,16 +15,24 @@
 <!--              </p>-->
 
               <div class="d-flex justify-content-between align-items-center">
-              <a>
+
+              <a >
+                <input *ngIf="!cate.subc" class="form-check-input" type="checkbox" value="{{cate.cateId}}" (change)="onChange($event)" id="cate" />
                 {{cate.name}}
               </a>
+
+
+<!--                <label class="form-check-label" for="sub1"> {{cate.name}} </label>-->
+
               <i class="fas fa-angle-down " *ngIf="cate.subc" (click)="basicCollapse.toggle()" role="button" [attr.aria-expanded]="!basicCollapse.collapsed" aria-controls="collapseExample"></i>
+
               </div>
+
                 <!--Collapsed content-->
               <div class="m-3" id="collapseExample" mdbCollapse #basicCollapse="mdbCollapse" >
                 <div  *ngFor="let sub of cate.subc">
 
-                  <input routerLink="/shop?cateId={{sub.cateId}}" class="form-check-input" type="checkbox" value="" id="sub1" />
+                  <input routerLink="/shop?cateId={{sub.cateId}}" class="form-check-input" type="checkbox" value="{{sub.cateId}}" (change)="onChange($event)" id="sub1" />
                   <label class="form-check-label" for="sub1"> {{sub.name}} </label>
                 </div>
               </div>
@@ -37,7 +46,7 @@
             <h5 class="fw-bold mb-4">Hãng sản xuất</h5>
 
             <div *ngFor="let nsx of nsx" [id]="nsx.id"  class="form-check mb-3">
-              <input class="form-check-input" type="checkbox" value="" id="condition1" />
+              <input class="form-check-input" type="checkbox" value="{{nsx.id}}" (change)="onChange($event)" id="condition1" />
               <label class="form-check-label" for="condition1"> {{nsx.name}} </label>
             </div>
           </section>
@@ -131,7 +140,7 @@
         <!-- Section: Products -->
         <section class="">
           <div class="row gx-xl-5 justify-content-center">
-            <div class="col-lg-4 col-6 mb-4 text-lg-start" *ngFor="let products of product" [id]="products.id">
+            <div class="col-lg-4 col-6 mb-4 text-lg-start" *ngFor="let products of product " [id]="products.id">
               <!-- Product card -->
               <div class="cart bg-white" >
                 <!-- Product image -->
