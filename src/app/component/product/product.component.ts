@@ -3,7 +3,8 @@ import {Product} from '../../model/product';
 import {Category} from "../../model/category";
 import {Manufactur} from "../../model/manufactur";
 import {ProductService} from "../../service/product.service";
-import {newArray} from "@angular/compiler/src/util";
+import {CartService} from "../../service/cart.service";
+
 
 @Component({
   selector: 'app-product',
@@ -28,8 +29,8 @@ export class ProductComponent implements OnInit {
   ];
 
 
+  constructor(private service: ProductService, private cartService: CartService) { }
 
-  constructor(private service: ProductService) { }
 
   ngOnInit(): void {
     this.getProduct();
@@ -55,6 +56,7 @@ export class ProductComponent implements OnInit {
       this.nsx = res;
     })
   }
+
 
   onChange(event:any) {
 
@@ -98,4 +100,8 @@ export class ProductComponent implements OnInit {
       // console.log(this.newArray)
     }
   }
+addToCart(p : Product){
+    this.cartService.addToCart(p, 1);
+}
+
 }

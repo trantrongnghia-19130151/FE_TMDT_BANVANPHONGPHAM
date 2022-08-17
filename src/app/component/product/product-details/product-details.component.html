@@ -1,14 +1,14 @@
-<div class="container-fluid d-flex gap-2 p-5" *ngIf="product !=null">
+<div class="container-fluid d-flex gap-2 p-5" *ngIf="product !=null" style="margin-top: 100px;">
   <div class="left col-3 border-end">
     <h5 class="fs-6 text-uppercase">Sản phẩm</h5>
     <div class="col-1 bg-secondary mt-3 mb-3" style="height: 3px"></div>
-    <div class="d-flex" *ngFor="let p of relateProduct | slice:0:4">
+    <div class="d-flex pt-2"  *ngFor="let p of relateProduct | slice:0:4" routerLink="/product/{{p.id}}">
       <img src="{{p.img}}"
            alt=""
-           class="img-fluid w-25">
+           class="img-fluid" style="width: 15%;">
       <div>
         <span class="d-block ms-2">{{p.name}}</span>
-        <span class="d-block ms-2 fw-bold"> {{p.price | currency: 'VNĐ'}}</span>
+        <span class="d-block ms-2 fw-bold"> {{p.price | currency: 'VND'}}</span>
       </div>
     </div>
   </div>
@@ -25,7 +25,7 @@
           {{product.name}}
         </h4>
         <div class="col-1 bg-secondary mt-3 mb-3" style="height: 5px"></div>
-        <span class= "fs-3">{{product.price | currency : 'EUR'}}</span>
+        <span class= "fs-3">{{product.price | currency : 'VND'}}</span>
         <p>
           Với thiết kế tháo rời, quý khách có thể sử dụng luôn khi mới mua sản phẩm về hoặc có thể bọc thêm nệm tùy theo ý thích của mỗi gia đình. Ngoài ra, nhằm phục vụ khách hàng tốt nhất, chúng tôi còn liên kết với các cơ sở may nệm sofa nhằm mang đến cho quý khách những mẫu nệm với giá rẻ hơn thị trường.
         </p>
@@ -36,7 +36,7 @@
           <input type="button" (click)="plus()" value="+" class="d-inline-block border" style="min-width: 25px;height: 40px">
           <button type="button" (click)="addToCart()" class="btn btn-warning d-inline-block ms-5 shadow-none text-uppercase">Thêm vào giỏ</button>
         </div>
-        <div class="fs-8 border-top mt-5">Danh mục: {{product.idNsx}}</div>
+        <div class="fs-8 border-top mt-5">Danh mục: {{product.cateId}}</div>
       </div>
     </div>
   </div>

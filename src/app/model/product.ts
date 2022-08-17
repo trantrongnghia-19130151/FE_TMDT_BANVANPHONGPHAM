@@ -6,6 +6,17 @@ export class Product {
   private _price: number;
   private _discount: number;
   private _idNsx: number;
+  private _cateId: string;
+
+  constructor(id: string, name: string, img: string, price: number, discount: number, idNsx: number, cateId: string) {
+    this._id = id;
+    this._name = name;
+    this._img = img;
+    this._price = price;
+    this._discount = discount;
+    this._idNsx = idNsx;
+    this._cateId = cateId;
+  }
 
   get id(): string {
     return this._id;
@@ -55,15 +66,11 @@ export class Product {
     this._idNsx = value;
   }
 
-  constructor(id: string, name: string, img: string, price: number, discount: number, idNsx: number) {
-    this._id = id;
-    this._name = name;
-    this._img = img;
-    this._price = price;
-    this._discount = discount;
-    this._idNsx = idNsx;
-
+  get cateId(): string {
+    return this._cateId;
   }
 
-
+  set cateId(value: string) {
+    this._cateId = value;
+  }
 }

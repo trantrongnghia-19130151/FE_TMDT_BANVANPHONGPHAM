@@ -10,11 +10,12 @@
             <h5 class="fw-bold mb-4">Danh mục sản phẩm</h5>
 
             <div class="" *ngFor=" let cate of category index as i ">
-<!--              <p class="mb-0">-->
-<!--                <a routerLink="/shop?category=+'{{cate.cateId}}'" class="text-reset">{{cate.name}}</a>-->
-<!--              </p>-->
+              <!--              <p class="mb-0">-->
+              <!--                <a routerLink="/shop?category=+'{{cate.cateId}}'" class="text-reset">{{cate.name}}</a>-->
+              <!--              </p>-->
 
               <div class="d-flex justify-content-between align-items-center">
+
 
               <a >
                 <input *ngIf="!cate.subc" class="form-check-input" type="checkbox" value="{{cate.cateId}}" (change)="onChange($event)" id="cate" />
@@ -33,6 +34,7 @@
                 <div  *ngFor="let sub of cate.subc">
 
                   <input routerLink="/shop?cateId={{sub.cateId}}" class="form-check-input" type="checkbox" value="{{sub.cateId}}" (change)="onChange($event)" id="sub1" />
+
                   <label class="form-check-label" for="sub1"> {{sub.name}} </label>
                 </div>
               </div>
@@ -45,8 +47,10 @@
           <section class="mb-5">
             <h5 class="fw-bold mb-4">Hãng sản xuất</h5>
 
+
             <div *ngFor="let nsx of nsx" [id]="nsx.id"  class="form-check mb-3">
               <input class="form-check-input" type="checkbox" value="{{nsx.id}}" (change)="onChange($event)" id="condition1" />
+
               <label class="form-check-label" for="condition1"> {{nsx.name}} </label>
             </div>
           </section>
@@ -142,26 +146,28 @@
           <div class="row gx-xl-5 justify-content-center">
             <div class="col-lg-4 col-6 mb-4 text-lg-start" *ngFor="let products of product " [id]="products.id">
               <!-- Product card -->
-              <div class="cart bg-white" >
+              <div class="cart bg-white">
                 <!-- Product image -->
                 <div
-                  class=" bg-image ripple shadow-4-soft rounded-6 mb-4 overflow-hidden d-block" data-ripple-color="light">
+                  class=" bg-image ripple shadow-4-soft rounded-6 mb-4 overflow-hidden d-block"
+                  data-ripple-color="light"
+                 routerLink="/product/{{products.id}}">
                   <img src="{{products.img}}" class="w-100" alt="" style="width: 280px; height: 280px"/>
 
-                    <div class="mask">
-                      <div
-                        class="d-flex justify-content-start align-items-start h-100 p-3" *ngIf="products.discount>0">
-                        <span class="badge badge-danger rounded-pill me-2">-{{products.discount}}%</span>
-                      </div>
+                  <div class="mask">
+                    <div
+                      class="d-flex justify-content-start align-items-start h-100 p-3" *ngIf="products.discount>0">
+                      <span class="badge badge-danger rounded-pill me-2">-{{products.discount}}%</span>
                     </div>
-                    <div class="hover-overlay">
+                  </div>
+                  <div class="hover-overlay">
 
-                      <div class="mask" style="background-color: hsla(0, 0%, 98.4%, 0.09)">
-                        <div class=" d-flex justify-content-center align-items-end h-100 p-0">
-                          <div class="add__cart"><a routerLink="/cart">+ Thêm giỏ hàng</a></div>
-                        </div>
+                    <div class="mask" style="background-color: hsla(0, 0%, 98.4%, 0.09)">
+                      <div class=" d-flex justify-content-center align-items-end h-100 p-0">
+                        <div class="add__cart"><a (click)="addToCart(products)">+ Thêm giỏ hàng</a></div>
                       </div>
                     </div>
+                  </div>
 
                 </div>
 
@@ -208,7 +214,7 @@
                   </ul>
                   <h5 class="mb-2">
                     <s class="text-muted me-2 small align-middle" *ngIf="products.discount>0">{{products.price}}</s>
-                    <span class="align-middle">{{products.price - (products.price*products.discount/100)}}</span>
+                    <span class="align-middle">{{products.price - (products.price * products.discount / 100)}}</span>
                   </h5>
                 </a>
                 <!-- Product content -->
