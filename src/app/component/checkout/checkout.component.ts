@@ -3,6 +3,7 @@ import {NgForm} from "@angular/forms";
 import {Order} from "../../model/order";
 import {CartService} from "../../service/cart.service";
 import {CheckoutService} from "../../service/checkout.service";
+import {Item} from "../../model/item";
 
 @Component({
   selector: 'app-checkout',
@@ -15,7 +16,12 @@ export class CheckoutComponent implements OnInit {
   order !: Order;
   headElements = ["Sản phẩm", "Giá", "Số lượng", "Tổng cộng"]
   total : number = 0;
+  items : Item[] = [];
   ngOnInit(): void {
+    this.items = this.cartSv.items;
+    this.items.map(item => {
+      this.total += item.getTotal();
+    })
   }
   onSubmit(f : NgForm){
     let order = new Order();
@@ -27,14 +33,9 @@ export class CheckoutComponent implements OnInit {
     order.message = f.control.get('mess')?.value;
     order.items = this.cartSv.items;
     this.checkoutService.placeOrder(order).subscribe(res =>{
-      if(res){
         this.order = res
-        this.order.items.forEach( item =>{
-          this.total += item.product.price * item.quantity
-        })
         localStorage.removeItem('cart');
         this.cartSv.subjectItem.next(this.cartSv.items = [])
-      }
     })
   }
 

@@ -1,47 +1,76 @@
 {
   "category": [
-    {"cateId": 100, "name": "Dụng cụ văn phòng",
+    {
+      "cateId": 100,
+      "name": "Dụng cụ văn phòng",
       "subc": [
-        {"cateId": 101, "name": "Kim bấm"},
-        {"cateId": 102, "name": "Dao kéo"},
-        {"cateId": 103, "name": "Kẹp giấy"},
-        {"cateId": 104, "name": "Thước"}
-
+        {
+          "cateId": 101,
+          "name": "Kim bấm"
+        },
+        {
+          "cateId": 102,
+          "name": "Dao kéo"
+        },
+        {
+          "cateId": 103,
+          "name": "Kẹp giấy"
+        },
+        {
+          "cateId": 104,
+          "name": "Thước"
+        }
       ]
     },
-
-
-    {"cateId": 200, "name": "Bút viết",
+    {
+      "cateId": 200,
+      "name": "Bút viết",
       "subc": [
-      {"cateId": 201, "name": "Bút chì"},
-      {"cateId": 202, "name": "Bút bi"},
-      {"cateId": 203, "name": "Bút lông"}
-    ]
-
-    },
-
-
-    {"cateId": 300, "name": "Tập-Sổ",
-      "subc": [
-        {"cateId": 301, "name": "Sổ tay"},
-        {"cateId": 302, "name": "Tập"}
+        {
+          "cateId": 201,
+          "name": "Bút chì"
+        },
+        {
+          "cateId": 202,
+          "name": "Bút bi"
+        },
+        {
+          "cateId": 203,
+          "name": "Bút lông"
+        }
       ]
     },
-
-
-    {"cateId": 400, "name": "Sách"}
+    {
+      "cateId": 300,
+      "name": "Tập-Sổ",
+      "subc": [
+        {
+          "cateId": 301,
+          "name": "Sổ tay"
+        },
+        {
+          "cateId": 302,
+          "name": "Tập"
+        }
+      ]
+    },
+    {
+      "cateId": 400,
+      "name": "Sách"
+    }
   ],
-
   "product": [
-    {"id": 1,
+    {
+      "id": 1,
       "name": "kim bấm cỡ nhỏ",
       "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
       "price": 13000,
       "discount": 50,
       "idNsx": 123,
-      "cateId":101
+      "cateId": 101
     },
-    {"id": 2,
+    {
+      "id": 2,
       "name": "Kim bấm cỡ lớn",
       "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
       "price": 13000,
@@ -49,7 +78,8 @@
       "idNsx": 124,
       "cateId": 101
     },
-    {"id": 3,
+    {
+      "id": 3,
       "name": "Kéo cắt giấy",
       "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
       "price": 13000,
@@ -57,7 +87,8 @@
       "idNsx": 125,
       "cateId": 102
     },
-    {"id": 4,
+    {
+      "id": 4,
       "name": "dao rọc giấy",
       "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
       "price": 13000,
@@ -65,7 +96,8 @@
       "idNsx": 123,
       "cateId": 102
     },
-    {"id": 5,
+    {
+      "id": 5,
       "name": "máy tính nhanh f580",
       "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
       "price": 13000,
@@ -73,7 +105,8 @@
       "idNsx": 124,
       "cateId": 100
     },
-    {"id": 6,
+    {
+      "id": 6,
       "name": "kẹp giấy gỗ",
       "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
       "price": 13000,
@@ -81,7 +114,8 @@
       "idNsx": 125,
       "cateId": 103
     },
-    {"id": 7,
+    {
+      "id": 7,
       "name": "kẹp giấy nhựa",
       "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
       "price": 13000,
@@ -89,7 +123,8 @@
       "idNsx": 123,
       "cateId": 103
     },
-    {"id": 8,
+    {
+      "id": 8,
       "name": "thướt kẻ hình tròn",
       "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
       "price": 13000,
@@ -97,7 +132,8 @@
       "idNsx": 123,
       "cateId": 104
     },
-    {"id": 9,
+    {
+      "id": 9,
       "name": "thướt kẻ vuông",
       "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
       "price": 13000,
@@ -105,7 +141,8 @@
       "idNsx": 123,
       "cateId": 104
     },
-    {"id": 10,
+    {
+      "id": 10,
       "name": "thướt kẻ tam giác",
       "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
       "price": 13000,
@@ -113,7 +150,8 @@
       "idNsx": 123,
       "cateId": 104
     },
-    {"id": 11,
+    {
+      "id": 11,
       "name": "Bút chì B1",
       "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
       "price": 13000,
@@ -121,7 +159,8 @@
       "idNsx": 123,
       "cateId": 201
     },
-    {"id": 12,
+    {
+      "id": 12,
       "name": "Bút chì B2",
       "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
       "price": 13000,
@@ -129,7 +168,8 @@
       "idNsx": 124,
       "cateId": 201
     },
-    {"id": 13,
+    {
+      "id": 13,
       "name": "Bút chì B3",
       "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
       "price": 13000,
@@ -137,7 +177,8 @@
       "idNsx": 125,
       "cateId": 201
     },
-    {"id": 14,
+    {
+      "id": 14,
       "name": "Bút chì B4",
       "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
       "price": 13000,
@@ -145,7 +186,8 @@
       "idNsx": 123,
       "cateId": 201
     },
-    {"id": 15,
+    {
+      "id": 15,
       "name": "Bút chì B5",
       "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
       "price": 13000,
@@ -153,7 +195,8 @@
       "idNsx": 124,
       "cateId": 201
     },
-    {"id": 16,
+    {
+      "id": 16,
       "name": "Bút chì B6",
       "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
       "price": 13000,
@@ -161,7 +204,8 @@
       "idNsx": 125,
       "cateId": 201
     },
-    {"id": 17,
+    {
+      "id": 17,
       "name": "Bút chì ngồi",
       "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
       "price": 13000,
@@ -169,7 +213,8 @@
       "idNsx": 123,
       "cateId": 201
     },
-    {"id": 18,
+    {
+      "id": 18,
       "name": "Bút bi khô",
       "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
       "price": 13000,
@@ -177,7 +222,8 @@
       "idNsx": 123,
       "cateId": 202
     },
-    {"id": 19,
+    {
+      "id": 19,
       "name": "Bút bi nước đen",
       "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
       "price": 13000,
@@ -185,7 +231,8 @@
       "idNsx": 123,
       "cateId": 202
     },
-    {"id": 20,
+    {
+      "id": 20,
       "name": "Bút bi nước đỏ",
       "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
       "price": 13000,
@@ -193,7 +240,8 @@
       "idNsx": 123,
       "cateId": 202
     },
-    {"id": 21,
+    {
+      "id": 21,
       "name": "Bút bi khô xanh",
       "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
       "price": 13000,
@@ -201,7 +249,8 @@
       "idNsx": 123,
       "cateId": 202
     },
-    {"id": 22,
+    {
+      "id": 22,
       "name": "Bút bi nước xanh",
       "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
       "price": 13000,
@@ -209,7 +258,8 @@
       "idNsx": 124,
       "cateId": 202
     },
-    {"id": 23,
+    {
+      "id": 23,
       "name": "Bút bi khô đỏ",
       "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
       "price": 13000,
@@ -217,7 +267,8 @@
       "idNsx": 125,
       "cateId": 202
     },
-    {"id": 24,
+    {
+      "id": 24,
       "name": "Bút bi khô đen",
       "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
       "price": 13000,
@@ -225,7 +276,8 @@
       "idNsx": 123,
       "cateId": 202
     },
-    {"id": 25,
+    {
+      "id": 25,
       "name": "Bút bi nước",
       "img": "http://bizweb.dktcdn.net/thumb/grande/100/315/522/products/mygel.jpg?v=1533567261650",
       "price": 13000,
@@ -233,7 +285,8 @@
       "idNsx": 124,
       "cateId": 202
     },
-    {"id": 26,
+    {
+      "id": 26,
       "name": "Bút lông xanh 2 đầu",
       "img": "https://cf.shopee.vn/file/21135b8f12cefbac300caaf8ef24b289",
       "price": 13000,
@@ -241,7 +294,8 @@
       "idNsx": 125,
       "cateId": 203
     },
-    {"id": 27,
+    {
+      "id": 27,
       "name": "Bút lông xanh 1 đầu",
       "img": "https://zenmart.vn/Resources/Zenmart/Product/2020/02/1696/8935001810087-3-but-long-bang-thien-long-wb-03-xanh-637165792133541266.png",
       "price": 13000,
@@ -249,7 +303,8 @@
       "idNsx": 123,
       "cateId": 203
     },
-    {"id": 28,
+    {
+      "id": 28,
       "name": "Bút lông đen 2 đầu",
       "img": "https://zenmart.vn/Resources/Zenmart/Product/2020/02/1722/8935001811107-2-but-long-dau-thien-long-pm-09-xanh-637165876496453228.jpg",
       "price": 13000,
@@ -257,7 +312,8 @@
       "idNsx": 123,
       "cateId": 203
     },
-    {"id": 29,
+    {
+      "id": 29,
       "name": "Bút lông đỏ",
       "img": "https://cf.shopee.vn/file/a2c93ed7209816e8cef7f3242e73e80c",
       "price": 13000,
@@ -265,7 +321,8 @@
       "idNsx": 123,
       "cateId": 203
     },
-    {"id": 30,
+    {
+      "id": 30,
       "name": "Số tay",
       "img": "https://bizweb.dktcdn.net/100/090/662/products/so-tay-ghi-chep-kraft-nau-4.jpg?v=1564214664360",
       "price": 13000,
@@ -273,7 +330,8 @@
       "idNsx": 123,
       "cateId": 301
     },
-    {"id": 31,
+    {
+      "id": 31,
       "name": "Tập 5 ô 200 trang",
       "img": "https://truonganphat.com/wp-content/uploads/2017/02/tap-thanh-dat-mang-non-96tr-khong-lem-truong-an-phat-my-tho-van-phong-pham-5-o-ly.jpg",
       "price": 13000,
@@ -281,7 +339,8 @@
       "idNsx": 123,
       "cateId": 302
     },
-    {"id": 32,
+    {
+      "id": 32,
       "name": "Tập 4 kẻ ngang 96 trang",
       "img": "https://sangha.com.vn/web/image/product.product/42451/image_1024/%5B47887%5D%20T%E1%BA%ADp%20H%C3%B2a%20B%C3%ACnh%20B%E1%BA%A1n%20Nh%E1%BB%8F%20ABC%204%20%C3%94%20Ly%20100%20Trang?unique=e97aa85",
       "price": 13000,
@@ -289,7 +348,8 @@
       "idNsx": 123,
       "cateId": 302
     },
-    {"id": 33,
+    {
+      "id": 33,
       "name": "Bộ sách giáo khoa lớp 1",
       "img": "https://blogtailieu.com/wp-content/uploads/2021/06/418_20200528094237_wm_shs-tieng-viet-tap-1-ctst_tc-1.jpg",
       "price": 250000,
@@ -297,7 +357,8 @@
       "idNsx": 1006,
       "cateId": 300
     },
-    {"id": 34,
+    {
+      "id": 34,
       "name": "Bộ sách giáo khoa lớp 2",
       "img": "https://baocantho.com.vn/image/fckeditor/upload/2020/20201105/images/sgk.jpg",
       "price": 250000,
@@ -305,7 +366,8 @@
       "idNsx": 1006,
       "cateId": 300
     },
-    {"id": 35,
+    {
+      "id": 35,
       "name": "Bộ sách giáo khoa lớp 3",
       "img": "https://adcbook.net.vn/web/image/product.template/68124/image_1024?unique=6215412",
       "price": 250000,
@@ -313,7 +375,8 @@
       "idNsx": 1006,
       "cateId": 300
     },
-    {"id": 36,
+    {
+      "id": 36,
       "name": "Bộ sách giáo khoa lớp 4",
       "img": "https://nhasachquangloi.vn/pub/media/catalog/product/cache/3bd4b739bad1f096e12e3a82b40e551a/s/b/sbgk18-l04-317.jpg",
       "price": 250000,
@@ -321,7 +384,8 @@
       "idNsx": 1006,
       "cateId": 300
     },
-    {"id": 37,
+    {
+      "id": 37,
       "name": "Bộ sách giáo khoa lớp 5",
       "img": "https://nhasachhaihau.com/wp-content/uploads/2021/03/skgl5bd1.jpg",
       "price": 250000,
@@ -329,7 +393,8 @@
       "idNsx": 1006,
       "cateId": 300
     },
-    {"id": 38,
+    {
+      "id": 38,
       "name": "Bộ sách giáo khoa lớp 6",
       "img": "https://danviet.mediacdn.vn/thumb_w/650/2021/4/10/bg1-16180261206291219213353.png",
       "price": 260000,
@@ -337,7 +402,8 @@
       "idNsx": 1006,
       "cateId": 300
     },
-    {"id": 39,
+    {
+      "id": 39,
       "name": "Bộ sách giáo khoa lớp 7",
       "img": "https://cf.shopee.vn/file/1b3bfe93e94e8098d858a3d1edd4a681",
       "price": 260000,
@@ -345,15 +411,17 @@
       "idNsx": 1006,
       "cateId": 300
     },
-    {"id": 40,
+    {
+      "id": 40,
       "name": "Bộ sách giáo khoa lớp 8",
       "img": "https://sobee.vn/wp-content/uploads/2019/05/bo-sach-giao-khoa-lop-8.jpg",
-      "price":260000,
+      "price": 260000,
       "discount": 5,
       "idNsx": 1006,
       "cateId": 300
     },
-    {"id": 41,
+    {
+      "id": 41,
       "name": "Bộ sách giáo khoa lớp 9",
       "img": "https://img.websosanh.vn/v10/users/review/images/1fdor7e4e2xyz/sach-giao-khoa-lop-9.jpg?compress=85",
       "price": 260000,
@@ -361,7 +429,8 @@
       "idNsx": 1006,
       "cateId": 300
     },
-    {"id": 42,
+    {
+      "id": 42,
       "name": "Bộ sách giáo khoa lớp 10",
       "img": "https://cf.shopee.vn/file/85e1d7808ef6a57a60e6d3902abf76ee",
       "price": 280000,
@@ -369,7 +438,8 @@
       "idNsx": 1006,
       "cateId": 300
     },
-    {"id": 43,
+    {
+      "id": 43,
       "name": "Bộ sách giáo khoa lớp 11",
       "img": "https://img.websosanh.vn/v10/users/review/images/60bz9hs1k8pgt/sach-giao-khoa-lop-11.jpg?compress=85",
       "price": 290000,
@@ -377,7 +447,8 @@
       "idNsx": 1006,
       "cateId": 300
     },
-    {"id": 44,
+    {
+      "id": 44,
       "name": "Bộ sách giáo khoa lớp 12 nâng cao",
       "img": "https://cf.shopee.vn/file/7afd05357847419458297d963efb5442",
       "price": 300000,
@@ -387,16 +458,131 @@
     }
   ],
   "manufactur": [
-    {"id": 1001, "name": "Nhà sản xuất bút bi Thiên Long"},
-    {"id": 1002, "name": "Nhà sản xuất bút bi Hồng Hà"},
-    {"id": 1003, "name": "Công ty TNHH Đông Thịnh Phát"},
-    {"id": 1004, "name": "Công ty TNHH thương mại và dịch vụ Sang Hà"},
-    {"id": 1005, "name": "Công ty TNHH sản xuất và thương mại Lâm Hưng Phát"},
-    {"id": 1006, "name": "Nhà xuất bản Giáo dục Việt Nam"},
-    {"id": 1007, "name": "Công ty Gia Phát"},
-    {"id": 1008, "name": "Công ty Thái Silk"},
-    {"id": 1009, "name": "Công ty sản xuất bút chì ANT"},
-    {"id": 1000, "name": "Công Alibaba.com"}
+    {
+      "id": 1001,
+      "name": "Nhà sản xuất bút bi Thiên Long"
+    },
+    {
+      "id": 1002,
+      "name": "Nhà sản xuất bút bi Hồng Hà"
+    },
+    {
+      "id": 1003,
+      "name": "Công ty TNHH Đông Thịnh Phát"
+    },
+    {
+      "id": 1004,
+      "name": "Công ty TNHH thương mại và dịch vụ Sang Hà"
+    },
+    {
+      "id": 1005,
+      "name": "Công ty TNHH sản xuất và thương mại Lâm Hưng Phát"
+    },
+    {
+      "id": 1006,
+      "name": "Nhà xuất bản Giáo dục Việt Nam"
+    },
+    {
+      "id": 1007,
+      "name": "Công ty Gia Phát"
+    },
+    {
+      "id": 1008,
+      "name": "Công ty Thái Silk"
+    },
+    {
+      "id": 1009,
+      "name": "Công ty sản xuất bút chì ANT"
+    },
+    {
+      "id": 1000,
+      "name": "Công Alibaba.com"
+    }
+  ],
+  "order": [
+    {
+      "id": 1,
+      "firstName": "sad",
+      "lastName": "sd",
+      "city": "436",
+      "address": "4365",
+      "phone": 456456,
+      "message": "",
+      "date": "2022-08-17T11:41:10.991Z",
+      "items": [
+        {
+          "_product": {
+            "id": 1,
+            "name": "kim bấm cỡ nhỏ",
+            "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
+            "price": 13000,
+            "discount": 50,
+            "idNsx": 123,
+            "cateId": 101
+          },
+          "_quantity": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "firstName": "sdas",
+      "lastName": "dgsdg",
+      "city": "dfgd",
+      "address": "45657",
+      "phone": 45457,
+      "message": "",
+      "date": "2022-08-17T11:42:13.696Z",
+      "items": [
+        {
+          "_product": {
+            "id": 1,
+            "name": "kim bấm cỡ nhỏ",
+            "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
+            "price": 13000,
+            "discount": 50,
+            "idNsx": 123,
+            "cateId": 101
+          },
+          "_quantity": 1
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "firstName": "ỳ",
+      "lastName": "dfh",
+      "city": "45",
+      "address": "5erg",
+      "phone": 56756,
+      "message": "",
+      "date": "2022-08-17T11:44:04.651Z",
+      "items": [
+        {
+          "_product": {
+            "id": 5,
+            "name": "máy tính nhanh f580",
+            "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
+            "price": 13000,
+            "discount": 0,
+            "idNsx": 124,
+            "cateId": 100
+          },
+          "_quantity": 7
+        },
+        {
+          "_product": {
+            "id": 3,
+            "name": "Kéo cắt giấy",
+            "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
+            "price": 13000,
+            "discount": 15,
+            "idNsx": 125,
+            "cateId": 102
+          },
+          "_quantity": 2
+        }
+      ]
+    }
   ]
-
 }

@@ -1,4 +1,4 @@
-<form class="container-fluid m-5 form" #f="ngForm" (ngSubmit)="onSubmit(f)" *ngIf="order == null">
+<form class="container-fluid p-5 form" #f="ngForm" (ngSubmit)="onSubmit(f)" *ngIf="order == null" style="margin-top: 100px;">
   <div><span class="fs-6">Bạn đã có tài khoản?</span> <a href="" class="text-dark"> Ấn vào đây để đăng nhập</a></div>
   <div class="mb-3"><i class="fa-solid fa-tag me-2 "></i> <a href="" class="text-dark"> Ấn vào đây để nhập mã của
     ban</a></div>
@@ -10,7 +10,7 @@
         <div class="w-50">
           <mdb-form-control>
             <input mdbInput ngModel  type="text" required id="fname" name="firstName" class="form-control "/>
-            <label mdbLabel class="form-label"  for="fname">Họ *</label>
+            <label mdbLabel class="form-label"  for="fname">Họ*</label>
           </mdb-form-control>
         </div>
         <div class="w-50">
@@ -23,16 +23,16 @@
       <div>
         <mdb-form-control>
           <input mdbInput ngModel  type="text" required id="city" name="city" class="form-control"/>
-          <label mdbLabel class="form-label" for="city">Tỉnh/Thành phố</label>
+          <label mdbLabel class="form-label" for="city">Tỉnh/Thành phố*</label>
         </mdb-form-control>
       </div>
       <mdb-form-control>
         <input mdbInput ngModel type="text"  required id="address" name="address" class="form-control"/>
-        <label mdbLabel class="form-label" for="address">Địa chỉ</label>
+        <label mdbLabel class="form-label" for="address">Địa chỉ*</label>
       </mdb-form-control>
       <mdb-form-control>
         <input mdbInput ngModel type="number" required id="phone" name="phone" class="form-control"/>
-        <label mdbLabel class="form-label" for="phone">Số điện thoại</label>
+        <label mdbLabel class="form-label" for="phone">Số điện thoại*</label>
       </mdb-form-control>
       <mdb-form-control>
         <textarea mdbInput ngModel class="form-control" id="textAreaExample" name="mess" rows="4"></textarea>
@@ -53,13 +53,13 @@
           </thead>
 
           <tbody>
-          <tr>
-            <td><span class="fs-6">Bộ bàn ghế ăn gỗ sồi</span> <span class="ms-2">x3</span></td>
-            <td><span class="fs-6">300</span></td>
+          <tr *ngFor="let item of items">
+            <td><span class="fs-6">{{item.product.name}}</span> <span class="ms-2">x {{item.quantity}}</span></td>
+            <td><span class="fs-6">{{item.getTotal() | currency: "VND"}}</span></td>
           </tr>
           <tr>
             <th class="fs-6 " scope="col">Tổng cộng</th>
-            <th class="fs-6 " scope="col">300</th>
+            <th class="fs-6 " scope="col">{{total | currency : "VND"}}</th>
 
           </tr>
           </tbody>
@@ -70,7 +70,7 @@
     </div>
   </div>
 </form>
-<div *ngIf="order !=null" class="container-fluid">
+<div *ngIf="order !=null" class="container-fluid p-5" style="margin-top: 100px;">
   <div class="d-flex gap-3 h-100 mt-5 ">
     <div class="col-8">
       <table class="table fs-6">
@@ -82,12 +82,12 @@
         </tr>
         </thead>
         <tbody>
-        <tr class="fs-6" *ngFor="let item of order?.items">
+        <tr class="fs-6" *ngFor="let item of items">
           <td>{{item.product.name}} <span class="fw-bold">x {{item.quantity}}</span></td>
           <td>{{item.product.price * item.quantity}}</td>
         </tr>
         <tr class="fs-6">
-          <th  scope="col">Tổng cộng</th>
+          <th  class="border-bottom-0" scope="col">Tổng cộng</th>
           <th  scope="col">{{total }}</th>
         </tr>
         </tbody>
