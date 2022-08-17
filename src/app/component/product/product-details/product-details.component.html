@@ -1,11 +1,11 @@
-<div class="container-fluid d-flex gap-2 p-5" *ngIf="product !=null">
+<div class="container-fluid d-flex gap-2 p-5" *ngIf="product !=null" style="margin-top: 100px;">
   <div class="left col-3 border-end">
     <h5 class="fs-6 text-uppercase">Sản phẩm</h5>
     <div class="col-1 bg-secondary mt-3 mb-3" style="height: 3px"></div>
     <div class="d-flex" *ngFor="let p of relateProduct | slice:0:4">
       <img src="{{p.img}}"
            alt=""
-           class="img-fluid w-25">
+           class="img-fluid" style="width: 15%;">
       <div>
         <span class="d-block ms-2">{{p.name}}</span>
         <span class="d-block ms-2 fw-bold"> {{p.price | currency: 'VNĐ'}}</span>

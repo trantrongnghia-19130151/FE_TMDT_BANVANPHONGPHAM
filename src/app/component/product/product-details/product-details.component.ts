@@ -22,9 +22,9 @@ export class ProductDetailsComponent implements OnInit {
     })
     this.pService.getProductById(this.id).subscribe(p => {
       this.product = p;
-    })
-    this.pService.getProductByCateId(this.product?.idNsx).subscribe(products =>{
-      this.relateProduct = products;
+      this.pService.getProductByCateId(this.product?.cateId).subscribe(products =>{
+        this.relateProduct = products;
+      })
     })
   }
   minus() {
