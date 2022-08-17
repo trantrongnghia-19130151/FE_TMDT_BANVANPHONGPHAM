@@ -3,7 +3,11 @@ import {Product} from '../../model/product';
 import {Category} from "../../model/category";
 import {Manufactur} from "../../model/manufactur";
 import {ProductService} from "../../service/product.service";
+
 import {Subscription} from "rxjs";
+
+
+import {CartService} from "../../service/cart.service";
 
 
 @Component({
@@ -26,7 +30,7 @@ export class ProductComponent implements OnInit, OnDestroy {
   ];
 
 
-  constructor(private service: ProductService) { }
+  constructor(private service: ProductService, private cartService: CartService) { }
 
   ngOnDestroy(): void {
         // @ts-ignore
@@ -61,4 +65,9 @@ export class ProductComponent implements OnInit, OnDestroy {
       this.nsx = res;
     })
   }
+
+addToCart(p : Product){
+    this.cartService.addToCart(p, 1);
+}
+
 }

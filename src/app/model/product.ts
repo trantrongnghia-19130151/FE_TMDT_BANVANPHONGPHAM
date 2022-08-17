@@ -16,7 +16,6 @@ export class Product {
     this._discount = discount;
     this._idNsx = idNsx;
     this._cateId = cateId;
-
   }
 
   get id(): string {
@@ -73,6 +72,7 @@ export class Product {
   }
 
   set cateId(value: number) {
+
     this._cateId = value;
   }
 }

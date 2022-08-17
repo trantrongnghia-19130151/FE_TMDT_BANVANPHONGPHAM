@@ -22,8 +22,8 @@ public send(pName: any){
     return this.http.get<any>("http://localhost:3000/product/" + id);
   }
 
-  getProductByCateId(cateId: number): Observable<any> {
-    return this.http.get<any>('http://localhost:3000/product?idNsx=' + cateId);
+  getProductByCateId(cateId : string) : Observable<any>{
+    return this.http.get<any>('http://localhost:3000/product?cateId=' + cateId);
   }
 
 
