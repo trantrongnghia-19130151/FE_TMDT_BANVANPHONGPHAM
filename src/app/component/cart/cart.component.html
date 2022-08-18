@@ -33,7 +33,7 @@
       <tbody>
       <tr *ngFor="let item of items">
         <td class="d-flex justify-content-start">{{item.product.name}} x {{item.quantity}}</td>
-        <td>{{item.getTotal() | currency : "EUR"}}</td>
+        <td>{{item.getTotal() | currency : "VND"}}</td>
       </tr>
       <tr>
         <td class="d-flex justify-content-start">Giao hang</td>
@@ -41,7 +41,7 @@
       </tr>
       <tr>
         <th>Tổng cộng</th>
-        <th>{{getTotalCart() | currency : "EUR"}}</th>
+        <th>{{getTotalCart() | currency : "VND"}}</th>
 
       </tr>
       </tbody>

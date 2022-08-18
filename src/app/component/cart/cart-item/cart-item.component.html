@@ -5,7 +5,7 @@
     <a href="" class="text-dark">{{item.product.name}} </a>
   </div>
 </td>
-<td class="align-middle">{{item.product.price | currency: 'EUR'}}</td>
+<td class="align-middle">{{item.product.price | currency: 'VND'}}</td>
 <td class="align-middle">
   <input (click)="minusProduct(item)" type="button" value="-" class="d-inline-block   border" style="min-width: 25px">
   <input type="number" name="0" id="" value="{{item.quantity}}" class="d-inline-block border outline text-center"
@@ -13,4 +13,4 @@
   <input (click)="plusProduct(item)" type="button" value="+" class="d-inline-block border" style="min-width: 25px">
 
 </td>
-<td class="align-middle">{{item.getTotal() | currency:"EUR"}}</td>
+<td class="align-middle">{{item.getTotal() | currency:"VND"}}</td>
