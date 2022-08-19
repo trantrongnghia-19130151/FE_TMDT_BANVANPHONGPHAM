@@ -17,17 +17,17 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCategory();
-    console.log(this.pName)
-this.change();
   }
 getCategory(){
     this.service.getAllCategory().subscribe(res => {
       this.category = res;
-      console.log(res);
     })
 }
-change(){
-     this.service.send(this.pName);
-  console.log(this.pName)
+
+  change(event: any){
+
+     this.service.getProductWithSearch(event.target.value).subscribe(res =>{
+       console.log(res)
+     });
 }
 }

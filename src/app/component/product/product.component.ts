@@ -3,10 +3,6 @@ import {Product} from '../../model/product';
 import {Category} from "../../model/category";
 import {Manufactur} from "../../model/manufactur";
 import {ProductService} from "../../service/product.service";
-
-import {Subscription} from "rxjs";
-
-
 import {CartService} from "../../service/cart.service";
 
 
@@ -15,12 +11,12 @@ import {CartService} from "../../service/cart.service";
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss']
 })
-export class ProductComponent implements OnInit, OnDestroy {
+export class ProductComponent implements OnInit {
   @Input() product : Product[] = [];
    category: Category[] = [];
    nsx : Manufactur[] =[];
-   pName :any;
-   private valueFromChildSubscription : Subscription | undefined;
+
+
   options = [
     { value: '1', label: 'Sản phẩm mới nhất' },
     { value: '2', label: 'Sản phẩm giảm giá' },
@@ -32,20 +28,13 @@ export class ProductComponent implements OnInit, OnDestroy {
 
   constructor(private service: ProductService, private cartService: CartService) { }
 
-  ngOnDestroy(): void {
-        // @ts-ignore
-    this.valueFromChildSubscription.unsubscribe();
-    }
+
 
   ngOnInit(): void {
     this.getCategory();
     this.getManufactur();
     this.getProduct();
 
-    this.valueFromChildSubscription = this.service.ValueFromChild.subscribe(res => {
-  this.pName = res;
-      console.log("this.pName");
-})
 
   }
   getProduct(){

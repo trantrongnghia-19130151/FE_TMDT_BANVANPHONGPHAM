@@ -28,7 +28,7 @@
               aria-describedby="search-addon"
               name="pName"
               [(ngModel)]="pName"
-              (keyup)="change()"
+              (keyup)="change($event)"
             />
             <div>
                 <span class="input-group-text text-white border-0" id="search-addon" >
@@ -72,7 +72,7 @@
               <a class="nav-link" routerLink="/about">Giới thiệu</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Liên hệ</a>
+              <a class="nav-link" routerLink="/contact">Liên hệ</a>
             </li>
           </ul>
         </div>

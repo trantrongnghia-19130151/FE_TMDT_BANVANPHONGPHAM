@@ -1,0 +1,33 @@
+.map-container{
+}
+.container-fluid{
+  .row{
+    .container{
+      .card{
+        .row{
+          margin: 25px;
+          .infor{
+            background-color: #000000;
+            color: white;
+
+          }
+          .card-body{
+            .row{
+              .btn {
+                transition: all .5s;
+
+              }
+
+              .btn:hover {
+                color: white;
+                background-color: #53c3f1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+

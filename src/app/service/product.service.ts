@@ -22,7 +22,7 @@ public send(pName: any){
     return this.http.get<any>("http://localhost:3000/product/" + id);
   }
 
-  getProductByCateId(cateId : string) : Observable<any>{
+  getProductByCateId(cateId: number | undefined) : Observable<any>{
     return this.http.get<any>('http://localhost:3000/product?cateId=' + cateId);
   }
 
@@ -37,6 +37,10 @@ public send(pName: any){
 
   getAllManufacture():Observable<any>{
     return this.http.get<any>("http://localhost:3000/manufactur/");
+  }
+
+  getProductWithSearch(name: any): Observable<any>{
+    return this.http.get<any>('http://localhost:3000/product?q='+ name);
   }
 
 }

@@ -1,5 +1,112 @@
 .container{
   margin-top: 113px;
+  padding: 0;
   background-color: #f9f9f9;
   color: black;
+  .top{
+    h1{
+      margin: 50px 10px 10px 120px;
+      font-weight: 20;
+    }
+  }
+  .body{
+    .content__one{
+      .img{
+        img{
+          width: 100%;
+        }
+      }
+      .cont{
+        h6{
+          margin:40px 20px 10px 20px;
+        }
+      }
+    }
+    .content__two{
+      .title-top{
+        display: flex;
+        margin:40px 20px 10px 20px;
+        .title{
+          h4{
+            font-weight: 100;
+          }
+        }
+      }
+      h6{
+        margin:10px 20px 10px 20px;
+      }
+    }
+    .content__three{
+      .title-top{
+        display: flex;
+        margin:40px 20px 10px 20px;
+        .title{
+          h4{
+            font-weight: 100;
+          }
+        }
+      }
+      h6{
+        margin:10px 20px 10px 20px;
+      }
+      .row{
+        height: 175px;
+        margin-top: 10px;
+       img{
+         text-align: center;
+         margin: 0 auto;
+         height: 50%;
+         width: 50%;
+         transform: translateX(50%);
+       }
+      }
+    }
+    .content__four{
+      .title-top{
+        display: flex;
+        margin:40px 20px 10px 20px;
+        .title{
+          h4{
+            font-weight: 100;
+          }
+        }
+      }
+      h6{
+        margin:10px 20px 10px 20px;
+      }
+    }
+    .content__five{
+      .title-top{
+        display: flex;
+        margin:40px 20px 10px 20px;
+        .title{
+          h4{
+            font-weight: 100;
+          }
+        }
+      }
+      h6{
+        margin:10px 20px 10px 20px;
+      }
+    }
+    .content__six{
+      .title-top{
+        display: flex;
+        margin:40px 20px 10px 20px;
+        .title{
+          h4{
+            font-weight: 100;
+          }
+        }
+      }
+      .img{
+        img{
+          width: 100%;
+        }
+      }
+      h6{
+        margin:40px 20px 0px 20px;
+      }
+    }
+  }
 }
