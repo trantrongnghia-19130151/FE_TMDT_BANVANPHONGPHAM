@@ -7,8 +7,10 @@ export class Product {
   private _discount: number;
   private _idNsx: number;
   private _cateId: string;
+  private _bestSeller: boolean;
+  private _inputDay:string;
 
-  constructor(id: string, name: string, img: string, price: number, discount: number, idNsx: number, cateId: string) {
+  constructor(id: string, name: string, img: string, price: number, discount: number, idNsx: number, cateId: string, bestSeller:boolean, inputDay:string ) {
     this._id = id;
     this._name = name;
     this._img = img;
@@ -16,6 +18,8 @@ export class Product {
     this._discount = discount;
     this._idNsx = idNsx;
     this._cateId = cateId;
+    this._bestSeller = bestSeller;
+    this._inputDay = inputDay;
   }
 
   get id(): string {
@@ -72,5 +76,21 @@ export class Product {
 
   set cateId(value: string) {
     this._cateId = value;
+  }
+
+  get bestSeller(): boolean {
+    return this._bestSeller;
+  }
+
+  set bestSeller(value: boolean) {
+    this._bestSeller = value;
+  }
+
+  get inputDay(): string {
+    return this._inputDay;
+  }
+
+  set inputDay(value: string) {
+    this._inputDay = value;
   }
 }

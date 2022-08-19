@@ -1,11 +1,12 @@
 <main class="shop">
   <div class="container">
     <div class="sticky row gx-lg-5">
-      <div class="fillter col-lg-3 d-block">
+      <div class="fillter col-lg-3 d-block" >
         <!-- Section: Filters -->
-        <section class="">
+        <section>
           <!-- Section: Categories -->
           <section class="mb-5">
+
             <h5 class="fw-bold mb-4">Danh mục sản phẩm</h5>
 
             <div class="" *ngFor=" let cate of category index as i ">
@@ -14,19 +15,27 @@
               <!--              </p>-->
 
               <div class="d-flex justify-content-between align-items-center">
-                <a>
-                  {{cate.name}}
-                </a>
-                <i class="fas fa-angle-down " *ngIf="cate.subc" (click)="basicCollapse.toggle()" role="button"
-                   [attr.aria-expanded]="!basicCollapse.collapsed" aria-controls="collapseExample"></i>
-              </div>
-              <!--Collapsed content-->
-              <div class="m-3" id="collapseExample" mdbCollapse #basicCollapse="mdbCollapse">
-                <div *ngFor="let sub of cate.subc">
 
-                  <input routerLink="/shop?cateId={{sub.cateId}}" class="form-check-input" type="checkbox" value=""
-                         id="sub1"/>
-                  <label class="form-check-label" for="sub1"> {{sub.name}} </label>
+
+              <a >
+                <input *ngIf="!cate.subc" class="form-check-input" type="checkbox" value="{{cate.cateId}}" (change)="onChange($event)" id="cate" />
+                {{cate.name}}
+              </a>
+
+
+<!--                <label class="form-check-label" for="sub1"> {{cate.name}} </label>-->
+
+              <i class="fas fa-angle-down " *ngIf="cate.subc" (click)="basicCollapse.toggle()" role="button" [attr.aria-expanded]="!basicCollapse.collapsed" aria-controls="collapseExample"></i>
+
+              </div>
+
+                <!--Collapsed content-->
+              <div class="m-3" id="collapseExample" mdbCollapse #basicCollapse="mdbCollapse" >
+                <div  *ngFor="let sub of cate.subc index as i">
+
+                  <input routerLink="/shop?cateId={{sub.cateId}}" class="form-check-input" type="checkbox" value="{{sub.cateId}}" (change)="onChange($event)" id="sub{{i}}" />
+
+                  <label class="form-check-label" for="sub{{i}}"> {{sub.name}} </label>
                 </div>
               </div>
             </div>
@@ -35,27 +44,31 @@
           <!-- Section: Categories -->
 
           <!-- Section: Condition -->
-          <section class="mb-5">
+          <section class="mb-5" data-mdb-filter="manufacture">
             <h5 class="fw-bold mb-4">Hãng sản xuất</h5>
 
-            <div *ngFor="let nsx of nsx" [id]="nsx.id" class="form-check mb-3">
-              <input class="form-check-input" type="checkbox" value="" id="condition1"/>
-              <label class="form-check-label" for="condition1"> {{nsx.name}} </label>
+
+            <div *ngFor="let nsx of nsx index as i" [id]="nsx.id "  class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" value="{{nsx.id}}" (change)="onChange($event)" id="condition{{i}}" />
+
+              <label class="form-check-label" for="condition{{i}}"> {{nsx.name}} </label>
             </div>
           </section>
           <!-- Section: Condition -->
 
           <!-- Section: Price - radio -->
-          <section class="mb-5">
+          <section class="mb-5" data-mdb-filter="price">
             <h5 class="fw-bold mb-4">Giá</h5>
 
             <div class="form-check mb-3">
               <input
                 class="form-check-input"
-                type="radio"
+                type="checkbox"
                 name="radioForm"
                 id="radioCondition1"
-                checked
+                min="0"
+                max="20000"
+                (change)="onChange($event)"
               />
               <label class="form-check-label" for="radioCondition1">
                 Dưới 20.000 VNĐ
@@ -65,9 +78,12 @@
             <div class="form-check mb-3">
               <input
                 class="form-check-input"
-                type="radio"
+                type="checkbox"
                 name="radioForm"
                 id="radioCondition2"
+                min="20000"
+                max="50000"
+                (change)="onChange($event)"
               />
               <label class="form-check-label" for="radioCondition2">
                 Từ 20.000 - 50.000 VNĐ
@@ -77,9 +93,12 @@
             <div class="form-check mb-3">
               <input
                 class="form-check-input"
-                type="radio"
+                type="checkbox"
                 name="radioForm"
                 id="radioCondition3"
+                min="50000"
+                max="100000"
+                (change)="onChange($event)"
               />
               <label class="form-check-label" for="radioCondition3">
                 Từ 50.000 - 100.000 VNĐ
@@ -89,9 +108,12 @@
             <div class="form-check mb-3">
               <input
                 class="form-check-input"
-                type="radio"
+                type="checkbox"
                 name="radioForm"
                 id="radioCondition4"
+                min="101000"
+                max="99999999"
+                (change)="onChange($event)"
               />
               <label class="form-check-label" for="radioCondition4">
                 Trên 100.000 VNĐ
@@ -110,7 +132,7 @@
       <div class="product col-lg-9">
         <!--Section: Sorting-->
         <section class="mb-6">
-          <div class="row justify-content-around">
+          <div class="row justify-content-around" id="array-example-data">
             <div class="col-8 text-lg-start">
               <h1>Tất cả sản phẩm</h1>
             </div>
@@ -118,11 +140,15 @@
             <div class="col-4">
               <mdb-form-control>
                 <mdb-select class="select">
-                  <mdb-option *ngFor="let option of options" [value]="option.value">{{
-                    option.label
-                    }}</mdb-option>
+                  <mdb-option *ngFor="let option of options index as i"  [value]="option.value" >
+                    <input class="d-none w-100" type="text" id="sort{{i}}" value="{{option.value}}" (click)="sort($event)">
+                    <label for="sort{{i}}">{{
+                      option.label
+                      }}</label>
+
+                  </mdb-option>
                 </mdb-select>
-                <label mdbLabel class="form-label">Tất cả sản phẩm</label>
+                <label mdbLabel class="form-label">Chọn</label>
               </mdb-form-control>
             </div>
 
@@ -133,14 +159,13 @@
         <!-- Section: Products -->
         <section class="">
           <div class="row gx-xl-5 justify-content-center">
-            <div class="col-lg-4 col-6 mb-4 text-lg-start" *ngFor="let products of product" [id]="products.id">
+            <div class="col-lg-4 col-6 mb-4 text-lg-start" *ngFor="let products of product " [id]="products.id">
               <!-- Product card -->
-              <div class="cart bg-white">
+              <div class="cart bg-white"  routerLink="/product/{{products.id}}">
                 <!-- Product image -->
                 <div
                   class=" bg-image ripple shadow-4-soft rounded-6 mb-4 overflow-hidden d-block"
-                  data-ripple-color="light"
-                 routerLink="/product/{{products.id}}">
+                  data-ripple-color="light">
                   <img src="{{products.img}}" class="w-100" alt="" style="width: 280px; height: 280px"/>
 
                   <div class="mask">
@@ -153,7 +178,7 @@
 
                     <div class="mask" style="background-color: hsla(0, 0%, 98.4%, 0.09)">
                       <div class=" d-flex justify-content-center align-items-end h-100 p-0">
-                        <div class="add__cart"><a (click)="addToCart(products)">+ Thêm giỏ hàng</a></div>
+                        <div class="add__cart" (click)="addToCart(products)"><a >+ Thêm giỏ hàng</a></div>
                       </div>
                     </div>
                   </div>
