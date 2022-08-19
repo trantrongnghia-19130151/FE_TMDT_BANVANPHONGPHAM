@@ -24,6 +24,9 @@ export class ProductService {
   getAllManufacture():Observable<any>{
     return this.http.get<any>("http://localhost:3000/manufactur/");
   }
+  getCategoryById(cateId : string) : Observable<any>{
+    return this.http.get<any>("http://localhost:3000/category?cateId=" + cateId );
+  }
 
 
 }
