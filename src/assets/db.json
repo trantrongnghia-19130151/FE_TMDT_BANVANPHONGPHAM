@@ -1,4 +1,12 @@
 {
+  "user": [
+    {
+      "fName": "Tran",
+      "lName": "Nghia",
+      "email": "nghia123@gmail.com",
+      "password": "123456"
+    }
+  ],
   "category": [
     {
       "cateId": 100,
@@ -67,7 +75,9 @@
       "price": 13000,
       "discount": 50,
       "idNsx": 123,
-      "cateId": 101
+      "cateId": 101,
+      "bestSeller": true,
+      "inputDay": "2022-08-18"
     },
     {
       "id": 2,
@@ -76,7 +86,9 @@
       "price": 13000,
       "discount": 5,
       "idNsx": 124,
-      "cateId": 101
+      "cateId": 101,
+      "bestSeller": false,
+      "inputDay": "2022-08-11"
     },
     {
       "id": 3,
@@ -85,7 +97,9 @@
       "price": 13000,
       "discount": 15,
       "idNsx": 125,
-      "cateId": 102
+      "cateId": 102,
+      "bestSeller": true,
+      "inputDay": "2022-08-16"
     },
     {
       "id": 4,
@@ -94,7 +108,8 @@
       "price": 13000,
       "discount": 25,
       "idNsx": 123,
-      "cateId": 102
+      "cateId": 102,
+      "bestSeller": true
     },
     {
       "id": 5,
@@ -103,7 +118,8 @@
       "price": 13000,
       "discount": 0,
       "idNsx": 124,
-      "cateId": 100
+      "cateId": 100,
+      "bestSeller": true
     },
     {
       "id": 6,
@@ -112,7 +128,8 @@
       "price": 13000,
       "discount": 5,
       "idNsx": 125,
-      "cateId": 103
+      "cateId": 103,
+      "bestSeller": true
     },
     {
       "id": 7,
@@ -121,7 +138,8 @@
       "price": 13000,
       "discount": 5000,
       "idNsx": 123,
-      "cateId": 103
+      "cateId": 103,
+      "bestSeller": true
     },
     {
       "id": 8,
@@ -130,7 +148,8 @@
       "price": 13000,
       "discount": 5000,
       "idNsx": 123,
-      "cateId": 104
+      "cateId": 104,
+      "bestSeller": true
     },
     {
       "id": 9,
@@ -139,7 +158,8 @@
       "price": 13000,
       "discount": 5000,
       "idNsx": 123,
-      "cateId": 104
+      "cateId": 104,
+      "bestSeller": true
     },
     {
       "id": 10,
@@ -148,7 +168,8 @@
       "price": 13000,
       "discount": 5000,
       "idNsx": 123,
-      "cateId": 104
+      "cateId": 104,
+      "bestSeller": true
     },
     {
       "id": 11,
@@ -157,7 +178,8 @@
       "price": 13000,
       "discount": 5000,
       "idNsx": 123,
-      "cateId": 201
+      "cateId": 201,
+      "bestSeller": true
     },
     {
       "id": 12,
@@ -166,7 +188,8 @@
       "price": 13000,
       "discount": 5000,
       "idNsx": 124,
-      "cateId": 201
+      "cateId": 201,
+      "bestSeller": true
     },
     {
       "id": 13,
@@ -175,7 +198,8 @@
       "price": 13000,
       "discount": 5000,
       "idNsx": 125,
-      "cateId": 201
+      "cateId": 201,
+      "bestSeller": true
     },
     {
       "id": 14,
@@ -184,7 +208,8 @@
       "price": 13000,
       "discount": 5000,
       "idNsx": 123,
-      "cateId": 201
+      "cateId": 201,
+      "bestSeller": true
     },
     {
       "id": 15,
@@ -193,7 +218,8 @@
       "price": 13000,
       "discount": 5000,
       "idNsx": 124,
-      "cateId": 201
+      "cateId": 201,
+      "bestSeller": false
     },
     {
       "id": 16,
@@ -202,7 +228,8 @@
       "price": 13000,
       "discount": 5000,
       "idNsx": 125,
-      "cateId": 201
+      "cateId": 201,
+      "bestSeller": false
     },
     {
       "id": 17,
@@ -211,7 +238,8 @@
       "price": 13000,
       "discount": 5000,
       "idNsx": 123,
-      "cateId": 201
+      "cateId": 201,
+      "bestSeller": false
     },
     {
       "id": 18,
@@ -220,7 +248,8 @@
       "price": 13000,
       "discount": 5000,
       "idNsx": 123,
-      "cateId": 202
+      "cateId": 202,
+      "bestSeller": false
     },
     {
       "id": 19,
@@ -229,7 +258,8 @@
       "price": 13000,
       "discount": 5000,
       "idNsx": 123,
-      "cateId": 202
+      "cateId": 202,
+      "bestSeller": true
     },
     {
       "id": 20,
@@ -238,7 +268,8 @@
       "price": 13000,
       "discount": 5000,
       "idNsx": 123,
-      "cateId": 202
+      "cateId": 202,
+      "bestSeller": false
     },
     {
       "id": 21,
@@ -247,7 +278,8 @@
       "price": 13000,
       "discount": 5000,
       "idNsx": 123,
-      "cateId": 202
+      "cateId": 202,
+      "bestSeller": true
     },
     {
       "id": 22,
@@ -256,7 +288,8 @@
       "price": 13000,
       "discount": 5000,
       "idNsx": 124,
-      "cateId": 202
+      "cateId": 202,
+      "bestSeller": true
     },
     {
       "id": 23,
@@ -265,7 +298,8 @@
       "price": 13000,
       "discount": 5000,
       "idNsx": 125,
-      "cateId": 202
+      "cateId": 202,
+      "bestSeller": false
     },
     {
       "id": 24,
@@ -274,7 +308,8 @@
       "price": 13000,
       "discount": 5000,
       "idNsx": 1001,
-      "cateId": 202
+      "cateId": 202,
+      "bestSeller": false
     },
     {
       "id": 25,
@@ -283,7 +318,8 @@
       "price": 13000,
       "discount": 5000,
       "idNsx": 1001,
-      "cateId": 202
+      "cateId": 202,
+      "bestSeller": true
     },
     {
       "id": 26,
@@ -292,7 +328,8 @@
       "price": 13000,
       "discount": 5000,
       "idNsx": 125,
-      "cateId": 203
+      "cateId": 203,
+      "bestSeller": true
     },
     {
       "id": 27,
@@ -301,7 +338,8 @@
       "price": 13000,
       "discount": 5000,
       "idNsx": 123,
-      "cateId": 203
+      "cateId": 203,
+      "bestSeller": false
     },
     {
       "id": 28,
@@ -310,7 +348,8 @@
       "price": 13000,
       "discount": 5000,
       "idNsx": 123,
-      "cateId": 203
+      "cateId": 203,
+      "bestSeller": true
     },
     {
       "id": 29,
@@ -319,7 +358,8 @@
       "price": 13000,
       "discount": 5000,
       "idNsx": 123,
-      "cateId": 203
+      "cateId": 203,
+      "bestSeller": true
     },
     {
       "id": 30,
@@ -328,7 +368,8 @@
       "price": 13000,
       "discount": 5000,
       "idNsx": 123,
-      "cateId": 301
+      "cateId": 301,
+      "bestSeller": false
     },
     {
       "id": 31,
@@ -337,7 +378,8 @@
       "price": 13000,
       "discount": 5000,
       "idNsx": 123,
-      "cateId": 302
+      "cateId": 302,
+      "bestSeller": true
     },
     {
       "id": 32,
@@ -346,7 +388,8 @@
       "price": 13000,
       "discount": 5000,
       "idNsx": 123,
-      "cateId": 302
+      "cateId": 302,
+      "bestSeller": true
     },
     {
       "id": 33,
@@ -355,7 +398,8 @@
       "price": 250000,
       "discount": 10,
       "idNsx": 1006,
-      "cateId": 300
+      "cateId": 300,
+      "bestSeller": true
     },
     {
       "id": 34,
@@ -364,7 +408,8 @@
       "price": 250000,
       "discount": 10,
       "idNsx": 1006,
-      "cateId": 300
+      "cateId": 300,
+      "bestSeller": true
     },
     {
       "id": 35,
@@ -373,7 +418,8 @@
       "price": 250000,
       "discount": 10,
       "idNsx": 1006,
-      "cateId": 300
+      "cateId": 300,
+      "bestSeller": true
     },
     {
       "id": 36,
@@ -382,7 +428,8 @@
       "price": 250000,
       "discount": 10,
       "idNsx": 1006,
-      "cateId": 300
+      "cateId": 300,
+      "bestSeller": false
     },
     {
       "id": 37,
@@ -391,7 +438,8 @@
       "price": 250000,
       "discount": 10,
       "idNsx": 1006,
-      "cateId": 300
+      "cateId": 300,
+      "bestSeller": true
     },
     {
       "id": 38,
@@ -400,7 +448,8 @@
       "price": 260000,
       "discount": 5,
       "idNsx": 1006,
-      "cateId": 300
+      "cateId": 300,
+      "bestSeller": true
     },
     {
       "id": 39,
@@ -409,7 +458,8 @@
       "price": 260000,
       "discount": 5,
       "idNsx": 1006,
-      "cateId": 300
+      "cateId": 300,
+      "bestSeller": false
     },
     {
       "id": 40,
@@ -418,7 +468,8 @@
       "price": 260000,
       "discount": 5,
       "idNsx": 1006,
-      "cateId": 400
+      "cateId": 400,
+      "bestSeller": true
     },
     {
       "id": 41,
@@ -427,7 +478,8 @@
       "price": 260000,
       "discount": 5,
       "idNsx": 1006,
-      "cateId": 400
+      "cateId": 400,
+      "bestSeller": true
     },
     {
       "id": 42,
@@ -436,7 +488,8 @@
       "price": 280000,
       "discount": 5,
       "idNsx": 1006,
-      "cateId": 400
+      "cateId": 400,
+      "bestSeller": true
     },
     {
       "id": 43,
@@ -445,7 +498,8 @@
       "price": 290000,
       "discount": 5,
       "idNsx": 1006,
-      "cateId": 400
+      "cateId": 400,
+      "bestSeller": true
     },
     {
       "id": 44,
@@ -453,8 +507,9 @@
       "img": "https://cf.shopee.vn/file/7afd05357847419458297d963efb5442",
       "price": 300000,
       "discount": 0,
-      "idNsx": 1006,
-      "cateId": 400
+      "idNsx": 1002,
+      "cateId": 400,
+      "bestSeller": false
     }
   ],
   "manufactur": [
