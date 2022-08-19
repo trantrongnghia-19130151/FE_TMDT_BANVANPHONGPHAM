@@ -4,7 +4,8 @@
       "fName": "Tran",
       "lName": "Nghia",
       "email": "nghia123@gmail.com",
-      "password": "123456"
+      "password": "123456",
+      "rePassword": "123456"
     }
   ],
   "category": [

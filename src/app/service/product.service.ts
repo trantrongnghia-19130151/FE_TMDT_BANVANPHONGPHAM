@@ -24,12 +24,6 @@ export class ProductService {
   getAllManufacture():Observable<any>{
     return this.http.get<any>("http://localhost:3000/manufactur/");
   }
-  getProductWithSort(attr: string, order:string):Observable<any>{
-    console.log(attr, order);
-    return this.http.get<any>("http://localhost:3000/product?_sort="+attr+"&_order="+order);
-  }
-  getProductDiscount():Observable<any>{
-    return this.http.get<any>("http://localhost:3000/product?discount_gte=1");
-  }
+
 
 }
