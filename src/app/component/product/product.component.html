@@ -159,7 +159,7 @@
         <!-- Section: Products -->
         <section class="">
           <div class="row gx-xl-5 justify-content-center">
-            <div class="col-lg-4 col-6 mb-4 text-lg-start" *ngFor="let products of product " [id]="products.id">
+            <div class="col-lg-4 col-6 mb-4 text-lg-start" *ngFor="let products of product | paginate: {itemsPerPage:9, currentPage:p};" [id]="products.id">
               <!-- Product card -->
               <div class="cart bg-white"  routerLink="/product/{{products.id}}">
                 <!-- Product image -->
@@ -241,34 +241,28 @@
           </div>
         </section>
         <!-- Section: Products -->
-        <div class="text-center mt-5">
-          <div>
-            <nav aria-label="">
-              <ul class="pagination pagination-circle mb-0 justify-content-center">
-                <li class="page-item">
-                  <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a
-                  >
-                </li>
-                <div class="d-flex">
-                  <li class="page-item">
-                    <a class="page-link" href="#">1</a>
-                  </li>
-                  <li class="page-item active" aria-current="page">
-                    <a class="page-link" href="#">2<span class="sr-only">(current)</span></a
-                    >
-                  </li>
-                  <li class="page-item">
-                    <a class="page-link" href="#">3</a>
-                  </li>
-                </div>
+<!--        <div class="text-center mt-5">-->
+<!--          <div>-->
+<!--            <nav aria-label="">-->
+<!--              <ul class="pagination pagination-circle mb-0 justify-content-center">-->
+<!--                <li class="page-item">-->
+<!--                  <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a-->
+<!--                  >-->
+<!--                </li>-->
+<!--                <div class="d-flex">-->
+<!--                  <li class="page-item" >-->
+<!--                    <a class="page-link" href="#">1</a>-->
+<!--                  </li>-->
+<!--                </div>-->
 
-                <li class="page-item">
-                  <a class="page-link" href="#">Next</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
+<!--                <li class="page-item">-->
+<!--                  <a class="page-link" href="#">Next</a>-->
+<!--                </li>-->
+<!--              </ul>-->
+<!--            </nav>-->
+<!--          </div>-->
+<!--        </div>-->
+        <pagination-controls class="pagination pagination-circle  mb-0 justify-content-end" (pageChange)="p = $event"></pagination-controls>
       </div>
 
     </div>

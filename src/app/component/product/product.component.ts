@@ -22,7 +22,7 @@ export class ProductComponent implements OnInit {
    tempArray:any =[];
    newArray: any = [];
    copArray:any=[];
-
+  p: number =1;
 
   options = [
     { value: 1, label: 'Tất cả sản phẩm' },
@@ -70,7 +70,7 @@ export class ProductComponent implements OnInit {
 
     if (event.target.checked) {
 
-      this.tempArray = this.product.filter((e: any) => (e.cateId == event.target.value|| e.idNsx == event.target.value || (e.price - (e.price * e.discount / 100) <= event.target.max && e.price - (e.price * e.discount / 100) >= event.target.min)));
+      this.tempArray = this.product.filter((e: any) => (e.cateId == event.target.value || e.idNsx == event.target.value || (e.price - (e.price * e.discount / 100) <= event.target.max && e.price - (e.price * e.discount / 100) >= event.target.min)));
       this.product= [];
       this.newArray=[];
       console.log(this.product)
@@ -122,6 +122,7 @@ addToCart(p : Product){
 
 
   // @ts-ignore
+
   sort(event:any){
     console.log(event.target.value);
     if(event.target.value==1) {
