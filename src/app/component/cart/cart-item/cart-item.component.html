@@ -1,8 +1,8 @@
 <td class="w-50">
   <div class="d-flex  align-items-center ">
-    <i class="fa-solid fa-circle-xmark h4 cursor-pointer" (click)="removeItem(item)"></i>
+    <i class="fa-solid fa-circle-xmark h4" style="cursor: pointer;" (click)="removeItem(item)"></i>
     <img src="{{item.product.img}}" alt="" class="img-fluid w-25 me-2 ms-2">
-    <a href="" class="text-dark">{{item.product.name}} </a>
+    <a routerLink="/product/{{item.product.id}}" class="text-dark">{{item.product.name}} </a>
   </div>
 </td>
 <td class="align-middle">{{item.product.price | currency: 'VND'}}</td>
