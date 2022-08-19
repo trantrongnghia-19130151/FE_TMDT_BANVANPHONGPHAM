@@ -6,4 +6,3 @@ describe('Product', () => {
     expect(new Product()).toBeTruthy();
   });
 });
-

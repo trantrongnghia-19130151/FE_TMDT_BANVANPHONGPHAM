@@ -35,23 +35,15 @@
       "cateId": 200,
       "name": "Bút viết",
       "subc": [
-        {
-          "cateId": 201,
-          "name": "Bút chì"
-        },
-        {
-          "cateId": 202,
-          "name": "Bút bi"
-        },
-        {
-          "cateId": 203,
-          "name": "Bút lông"
-        }
-      ]
+
+      {"cateId": 201, "name": "Bút chì"},
+      {"cateId": 202, "name": "Bút bi"},
+      {"cateId": 203, "name": "Bút lông"}
+    ]
     },
-    {
-      "cateId": 300,
-      "name": "Tập-Sổ",
+
+
+    {"cateId": 300, "name": "Tập-Sổ",
       "subc": [
         {
           "cateId": 301,
@@ -63,10 +55,9 @@
         }
       ]
     },
-    {
-      "cateId": 400,
-      "name": "Sách"
-    }
+
+    {"cateId": 400, "name": "Sách"}
+
   ],
   "product": [
     {
@@ -514,47 +505,18 @@
     }
   ],
   "manufactur": [
-    {
-      "id": 1001,
-      "name": "Nhà sản xuất bút bi Thiên Long"
-    },
-    {
-      "id": 1002,
-      "name": "Nhà sản xuất bút bi Hồng Hà"
-    },
-    {
-      "id": 1003,
-      "name": "Công ty TNHH Đông Thịnh Phát"
-    },
-    {
-      "id": 1004,
-      "name": "Công ty TNHH thương mại và dịch vụ Sang Hà"
-    },
-    {
-      "id": 1005,
-      "name": "Công ty TNHH sản xuất và thương mại Lâm Hưng Phát"
-    },
-    {
-      "id": 1006,
-      "name": "Nhà xuất bản Giáo dục Việt Nam"
-    },
-    {
-      "id": 1007,
-      "name": "Công ty Gia Phát"
-    },
-    {
-      "id": 1008,
-      "name": "Công ty Thái Silk"
-    },
-    {
-      "id": 1009,
-      "name": "Công ty sản xuất bút chì ANT"
-    },
-    {
-      "id": 1000,
-      "name": "Công Alibaba.com"
-    }
+    {"id": 1001, "name": "Nhà sản xuất bút bi Thiên Long"},
+    {"id": 1002, "name": "Nhà sản xuất bút bi Hồng Hà"},
+    {"id": 1003, "name": "Công ty TNHH Đông Thịnh Phát"},
+    {"id": 1004, "name": "Công ty TNHH thương mại và dịch vụ Sang Hà"},
+    {"id": 1005, "name": "Công ty TNHH sản xuất và thương mại Lâm Hưng Phát"},
+    {"id": 1006, "name": "Nhà xuất bản Giáo dục Việt Nam"},
+    {"id": 1007, "name": "Công ty Gia Phát"},
+    {"id": 1008, "name": "Công ty Thái Silk"},
+    {"id": 1009, "name": "Công ty sản xuất bút chì ANT"},
+    {"id": 1000, "name": "Công Alibaba.com"}
   ],
+
   "order": [
     {
       "id": 1,

@@ -70,11 +70,13 @@ export class Product {
     this._idNsx = value;
   }
 
-  get cateId(): string {
+
+  get cateId(): number {
     return this._cateId;
   }
 
-  set cateId(value: string) {
+  set cateId(value: number) {
+
     this._cateId = value;
   }
 

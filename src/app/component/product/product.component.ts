@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 import {Product} from '../../model/product';
 import {Category} from "../../model/category";
 import {Manufactur} from "../../model/manufactur";
@@ -6,6 +6,7 @@ import {ProductService} from "../../service/product.service";
 import {CartService} from "../../service/cart.service";
 import {animate} from "@angular/animations";
 import {log10} from "chart.js/helpers";
+
 
 
 @Component({
@@ -18,6 +19,7 @@ export class ProductComponent implements OnInit {
 
    category: Category[] = [];
    nsx : Manufactur[] =[];
+
    arrays: any = [];
    tempArray:any =[];
    newArray: any = [];
@@ -34,15 +36,17 @@ export class ProductComponent implements OnInit {
   ];
 
 
-  constructor(private service: ProductService, private cartService: CartService) {
 
-  }
+  constructor(private service: ProductService, private cartService: CartService) { }
+
+
 
 
   ngOnInit(): void {
-    this.getProduct();
     this.getCategory();
     this.getManufactur();
+    this.getProduct();
+
 
   }
   getProduct(){
@@ -119,8 +123,6 @@ addToCart(p : Product){
     this.cartService.addToCart(p, 1);
 }
 
-
-
   // @ts-ignore
 
   sort(event:any){
@@ -168,4 +170,5 @@ addToCart(p : Product){
 
     }
 }
+
 }
