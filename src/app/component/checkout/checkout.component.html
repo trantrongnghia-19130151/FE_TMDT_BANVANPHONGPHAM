@@ -1,4 +1,5 @@
-<form class="container-fluid p-5 form" #f="ngForm" (ngSubmit)="onSubmit(f)" *ngIf="order == null" style="margin-top: 100px;">
+<form class="container-fluid p-5 form" #f="ngForm" (ngSubmit)="onSubmit(f)" *ngIf="order == null"
+      style="margin-top: 100px;">
   <div><span class="fs-6">Bạn đã có tài khoản?</span> <a href="" class="text-dark"> Ấn vào đây để đăng nhập</a></div>
   <div class="mb-3"><i class="fa-solid fa-tag me-2 "></i> <a href="" class="text-dark"> Ấn vào đây để nhập mã của
     ban</a></div>
@@ -6,38 +7,53 @@
     <div class="col-6 border-top pt-3">
       <span class="fs-5 w-100 text-uppercase d-block">Thông tin thanh toán</span>
       <span class="text-danger"> * Bắt buộc </span>
-      <div class="d-flex gap-3">
+      <div class="d-flex gap-3 form-group">
         <div class="w-50">
           <mdb-form-control>
-            <input mdbInput ngModel  type="text" required id="fname" name="firstName" class="form-control "/>
-            <label mdbLabel class="form-label"  for="fname">Họ*</label>
+            <input mdbInput ngModel #fname="ngModel" type="text" required id="fname" name="firstName"
+                   class="form-control "/>
+            <label mdbLabel class="form-label" for="fname">Họ*</label>
           </mdb-form-control>
+          <small class="text-danger" *ngIf="fname?.value?.length == 0 && fname?.touched">Vui lòng nhập họ</small>
         </div>
         <div class="w-50">
-          <mdb-form-control >
-            <input mdbInput ngModel   type="text" required id="lname" name="lastName" class="form-control"/>
+          <mdb-form-control>
+            <input mdbInput ngModel #lname="ngModel" type="text" required id="lname" name="lastName"
+                   class="form-control"/>
             <label mdbLabel class="form-label" for="lname">Tên*</label>
           </mdb-form-control>
+          <small class="text-danger" *ngIf="lname?.value?.length == 0 && lname?.touched">Vui lòng nhập tên</small>
         </div>
       </div>
-      <div>
+      <div class="form-group">
         <mdb-form-control>
-          <input mdbInput ngModel  type="text" required id="city" name="city" class="form-control"/>
+          <input mdbInput ngModel #city="ngModel" type="text" required id="city" name="city" class="form-control"/>
           <label mdbLabel class="form-label" for="city">Tỉnh/Thành phố*</label>
         </mdb-form-control>
+        <small class="text-danger" *ngIf="city?.value?.length == 0 && city?.touched">Vui lòng nhập tỉnh/thành phố</small>
       </div>
-      <mdb-form-control>
-        <input mdbInput ngModel type="text"  required id="address" name="address" class="form-control"/>
-        <label mdbLabel class="form-label" for="address">Địa chỉ*</label>
-      </mdb-form-control>
-      <mdb-form-control>
-        <input mdbInput ngModel type="number" required id="phone" name="phone" class="form-control"/>
-        <label mdbLabel class="form-label" for="phone">Số điện thoại*</label>
-      </mdb-form-control>
-      <mdb-form-control>
-        <textarea mdbInput ngModel class="form-control" id="textAreaExample" name="mess" rows="4"></textarea>
-        <label mdbLabel class="form-label" for="textAreaExample">Message</label>
-      </mdb-form-control>
+      <div class="form-group">
+        <mdb-form-control>
+          <input mdbInput ngModel #address="ngModel" type="text" required id="address" name="address"
+                 class="form-control"/>
+          <label mdbLabel class="form-label" for="address">Địa chỉ*</label>
+        </mdb-form-control>
+        <small class="text-danger" *ngIf="address?.value?.length == 0 && address?.touched">Vui lòng nhập địa chỉ</small>
+      </div>
+      <div class="form-group">
+        <mdb-form-control>
+          <input mdbInput ngModel #phone="ngModel" type="number" required id="phone" name="phone" class="form-control"/>
+          <label mdbLabel class="form-label" for="phone">Số điện thoại*</label>
+        </mdb-form-control>
+        <small class="text-danger" *ngIf="phone?.value?.length == 0 && phone?.touched">Vui lòng nhập số điện thoại</small>
+      </div>
+      <div class="form-group">
+
+        <mdb-form-control>
+          <textarea mdbInput ngModel class="form-control" id="textAreaExample" name="mess" rows="4"></textarea>
+          <label mdbLabel class="form-label" for="textAreaExample">Message</label>
+        </mdb-form-control>
+      </div>
     </div>
     <div class="col-6 border">
       <div class="p-3">
@@ -65,7 +81,8 @@
           </tbody>
 
         </table>
-        <button type="submit" [disabled]="f.invalid" class="btn btn-warning shadow-none d-inline-block ms-3">Đặt hàng</button>
+        <button type="submit" [disabled]="f.invalid" class="btn btn-warning shadow-none d-inline-block ms-3">Đặt hàng
+        </button>
       </div>
     </div>
   </div>
@@ -77,8 +94,8 @@
         <thead>
         <tr><span class="fs-5  text-uppercase">Đơn hàng của bạn</span></tr>
         <tr>
-          <th class="text-uppercase "  scope="col">Sản phẩm</th>
-          <th  scope="col">Tổng</th>
+          <th class="text-uppercase " scope="col">Sản phẩm</th>
+          <th scope="col">Tổng</th>
         </tr>
         </thead>
         <tbody>
@@ -87,8 +104,8 @@
           <td>{{item.product.price * item.quantity}}</td>
         </tr>
         <tr class="fs-6">
-          <th  class="border-bottom-0" scope="col">Tổng cộng</th>
-          <th  scope="col">{{total }}</th>
+          <th class="border-bottom-0" scope="col">Tổng cộng</th>
+          <th class="border-bottom-0" scope="col">{{total }}</th>
         </tr>
         </tbody>
       </table>
@@ -102,7 +119,7 @@
         <div class="text-light">
           <ul>
             <li>Mã đơn hàng: {{order.id }}</li>
-            <li>Ngày: {{order.date |  date:'long' : '' : 'en-US' }} </li>
+            <li>Ngày: {{order.date |  date:'long' : '' }} </li>
             <li>Tổng cộng: {{total | currency : 'VND'}} </li>
             <li>Phương thức thanh toán : COD</li>
           </ul>

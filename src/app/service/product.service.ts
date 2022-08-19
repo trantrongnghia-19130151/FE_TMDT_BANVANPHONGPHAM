@@ -43,4 +43,8 @@ public send(pName: any){
     return this.http.get<any>('http://localhost:3000/product?q='+ name);
   }
 
+  getCategoryById(cateId : string) : Observable<any>{
+    return this.http.get<any>("http://localhost:3000/category?cateId=" + cateId );
+  }
+
 }
