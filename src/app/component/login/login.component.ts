@@ -23,14 +23,18 @@ loginForm!: NgForm;
     let email = form.value.email;
     let pass = form.value.password;
     console.log(email, pass)
-    this.authService.login(email, pass).subscribe(res=>{
-        let d = JSON.parse(res);
-        console.log("Đăng nhập thành công ", res);
-        const expiresAt = moment().add(d.expiresIn,'second');
-        localStorage.setItem('id_token', d.idToken);
-        localStorage.setItem("expires_at", JSON.stringify(expiresAt.valueOf()) );
-        this.router.navigateByUrl('/', { skipLocationChange: false });
-       ;
+    this.authService.login().subscribe(res=>{
+      console.log(res);
+      const user = res.find((a:any)=>{
+        return a.email === email && a.password === pass;
+      });
+      if(user){
+        form.reset();
+        this.router.navigateByUrl("/");
+        localStorage.setItem("id", user.id);
+      }else{
+        alert("Không tồn tại người dùng này");
+      }
       });
   }
 
