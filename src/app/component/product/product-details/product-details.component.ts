@@ -32,7 +32,7 @@ export class ProductDetailsComponent implements OnInit {
       let cateId = subCateId.slice(0,subCateId.length-1) + 0;
       this.pService.getCategoryById(cateId).subscribe(resp =>{
         this.category = resp[0];
-        this.subCategory = this.category.subc.find( e => e.cateId + "" == this.product.cateId)
+        this.subCategory = this.category.subc.find( e => e.cateId  == this.product.cateId)
         console.log(this.subCategory)
       });
     })

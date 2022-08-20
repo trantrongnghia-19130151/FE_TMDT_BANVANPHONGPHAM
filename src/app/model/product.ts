@@ -6,11 +6,11 @@ export class Product {
   private _price: number;
   private _discount: number;
   private _idNsx: number;
-  private _cateId: string;
+  private _cateId: number;
   private _bestSeller: boolean;
   private _inputDay:string;
 
-  constructor(id: string, name: string, img: string, price: number, discount: number, idNsx: number, cateId: string, bestSeller:boolean, inputDay:string ) {
+  constructor(id: string, name: string, img: string, price: number, discount: number, idNsx: number, cateId: number, bestSeller:boolean, inputDay:string ) {
     this._id = id;
     this._name = name;
     this._img = img;

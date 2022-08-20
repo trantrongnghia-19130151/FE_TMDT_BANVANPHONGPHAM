@@ -189,44 +189,6 @@
                 <!-- Product content -->
                 <a href="" class="px-3 text-reset d-block">
                   <p class="fw-bold mb-2">{{products.name}}</p>
-
-                  <ul
-                    class="rating mb-2"
-                    data-mdb-toggle="rating"
-                    data-mdb-readonly="true"
-                    data-mdb-value="4"
-                  >
-                    <li>
-                      <i
-                        class="far fa-star fa-sm text-primary ps-0"
-                        title="Bad"
-                      ></i>
-                    </li>
-                    <li>
-                      <i
-                        class="far fa-star fa-sm text-primary"
-                        title="Poor"
-                      ></i>
-                    </li>
-                    <li>
-                      <i
-                        class="far fa-star fa-sm text-primary"
-                        title="OK"
-                      ></i>
-                    </li>
-                    <li>
-                      <i
-                        class="far fa-star fa-sm text-primary"
-                        title="Good"
-                      ></i>
-                    </li>
-                    <li>
-                      <i
-                        class="far fa-star fa-sm text-primary"
-                        title="Excellent"
-                      ></i>
-                    </li>
-                  </ul>
                   <h5 class="mb-2">
                     <s class="text-muted me-2 small align-middle" *ngIf="products.discount>0">{{products.price}}</s>
                     <span class="align-middle">{{products.price - (products.price * products.discount / 100)}}</span>

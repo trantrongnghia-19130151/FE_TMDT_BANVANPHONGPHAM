@@ -11,27 +11,25 @@ import {User} from "../model/user";
 export class Authentication {
   url='http://localhost:3000/';
 
-  private httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type' : 'application/json',
-    }),
-  }
 
   constructor(private http: HttpClient) {
   }
   register(user:User){
     return this.http.post<User>(this.url+ 'user', user);
   }
-  login(email:string, pass:string):Observable<any>{
-    let value = {"email":email, "password":pass};
-    return this.http.post<User>(this.url + 'user', JSON.stringify(value), this.httpOptions);
-
+  login():Observable<any>{
+    return this.http.get<User>(this.url + 'user');
   }
   public isLogin() {
-    const str = localStorage.getItem("expires_at") || "";
-    if (str=="") return false;
-    const expiresAt = JSON.parse(str);
+    const str = localStorage.getItem("id") || "";
+    if (str==""){
+      return false;
+    } else{
+      return true;
+    }
 
-    return moment().isBefore(moment(expiresAt));
+  }
+  logout(){
+    localStorage.removeItem("id");
   }
 }

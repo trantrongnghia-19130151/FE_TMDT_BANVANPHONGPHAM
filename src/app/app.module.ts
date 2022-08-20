@@ -62,7 +62,6 @@ import {RouterModule} from "@angular/router";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { HomeComponent } from './component/home/home.component';
 import { ProductDetailsComponent } from './component/product/product-details/product-details.component';
-import {Ng2SearchPipeModule} from "ng2-search-filter";
 import {NgxPaginationModule} from "ngx-pagination";
 import { ContactComponent } from './component/contact/contact.component';
 import { AboutComponent } from './component/about/about.component';
@@ -119,7 +118,6 @@ import { AboutComponent } from './component/about/about.component';
     AppRoutingModule,
     RouterModule,
     FormsModule,
-    Ng2SearchPipeModule,
     ReactiveFormsModule,
     NgxPaginationModule,
   ],
