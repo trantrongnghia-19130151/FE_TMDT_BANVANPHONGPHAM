@@ -45,7 +45,7 @@
               </div>
               <div class="mb-3">
               <mdb-form-control class="w-100 ">
-                <input mdbInput type="password" id="repassword" ngModel name="prePassword" required #rePassword="ngModel" minlength="6" class="form-control"/>
+                <input mdbInput type="password" id="repassword" ngModel name="rePassword" required #rePassword="ngModel" minlength="6" class="form-control"/>
                 <label mdbLabel class="form-label" for="repassword">Nhập lại mật khẩu</label>
               </mdb-form-control>
                 <small id="rePassVal" class="text-danger mb-3" *ngIf="!rePassword?.valid && (rePassword?.dirty||rePassword?.touched) || !checkPass(password?.value, rePassword?.value) && authForm.valid ">

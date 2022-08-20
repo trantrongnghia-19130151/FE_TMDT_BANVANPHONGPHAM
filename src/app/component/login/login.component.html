@@ -8,7 +8,7 @@
           <div class="card-body px-4 py-5 px-md-5">
             <h1>Đăng nhập</h1>
             <p>Hãy đăng nhập tài khoản của bạn</p>
-            <form id="loginForm" ng-submit="onSubmit(authForm)" #loginForm="ngForm" #authForm="ngForm" >
+            <form id="loginForm" (ngSubmit)="onSubmit(authForm)"  #loginForm="ngForm" #authForm="ngForm" >
               <div class="mb-3">
               <mdb-form-control class="w-100 ">
                 <input mdbInput type="email" id="email" class="form-control" ngModel name="email" required #email="ngModel"/>

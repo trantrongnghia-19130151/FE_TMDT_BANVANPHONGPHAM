@@ -3,6 +3,7 @@ import {NgForm} from "@angular/forms";
 import * as moment from 'moment';
 import {Authentication} from "../../service/authentication";
 import {Router} from "@angular/router";
+import {ProductService} from "../../service/product.service";
 
 @Component({
   selector: 'app-login',
@@ -21,6 +22,7 @@ loginForm!: NgForm;
   onSubmit(form: NgForm) {
     let email = form.value.email;
     let pass = form.value.password;
+    console.log(email, pass)
     this.authService.login(email, pass).subscribe(res=>{
         let d = JSON.parse(res);
         console.log("Đăng nhập thành công ", res);

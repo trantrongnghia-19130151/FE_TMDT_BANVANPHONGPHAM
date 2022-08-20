@@ -1,9 +1,10 @@
 {
   "user": [
     {
-      "fName": "Tran",
-      "lName": "Nghia",
-      "email": "nghia123@gmail.com",
+      "id": 1,
+      "fName": "Trần",
+      "lName": "Nghĩa",
+      "email": "nghiatran.150101@gmail.com",
       "password": "123456",
       "rePassword": "123456"
     }
@@ -719,6 +720,32 @@
             "discount": 5,
             "idNsx": 124,
             "cateId": 101
+          },
+          "_quantity": 2
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "firstName": "Trần",
+      "lastName": "Nghĩa",
+      "city": "TP.Hồ Chí Minh",
+      "address": "103,đường số 4, khu phố 3, linh xuân, thủ đức,tp. hcm",
+      "phone": 345551898,
+      "message": "alooooo",
+      "date": "2022-08-20T10:08:38.110Z",
+      "items": [
+        {
+          "_product": {
+            "id": 3,
+            "name": "Kéo cắt giấy",
+            "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
+            "price": 13000,
+            "discount": 15,
+            "idNsx": 125,
+            "cateId": 102,
+            "bestSeller": true,
+            "inputDay": "2022-08-16"
           },
           "_quantity": 2
         }
