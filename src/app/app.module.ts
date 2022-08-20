@@ -46,6 +46,7 @@ import { MdbTransferModule } from 'mdb-angular-transfer';
 import { MdbMentionModule } from 'mdb-angular-mention';
 import { MdbCookiesManagementService } from 'mdb-angular-cookies-management';
 import { MdbStorageManagementService } from 'mdb-angular-storage-management';
+import {Ng2SearchPipeModule} from "ng2-search-filter";
 
 
 import { HeaderComponent} from "./component/header/header.component";
@@ -63,10 +64,13 @@ import { HomeComponent } from './component/home/home.component';
 import { ProductDetailsComponent } from './component/product/product-details/product-details.component';
 import {Ng2SearchPipeModule} from "ng2-search-filter";
 import {NgxPaginationModule} from "ngx-pagination";
+import { ContactComponent } from './component/contact/contact.component';
+import { AboutComponent } from './component/about/about.component';
+
 
 @NgModule({
 
-  declarations: [AppComponent, HomeComponent ,HeaderComponent, FooterComponent, LoginComponent, CartComponent, CartItemComponent, CheckoutComponent, RegisterComponent, ProductComponent, ProductDetailsComponent],
+  declarations: [AppComponent, HomeComponent ,HeaderComponent, FooterComponent, LoginComponent, CartComponent, CartItemComponent, CheckoutComponent, RegisterComponent, ProductComponent, ProductDetailsComponent, ContactComponent, AboutComponent],
 
   imports: [
     BrowserModule,
@@ -119,6 +123,7 @@ import {NgxPaginationModule} from "ngx-pagination";
     ReactiveFormsModule,
     NgxPaginationModule,
   ],
+
 
   providers: [MdbCookiesManagementService, MdbStorageManagementService],
   bootstrap: [AppComponent],

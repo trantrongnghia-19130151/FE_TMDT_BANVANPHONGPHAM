@@ -1,0 +1,16 @@
+.container-fluid .row .container .card .row {
+  margin: 25px;
+}
+.container-fluid .row .container .card .row .infor {
+  background-color: #000000;
+  color: white;
+}
+.container-fluid .row .container .card .row .card-body .row .btn {
+  transition: all 0.5s;
+}
+.container-fluid .row .container .card .row .card-body .row .btn:hover {
+  color: white;
+  background-color: #53c3f1;
+}
+
+/*# sourceMappingURL=contact.component.css.map */

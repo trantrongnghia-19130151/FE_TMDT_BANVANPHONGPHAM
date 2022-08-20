@@ -1,0 +1,82 @@
+.container {
+  margin-top: 113px;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: black;
+}
+.container .top h1 {
+  margin: 50px 10px 10px 120px;
+  font-weight: 20;
+}
+.container .body .content__one .img img {
+  width: 100%;
+}
+.container .body .content__one .cont h6 {
+  margin: 40px 20px 10px 20px;
+}
+.container .body .content__two .title-top {
+  display: flex;
+  margin: 40px 20px 10px 20px;
+}
+.container .body .content__two .title-top .title h4 {
+  font-weight: 100;
+}
+.container .body .content__two h6 {
+  margin: 10px 20px 10px 20px;
+}
+.container .body .content__three .title-top {
+  display: flex;
+  margin: 40px 20px 10px 20px;
+}
+.container .body .content__three .title-top .title h4 {
+  font-weight: 100;
+}
+.container .body .content__three h6 {
+  margin: 10px 20px 10px 20px;
+}
+.container .body .content__three .row {
+  height: 175px;
+  margin-top: 10px;
+}
+.container .body .content__three .row img {
+  text-align: center;
+  margin: 0 auto;
+  height: 50%;
+  width: 50%;
+  transform: translateX(50%);
+}
+.container .body .content__four .title-top {
+  display: flex;
+  margin: 40px 20px 10px 20px;
+}
+.container .body .content__four .title-top .title h4 {
+  font-weight: 100;
+}
+.container .body .content__four h6 {
+  margin: 10px 20px 10px 20px;
+}
+.container .body .content__five .title-top {
+  display: flex;
+  margin: 40px 20px 10px 20px;
+}
+.container .body .content__five .title-top .title h4 {
+  font-weight: 100;
+}
+.container .body .content__five h6 {
+  margin: 10px 20px 10px 20px;
+}
+.container .body .content__six .title-top {
+  display: flex;
+  margin: 40px 20px 10px 20px;
+}
+.container .body .content__six .title-top .title h4 {
+  font-weight: 100;
+}
+.container .body .content__six .img img {
+  width: 100%;
+}
+.container .body .content__six h6 {
+  margin: 40px 20px 0px 20px;
+}
+
+/*# sourceMappingURL=about.component.css.map */
