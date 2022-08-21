@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from "rxjs";
 import * as moment from 'moment';
+import {User} from "../model/user";
 
 
 @Injectable({
@@ -9,25 +10,26 @@ import * as moment from 'moment';
 })
 export class Authentication {
   url='http://localhost:3000/';
-  private httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type' : 'application/json',
-    }),
-  }
+
 
   constructor(private http: HttpClient) {
   }
-  register(firstName:string, lastName:string, email: string, password:string, prePassword:string): Observable<any>{
-    return this.http.post(this.url+ 'register', {"firstName":firstName, "lastName": lastName, "email":email, "password":password, "prePassword": prePassword});
+  register(user:User){
+    return this.http.post<User>(this.url+ 'user', user);
   }
-  login(email:string, pass:string):Observable<any>{
-    return this.http.post(this.url + 'login', {"email":email, "password":pass}, this.httpOptions);
+  login():Observable<any>{
+    return this.http.get<User>(this.url + 'user');
   }
   public isLogin() {
-    const str = localStorage.getItem("expires_at") || "";
-    if (str=="") return false;
-    const expiresAt = JSON.parse(str);
+    const str = localStorage.getItem("id") || "";
+    if (str==""){
+      return false;
+    } else{
+      return true;
+    }
 
-    return moment().isBefore(moment(expiresAt));
+  }
+  logout(){
+    localStorage.removeItem("id");
   }
 }

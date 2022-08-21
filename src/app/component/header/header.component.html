@@ -1,4 +1,4 @@
-<header>
+ <header>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top p-0">
     <!--    header-->
@@ -66,10 +66,9 @@
           <div class="header-top-right d-flex">
             <a type="button" routerLink="/login">Đăng nhập</a> |
             <a type="button" routerLink="/register">Đăng ký</a>
-            <a type="button" class="btn-floating light-green shopping__card" routerLink="/cart">
-              <span class="badge rounded-pill badge-notification bg-danger">99+</span>
-              <i class="fas fa-shopping-bag "></i>
-            </a>
+            <a type="button" class="btn-floating light-green" routerLink="/cart"><i class="fas fa-shopping-bag">
+              <span class="text-danger quantity" *ngIf="quantity > 0">{{quantity}}</span>
+            </i></a>
           </div>
         </div>
         <!--        end shopping cart, signup, login-->

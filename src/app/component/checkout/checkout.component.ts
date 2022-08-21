@@ -32,6 +32,7 @@ export class CheckoutComponent implements OnInit {
     order.phone = f.control.get('phone')?.value;
     order.message = f.control.get('mess')?.value;
     order.items = this.cartSv.items;
+    order.userId = JSON.parse(localStorage.getItem('id') || '');
     this.checkoutService.placeOrder(order).subscribe(res =>{
         this.order = res
         localStorage.removeItem('cart');

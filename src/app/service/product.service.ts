@@ -24,7 +24,9 @@ export class ProductService {
   getProductByCateId(cateId: number | undefined) : Observable<any>{
     return this.http.get<any>('http://localhost:3000/product?cateId=' + cateId);
   }
-
+  getProductByParentCateId(parent_cateId: number | undefined) : Observable<any>{
+    return this.http.get<any>('http://localhost:3000/product?parent_cateId=' + parent_cateId);
+  }
 
   getAllCategory(): Observable<any> {
     return this.http.get<any>("http://localhost:3000/category/");

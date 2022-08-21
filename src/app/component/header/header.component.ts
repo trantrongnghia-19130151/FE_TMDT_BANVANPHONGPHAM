@@ -3,7 +3,7 @@ import {Category} from "../../model/category";
 import {ProductService} from "../../service/product.service";
 import {Product} from "../../model/product";
 import {NgForm} from "@angular/forms";
-
+import {CartService} from "../../service/cart.service";
 
 @Component({
   selector: 'app-header',
@@ -19,6 +19,16 @@ name:any;
   ngOnInit(): void {
     this.getCategory();
 
+  pName: any;
+  quantity = 0;
+
+   constructor(private service: ProductService, private  cartService: CartService) { }
+
+  ngOnInit(): void {
+    this.getCategory();
+    this.cartService.subjectItem.subscribe(resp =>{
+      this.quantity = resp.length
+    });
   }
 getCategory(){
     this.service.getAllCategory().subscribe(res => {

@@ -25,13 +25,11 @@
           {{product.name}}
         </h4>
         <div class="col-1 bg-secondary mt-3 mb-3" style="height: 5px"></div>
-        <span class= "fs-3">{{product.price | currency : 'VND'}}</span>
-        <p>
-          Với thiết kế tháo rời, quý khách có thể sử dụng luôn khi mới mua sản phẩm về hoặc có thể bọc thêm nệm tùy theo ý thích của mỗi gia đình. Ngoài ra, nhằm phục vụ khách hàng tốt nhất, chúng tôi còn liên kết với các cơ sở may nệm sofa nhằm mang đến cho quý khách những mẫu nệm với giá rẻ hơn thị trường.
-        </p>
-        <div class="d-flex ">
+        <span class= "fs-3 ">{{product.price | currency : 'VND'}}</span>
+
+        <div class="d-flex pt-4 ">
           <input type="button" (click)="minus()" value="-" class="d-inline-block  border" style="min-width: 25px; height: 40px">
-          <input [(ngModel)]="qty" type="number" name="0" id="" value="1" class="d-inline-block border outline text-center"
+          <input [(ngModel)]="qty" oninput="validity.valid||(value='1');" type="number" min="1"name="0" id="" value="1" class="d-inline-block border outline text-center"
                  style="outline:none; width: 45px; height: 40px">
           <input type="button" (click)="plus()" value="+" class="d-inline-block border" style="min-width: 25px;height: 40px">
           <button type="button" (click)="addToCart()" class="btn btn-warning d-inline-block ms-5 shadow-none text-uppercase">Thêm vào giỏ</button>
