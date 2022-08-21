@@ -31,7 +31,7 @@ loginForm!: NgForm;
       if(user){
         form.reset();
         this.router.navigateByUrl("/");
-        localStorage.setItem("id", user.id);
+        localStorage.setItem("user", JSON.stringify(user));
       }else{
         alert("Không tồn tại người dùng này");
       }

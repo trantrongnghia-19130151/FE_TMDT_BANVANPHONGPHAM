@@ -4,6 +4,7 @@ import {ProductService} from "../../service/product.service";
 import {Product} from "../../model/product";
 import {NgForm} from "@angular/forms";
 import {CartService} from "../../service/cart.service";
+import {Authentication} from "../../service/authentication";
 
 @Component({
   selector: 'app-header',
@@ -21,18 +22,22 @@ name:any;
 
   pName: any;
   quantity = 0;
+  fullName='';
 
-   constructor(private service: ProductService, private  cartService: CartService) { }
+   constructor(private service: ProductService, private  cartService: CartService, private auth: Authentication) { }
 
   ngOnInit(): void {
     this.getCategory();
     this.cartService.subjectItem.subscribe(resp =>{
       this.quantity = resp.length
     });
+    this.fullName;
+    console.log(this.auth.getFullName().fName + " " + this.auth.getFullName().lName);
   }
 getCategory(){
     this.service.getAllCategory().subscribe(res => {
       this.category = res;
+      this.fullName = this.auth.getFullName().fName + " " + this.auth.getFullName().lName
     })
 
 }
@@ -48,6 +53,15 @@ if(event.target.value) {
   this.product=[]
 }
 
+isLogin(){
+     return this.auth.isLogin();
+
+}
+
+  logOut() {
+    this.auth.logout();
+
+
 }
 
   reset(form: NgForm) {
@@ -58,5 +72,6 @@ if(event.target.value) {
 
   closeReesult() {
     this.name=""
+
   }
 }
