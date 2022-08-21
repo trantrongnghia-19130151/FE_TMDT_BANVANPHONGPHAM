@@ -12,12 +12,12 @@ export class CartComponent implements OnInit {
   headElements = ["Sản phẩm", "Giá", "Số lượng", "Tổng cộng"]
   headBillElements = ["Tổng số lượng",""]
   constructor(private cartService: CartService) {
-    this.cartService.subjectItem.subscribe(items =>{
-      this.items = items
-    })
   }
 
   ngOnInit(): void {
+    this.cartService.subjectItem.subscribe(items =>{
+      this.items = items
+    })
   }
   getTotalCart():number {
     let total = 0;

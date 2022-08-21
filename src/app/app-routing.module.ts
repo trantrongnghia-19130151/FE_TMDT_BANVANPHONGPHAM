@@ -11,6 +11,7 @@ import {CheckoutComponent} from "./component/checkout/checkout.component";
 import {ProductDetailsComponent} from "./component/product/product-details/product-details.component";
 import {AboutComponent} from "./component/about/about.component";
 import {ContactComponent} from "./component/contact/contact.component";
+import {SecurityGuard} from "./security.guard";
 
 const routes : Routes = [
 
@@ -18,7 +19,7 @@ const routes : Routes = [
   {path: 'shop', component: ProductComponent},
   {path: 'shop/:id', component: ProductComponent},
   {path: 'product/:id', component: ProductDetailsComponent},
-  {path: 'cart', component:CartComponent},
+  {path: 'cart', component:CartComponent, canActivate:[SecurityGuard]},
   {path: 'register', component:RegisterComponent},
   {path: 'login', component:LoginComponent},
   {path: 'checkout', component: CheckoutComponent},

@@ -4,10 +4,6 @@ import {Category} from "../../model/category";
 import {Manufactur} from "../../model/manufactur";
 import {ProductService} from "../../service/product.service";
 import {CartService} from "../../service/cart.service";
-import {animate} from "@angular/animations";
-import {log10} from "chart.js/helpers";
-
-
 
 @Component({
   selector: 'app-product',
@@ -23,8 +19,7 @@ export class ProductComponent implements OnInit {
    arrays: any = [];
    tempArray:any =[];
    newArray: any = [];
-   copArray:any=[];
-   p: number =1;
+    p: number =1;
 
 
   options = [
@@ -77,25 +72,21 @@ export class ProductComponent implements OnInit {
 
     if (event.target.checked) {
 
-      this.tempArray = this.product.filter((e: any) => (e.cateId == event.target.value || e.idNsx == event.target.value || (e.price - (e.price * e.discount / 100) <= event.target.max && e.price - (e.price * e.discount / 100) >= event.target.min)));
+      this.tempArray = this.product.filter((e: any) => ( e.idNsx == event.target.value || (e.price - (e.price * e.discount / 100) <= event.target.max && e.price - (e.price * e.discount / 100) >= event.target.min)));
       this.product= [];
       this.newArray=[];
-      console.log(this.product)
       this.newArray.push(this.tempArray);
-      // console.log(this.newArray)
       for (let i = 0; i < this.newArray.length; i++) {
         var firstArray = this.newArray[i];
         for (let i = 0; i < firstArray.length; i++) {
           var obj = firstArray[i];
            this.product.push(obj);
-          console.log(this.product)
 
-          // console.log(this.product)
         }
       }
     } else {
 
-      this.tempArray = this.product.filter((e: any) => (e.cateId != event.target.value && e.idNsx != event.target.value && (e.price - (e.price * e.discount / 100) > event.target.max || e.price - (e.price * e.discount / 100) < event.target.min)));
+      this.tempArray = this.product.filter((e: any) => ( e.idNsx != event.target.value && (e.price - (e.price * e.discount / 100) > event.target.max || e.price - (e.price * e.discount / 100) < event.target.min)));
       this.newArray = [];
       this.product = [];
       this.newArray.push(this.tempArray);
@@ -103,47 +94,33 @@ export class ProductComponent implements OnInit {
         var firstArray = this.newArray[i];
         for (let i = 0; i < firstArray.length; i++) {
           var obj = firstArray[i];
-
-
           this.product.push(obj);
-
-
-          // console.log(this.product.length)
-
         }
         if (firstArray.length === 0 || !event.target.value) {
-          // console.log(firstArray.length)
            this.product = this.arrays;
-
-
         }
-
-        // console.log(this.newArray)
       }
     }
   }
 addToCart(p : Product){
     this.cartService.addToCart(p, 1);
 }
-
   // @ts-ignore
-
   sort(event:any){
-    console.log(event.target.value);
-    if(event.target.value==1) {
+    console.log(event[0]);
+    if(event[0]==1) {
       this.service.getAllProduct().subscribe(res => {
         this.product = res;
 
       })
     }
-    if(event.target.value==2) {
+    if(event[0]==2) {
        let d = new Date();
 
       this.tempArray =  this.product.filter((value:any)=>(value.inputDay != undefined));
       this.product=[];
       this.newArray=[];
       this.newArray.push(this.tempArray);
-      // console.log(this.newArray)
       for (let i = 0; i < this.newArray.length; i++) {
         var firstArray = this.newArray[i];
         for (let i = 0; i < firstArray.length; i++) {
@@ -156,22 +133,37 @@ addToCart(p : Product){
       }
 
     }
-    if(event.target.value==3) {
+    if(event[0]==3) {
       this.product =  this.product.filter((value:any)=> value.discount > 0);
 
     }
-    if(event.target.value==4) {
+    if(event[0]==4) {
       this.product =  this.product.filter((value:any)=> value.bestSeller == false);
 
     }
-    if(event.target.value==5){
+    if(event[0]==5){
      this.product.sort((a,b)=>(a.price > b.price)? -1:1);
 
     }
-    if(event.target.value==6) {
+    if(event[0]==6) {
       this.product.sort((a,b)=>(a.price > b.price)? 1:-1);
 
     }
 }
 
+  stopPropagation(event:any) {
+    event.stopPropagation()
+  }
+
+  getCate(event:any) {
+    this.service.getProductByParentCateId(event[0]).subscribe((res:any)=>{
+      this.product = res;
+    })
+  }
+
+  getSubCate(event:any) {
+    this.service.getProductByCateId(event[0]).subscribe((res:any)=>{
+      this.product = res;
+    })
+  }
 }
