@@ -17,12 +17,22 @@ export class ProductDetailsComponent implements OnInit {
   qty = 1;
   category !: Category;
   subCategory !: Category | undefined ;
-  constructor(private pService : ProductService, private cartService: CartService,private routLink: ActivatedRoute) { }
+  constructor(private pService : ProductService, private cartService: CartService,private routLink: ActivatedRoute) {
+
+  }
 
   ngOnInit(): void {
     this.routLink.paramMap.subscribe(params => {
-      this.id = params.get('id') || ''
+      this.id = params.get('id') || '';
+      this.getProduct();
     })
+  }
+  minus() {
+    if(this.qty > 1){
+      this.qty--
+    }
+  }
+  getProduct(){
     this.pService.getProductById(this.id).subscribe(p => {
       this.product = p;
       this.pService.getProductByCateId(this.product?.cateId).subscribe(products =>{
@@ -33,14 +43,8 @@ export class ProductDetailsComponent implements OnInit {
       this.pService.getCategoryById(cateId).subscribe(resp =>{
         this.category = resp[0];
         this.subCategory = this.category.subc.find( e => e.cateId  == this.product.cateId)
-        console.log(this.subCategory)
       });
     })
-  }
-  minus() {
-    if(this.qty > 1){
-      this.qty--
-    }
   }
 
   plus() {

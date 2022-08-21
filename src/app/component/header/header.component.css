@@ -42,6 +42,23 @@
 .header .header-top .right .header-top-right a:first-child {
   padding-right: 5px;
 }
+.header .header-top .right .header-top-right i {
+  position: relative;
+}
+.header .header-top .right .header-top-right i .quantity {
+  position: absolute;
+  font-size: 0.5rem;
+  bottom: 10%;
+  right: 0;
+  background-color: red;
+  border-radius: 50%;
+  color: #fff !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 40%;
+}
 .header .header-bot {
   width: 100vw;
   text-align: center;

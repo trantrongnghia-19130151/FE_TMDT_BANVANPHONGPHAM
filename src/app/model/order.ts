@@ -1,7 +1,9 @@
 import {Item} from "./item";
+import {User} from "./user";
 
 export class Order {
   id: number = 0;
+  userId : string = "";
   firstName: string = '';
   lastName: string = '';
   city: string = '';
