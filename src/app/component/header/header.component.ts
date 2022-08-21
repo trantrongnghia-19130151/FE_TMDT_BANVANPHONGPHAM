@@ -25,7 +25,6 @@ export class HeaderComponent implements OnInit {
     this.cartService.subjectItem.subscribe(resp =>{
       this.quantity = resp.length
     });
-
   }
 getCategory(){
     this.service.getAllCategory().subscribe(res => {

@@ -21,7 +21,6 @@ export class ProductComponent implements OnInit {
    newArray: any = [];
     p: number =1;
 
-
   options = [
     { value: 1, label: 'Tất cả sản phẩm' },
     { value: 2, label: 'Sản phẩm mới nhất' },
@@ -31,19 +30,12 @@ export class ProductComponent implements OnInit {
     { value: 6, label: 'Giá tăng dần' },
   ];
 
-
-
   constructor(private service: ProductService, private cartService: CartService) { }
-
-
-
 
   ngOnInit(): void {
     this.getCategory();
     this.getManufactur();
      this.getProduct();
-
-
 
   }
   getProduct(){
