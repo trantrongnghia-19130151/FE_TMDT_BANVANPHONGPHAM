@@ -49,7 +49,6 @@ if(event.target.value) {
   reset(form: NgForm) {
      this.name= "";
     form.reset();
-    console.log("hello")
   }
 
   closeReesult() {
