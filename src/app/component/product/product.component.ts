@@ -15,7 +15,7 @@ export class ProductComponent implements OnInit {
 
    category: Category[] = [];
    nsx : Manufactur[] =[];
-
+   name:any;
    arrays: any = [];
    tempArray:any =[];
    newArray: any = [];
@@ -40,7 +40,8 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
     this.getCategory();
     this.getManufactur();
-    this.getProduct();
+     this.getProduct();
+
 
 
   }
@@ -48,6 +49,7 @@ export class ProductComponent implements OnInit {
     this.service.getAllProduct().subscribe(res => {
       this.product = res;
       this.arrays = res;
+
     })
 
   }

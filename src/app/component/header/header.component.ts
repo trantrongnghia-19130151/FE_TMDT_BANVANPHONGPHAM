@@ -2,6 +2,7 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Category} from "../../model/category";
 import {ProductService} from "../../service/product.service";
 import {Product} from "../../model/product";
+import {NgForm} from "@angular/forms";
 import {CartService} from "../../service/cart.service";
 import {Authentication} from "../../service/authentication";
 
@@ -13,6 +14,12 @@ import {Authentication} from "../../service/authentication";
 export class HeaderComponent implements OnInit {
   category: Category[] = [];
   product: Product[] = [];
+name:any;
+   constructor(private service: ProductService) { }
+
+  ngOnInit(): void {
+    this.getCategory();
+
   pName: any;
   quantity = 0;
   fullName='';
@@ -32,14 +39,20 @@ getCategory(){
       this.category = res;
       this.fullName = this.auth.getFullName().fName + " " + this.auth.getFullName().lName
     })
-}
 
+}
   change(event: any){
+if(event.target.value) {
+  this.name = event.target.value;
+  this.service.subjectProduct.next(this.name);
+  this.service.getProductWithSearch(event.target.value).subscribe(res =>{
+    this.product = res;
 
-     this.service.getProductWithSearch(event.target.value).subscribe(res =>{
-       console.log(res)
-     });
+  });
+}else{
+  this.product=[]
 }
+
 isLogin(){
      return this.auth.isLogin();
 
@@ -47,5 +60,18 @@ isLogin(){
 
   logOut() {
     this.auth.logout();
+
+
+}
+
+  reset(form: NgForm) {
+     this.name= "";
+    form.reset();
+    console.log("hello")
+  }
+
+  closeReesult() {
+    this.name=""
+
   }
 }
