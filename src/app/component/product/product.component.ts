@@ -46,10 +46,13 @@ export class ProductComponent implements OnInit {
 
   }
   getProduct(){
-    this.service.getAllProduct().subscribe(res => {
-      this.product = res;
-      this.arrays = res;
+    this.service.subjectProduct.subscribe(res => {
+      this.name = res;
+      this.service.getProductWithSearch(this.name).subscribe(res => {
+        this.product = res;
+        this.arrays = res;
 
+      });
     })
 
   }

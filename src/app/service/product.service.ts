@@ -1,11 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-
-import {Observable} from "rxjs";
-
-
 import {BehaviorSubject, Observable} from "rxjs";
-import {Product} from "../model/product";
 import {HeaderComponent} from "../component/header/header.component";
 
 
