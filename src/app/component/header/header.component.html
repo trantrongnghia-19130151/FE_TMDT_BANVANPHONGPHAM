@@ -79,10 +79,9 @@
                 Xin chào {{fullName}}
               </a>
               <ul mdbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <li><a class="dropdown-item" href="#" (click)="logOut()">Đăng xuất</a></li>
+                <li><a class="dropdown-item"  (click)="logOut()">Đăng xuất</a></li>
               </ul>
             </div>
-<!--            <a type="button" *ngIf="isLogin()" (click)="logOut()">Đăng xuất</a>-->
             <a type="button" class="btn-floating light-green" routerLink="/cart"><i class="fas fa-shopping-bag">
               <span class="text-danger quantity" *ngIf="quantity > 0">{{quantity}}</span>
             </i></a>
@@ -97,12 +96,46 @@
         <div class="collapse navbar-collapse header-bot-item" id="navbarExample01">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" aria-current="page" href="#">Trang chủ</a>
+              <a class="nav-link" aria-current="page" routerLink="/">Trang chủ</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-link" routerLink="/shop">Sản phẩm</a>
-              <div class="dropdown-menu">
-                <a routerLink="/shop?category={{cate.cateId}}" *ngFor="let cate of category" [id]="cate.cateId">{{cate.name}}</a>
+              <a class="nav-link dropdown-link text-center" routerLink="/shop">Sản phẩm</a>
+<!--              <div class="dropdown-menu">-->
+<!--                <a routerLink="/shop?category={{cate.cateId}}" *ngFor="let cate of category" [id]="cate.cateId">{{cate.name}}-->
+<!--                  <i class="fas fa-angle-right icon__angle text-right " *ngIf="cate.subc" role="button" ></i>-->
+<!--                  <div class="dropdown-sub__menu"><a routerLink="/shop?category={{cate.cateId}}" *ngFor="let sub of cate.subc index as i" [id]="cate.cateId">{{sub.name}}</a></div>-->
+<!--                </a>-->
+<!--              </div>-->
+
+              <div class="dropdown-category__menu">
+              <div mdbDropdown class="dropend " *ngFor="let cate of category" [id]="cate.cateId">
+                <div class="menu__item  d-flex justify-content-between align-items-center">
+                  <a (click)="getCate([cate.cateId])" (click)="closeReesult()" >{{cate.name}}</a>
+                  <a type="button" class="dropdown-toggle dropdown-toggle-split" *ngIf="cate.subc" mdbDropdownToggle aria-expanded="false">
+                  </a>
+                </div>
+                <ul mdbDropdownMenu class="dropdown-menu" style="margin-left: 18px">
+                  <style>
+                    .dropdown-menu{
+                      transition: all 0.5s;
+                      position: absolute;
+                     left: 0;
+
+                      min-width: 160px;
+                      z-index: 1;
+                      margin-left: 15px;
+                    }
+
+                    .dropdown-menu .dropdown-item:hover{
+                      background-color: #000;
+                      color: white;
+                      cursor: pointer;
+
+                    }
+                  </style>
+                  <li><a class="dropdown-item" (click)="getSubCate([sub.cateId])" (click)="closeReesult()" *ngFor="let sub of cate.subc index as i" [id]="cate.cateId">{{sub.name}}</a></li>
+                </ul>
+              </div>
               </div>
             </li>
             <li class="nav-item">
@@ -114,7 +147,6 @@
           </ul>
         </div>
       </div>
-
       <!--        end menu-->
     </div>
     <!--    end header-->

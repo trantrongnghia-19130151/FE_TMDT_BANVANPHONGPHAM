@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {BehaviorSubject, Observable} from "rxjs";
 import {HeaderComponent} from "../component/header/header.component";
+import {Product} from "../model/product";
 
 
 @Injectable({
@@ -11,7 +12,8 @@ export class ProductService {
   // @ts-ignore
   private value :HeaderComponent = new HeaderComponent();
   subjectProduct: BehaviorSubject<string> = new BehaviorSubject<string>("");
-
+  product: Product[]=[];
+  subjectProductByCateId: BehaviorSubject<Product[]> = new BehaviorSubject<Product[]>([]);
   constructor(private http: HttpClient) {
 }
 

@@ -69,4 +69,18 @@ isLogin(){
     this.name=""
 
   }
+
+  getCate(event:any) {
+    this.service.getProductByParentCateId(event[0]).subscribe((res:any)=>{
+      this.product = res;
+      this.service.subjectProductByCateId.next(this.product);
+    })
+  }
+
+  getSubCate(event:any) {
+    this.service.getProductByCateId(event[0]).subscribe((res:any)=>{
+      this.product = res;
+      this.service.subjectProductByCateId.next(this.product);
+    })
+  }
 }
