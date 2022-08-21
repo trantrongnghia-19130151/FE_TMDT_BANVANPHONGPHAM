@@ -67,6 +67,7 @@ import { ContactComponent } from './component/contact/contact.component';
 import { AboutComponent } from './component/about/about.component';
 
 
+
 @NgModule({
 
   declarations: [AppComponent, HomeComponent ,HeaderComponent, FooterComponent, LoginComponent, CartComponent, CartItemComponent, CheckoutComponent, RegisterComponent, ProductComponent, ProductDetailsComponent, ContactComponent, AboutComponent],

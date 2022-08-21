@@ -12,13 +12,13 @@
               <div class="row">
                 <div class="col-md-6">
                   <mdb-form-control class="w-100 mb-3">
-                    <input mdbInput type="Text" id="fname" ngModel name="fname"  #fname="ngModel" class="form-control"/>
+                    <input mdbInput type="Text" id="fname" ngModel name="fname" required #fname="ngModel" class="form-control"/>
                     <label mdbLabel class="form-label" for="fname">Họ</label>
                   </mdb-form-control>
                 </div>
                 <div class="col-md-6">
                   <mdb-form-control class="w-100 mb-3">
-                    <input mdbInput type="text" id="lname" class="form-control" ngModel name="lname" #lname="ngModel"/>
+                    <input mdbInput type="text" id="lname" class="form-control" required ngModel name="lname" #lname="ngModel"/>
                     <label mdbLabel class="form-label" for="lname">Tên</label>
                   </mdb-form-control>
                 </div>
@@ -53,7 +53,7 @@
                 </small>
               </div>
               <!-- Submit button -->
-              <button type="submit" class="btn btn-danger btn-block mb-4" [disabled]="!authForm.valid &&  rePassword?.dirty || !checkPass(password?.value, rePassword?.value)">
+              <button type="submit" class="btn btn-danger btn-block mb-4" [disabled]="!authForm.valid &&  (rePassword?.dirty||rePassword?.touched) ||  !checkPass(password?.value, rePassword?.value)">
                 Đăng kí
               </button>
              <div class="text-center mb-4">
