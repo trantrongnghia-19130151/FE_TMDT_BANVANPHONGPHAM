@@ -46,8 +46,25 @@
         <!--        shopping cart, signup, login-->
         <div class="col-4 text-center right">
           <div class="header-top-right d-flex">
-            <a type="button" routerLink="/login">Đăng nhập</a> |
-            <a type="button" routerLink="/register">Đăng ký</a>
+            <a type="button" routerLink="/login" *ngIf="!isLogin()">Đăng nhập |</a>
+            <a type="button" routerLink="/register" *ngIf="!isLogin()">Đăng ký</a>
+
+            <div mdbDropdown class="dropdown">
+              <a
+                class="btn btn-light dropdown-toggle"
+                role="button"
+                id="dropdownMenuLink"
+                mdbDropdownToggle
+                aria-expanded="false"
+                [hidden]="!isLogin()"
+              >
+                Xin chào {{fullName}}
+              </a>
+              <ul mdbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#" (click)="logOut()">Đăng xuất</a></li>
+              </ul>
+            </div>
+<!--            <a type="button" *ngIf="isLogin()" (click)="logOut()">Đăng xuất</a>-->
             <a type="button" class="btn-floating light-green" routerLink="/cart"><i class="fas fa-shopping-bag">
               <span class="text-danger quantity" *ngIf="quantity > 0">{{quantity}}</span>
             </i></a>

@@ -21,7 +21,7 @@ export class Authentication {
     return this.http.get<User>(this.url + 'user');
   }
   public isLogin() {
-    const str = localStorage.getItem("id") || "";
+    const str = localStorage.getItem("user") || "";
     if (str==""){
       return false;
     } else{
@@ -29,7 +29,13 @@ export class Authentication {
     }
 
   }
+  getFullName(){
+    const fullName = localStorage.getItem("user");
+    const str:any = fullName != null ?  JSON.parse(fullName): [];
+    return str;
+    console.log(str);
+  }
   logout(){
-    localStorage.removeItem("id");
+    localStorage.removeItem("user");
   }
 }

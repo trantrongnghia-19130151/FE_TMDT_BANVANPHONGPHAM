@@ -432,7 +432,7 @@
       "price": 250000,
       "discount": 10,
       "idNsx": 1006,
-      "cateId":400,
+      "cateId": 400,
       "parent_cateId": 400,
       "bestSeller": true
     },
@@ -637,6 +637,49 @@
             "cateId": 101,
             "bestSeller": false,
             "inputDay": "2022-08-11"
+          },
+          "_quantity": 1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "firstName": "Trần",
+      "lastName": "Nghĩa",
+      "city": "TP.Hồ Chí Minh",
+      "address": "103,đường số 4, khu phố 3, linh xuân, thủ đức,tp. hcm",
+      "phone": 124545645,
+      "message": "",
+      "date": "2022-08-21T14:43:29.585Z",
+      "items": [
+        {
+          "_product": {
+            "id": 2,
+            "name": "Kim bấm cỡ lớn",
+            "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
+            "price": 13000,
+            "discount": 5,
+            "idNsx": 124,
+            "cateId": 101,
+            "parent_cateId": 100,
+            "bestSeller": false,
+            "inputDay": "2022-08-11"
+          },
+          "_quantity": 2
+        },
+        {
+          "_product": {
+            "id": 3,
+            "name": "Kéo cắt giấy",
+            "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
+            "price": 13000,
+            "discount": 15,
+            "idNsx": 125,
+            "cateId": 102,
+            "parent_cateId": 100,
+            "bestSeller": true,
+            "inputDay": "2022-08-16"
           },
           "_quantity": 1
         }

@@ -19,10 +19,10 @@ const routes : Routes = [
   {path: 'shop', component: ProductComponent},
   {path: 'shop/:id', component: ProductComponent},
   {path: 'product/:id', component: ProductDetailsComponent},
-  {path: 'cart', component:CartComponent, canActivate:[SecurityGuard]},
+  {path: 'cart', component:CartComponent},
   {path: 'register', component:RegisterComponent},
   {path: 'login', component:LoginComponent},
-  {path: 'checkout', component: CheckoutComponent},
+  {path: 'checkout', component: CheckoutComponent,  canActivate:[SecurityGuard]},
   {path: 'about', component: AboutComponent},
   {path: 'contact', component: ContactComponent}
 ]
