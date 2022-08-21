@@ -35,7 +35,6 @@ export class ProductDetailsComponent implements OnInit {
   getProduct(){
     this.pService.getProductById(this.id).subscribe(p => {
       this.product = p;
-      console.log(this.product)
       this.pService.getProductByCateId(this.product?.cateId).subscribe(products =>{
         this.relateProduct = products;
       })
