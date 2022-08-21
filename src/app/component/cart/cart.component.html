@@ -16,7 +16,7 @@
         </tbody>
       </table>
       <div class="button-group">
-        <button type="button" class="btn btn-outline-dark btn-rounded" routerLink="/shop">
+        <button type="button" class="btn btn-light btn-outline-dark btn-rounded" routerLink="/shop">
           <i class="fa-solid fa-arrow-left me-2"></i>
           Trờ lại cửa hàng
         </button>
@@ -32,7 +32,7 @@
       </thead>
       <tbody>
       <tr *ngFor="let item of items">
-        <td class="d-flex justify-content-start">{{item.product.name}} x {{item.quantity}}</td>
+        <td class="d-flex justify-content-start">{{item.product.name}} <strong class="ms-1">x{{item.quantity}}</strong></td>
         <td>{{item.getTotal() | currency : "VND"}}</td>
       </tr>
       <tr>
