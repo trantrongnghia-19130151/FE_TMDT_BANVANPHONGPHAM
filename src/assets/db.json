@@ -7,16 +7,6 @@
       "email": "nghiatran.150101@gmail.com",
       "password": "123456",
       "rePassword": "123456"
-    },
-    {
-      "email": "nghiatran.150101@gmail.com",
-      "password": "123456",
-      "id": 2
-    },
-    {
-      "e": "nghiatran.150101@gmail.com",
-      "p": "123456",
-      "id": 3
     }
   ],
   "category": [
@@ -88,6 +78,7 @@
       "discount": 50,
       "idNsx": 123,
       "cateId": 101,
+      "parent_cateId": 100,
       "bestSeller": true,
       "inputDay": "2022-08-18"
     },
@@ -99,6 +90,7 @@
       "discount": 5,
       "idNsx": 124,
       "cateId": 101,
+      "parent_cateId": 100,
       "bestSeller": false,
       "inputDay": "2022-08-11"
     },
@@ -110,6 +102,7 @@
       "discount": 15,
       "idNsx": 125,
       "cateId": 102,
+      "parent_cateId": 100,
       "bestSeller": true,
       "inputDay": "2022-08-16"
     },
@@ -121,6 +114,7 @@
       "discount": 25,
       "idNsx": 123,
       "cateId": 102,
+      "parent_cateId": 100,
       "bestSeller": true
     },
     {
@@ -130,7 +124,8 @@
       "price": 13000,
       "discount": 0,
       "idNsx": 124,
-      "cateId": 100,
+      "cateId": 101,
+      "parent_cateId": 100,
       "bestSeller": true
     },
     {
@@ -141,6 +136,7 @@
       "discount": 5,
       "idNsx": 125,
       "cateId": 103,
+      "parent_cateId": 100,
       "bestSeller": true
     },
     {
@@ -151,6 +147,7 @@
       "discount": 5000,
       "idNsx": 123,
       "cateId": 103,
+      "parent_cateId": 100,
       "bestSeller": true
     },
     {
@@ -161,6 +158,7 @@
       "discount": 5000,
       "idNsx": 123,
       "cateId": 104,
+      "parent_cateId": 100,
       "bestSeller": true
     },
     {
@@ -171,6 +169,7 @@
       "discount": 5000,
       "idNsx": 123,
       "cateId": 104,
+      "parent_cateId": 100,
       "bestSeller": true
     },
     {
@@ -181,6 +180,7 @@
       "discount": 5000,
       "idNsx": 123,
       "cateId": 104,
+      "parent_cateId": 100,
       "bestSeller": true
     },
     {
@@ -191,6 +191,7 @@
       "discount": 5000,
       "idNsx": 123,
       "cateId": 201,
+      "parent_cateId": 200,
       "bestSeller": true
     },
     {
@@ -201,6 +202,7 @@
       "discount": 5000,
       "idNsx": 124,
       "cateId": 201,
+      "parent_cateId": 200,
       "bestSeller": true
     },
     {
@@ -211,6 +213,7 @@
       "discount": 5000,
       "idNsx": 125,
       "cateId": 201,
+      "parent_cateId": 200,
       "bestSeller": true
     },
     {
@@ -221,6 +224,7 @@
       "discount": 5000,
       "idNsx": 123,
       "cateId": 201,
+      "parent_cateId": 200,
       "bestSeller": true
     },
     {
@@ -231,6 +235,7 @@
       "discount": 5000,
       "idNsx": 124,
       "cateId": 201,
+      "parent_cateId": 200,
       "bestSeller": false
     },
     {
@@ -241,6 +246,7 @@
       "discount": 5000,
       "idNsx": 125,
       "cateId": 201,
+      "parent_cateId": 200,
       "bestSeller": false
     },
     {
@@ -251,6 +257,7 @@
       "discount": 5000,
       "idNsx": 123,
       "cateId": 201,
+      "parent_cateId": 200,
       "bestSeller": false
     },
     {
@@ -261,6 +268,7 @@
       "discount": 5000,
       "idNsx": 123,
       "cateId": 202,
+      "parent_cateId": 200,
       "bestSeller": false
     },
     {
@@ -271,6 +279,7 @@
       "discount": 5000,
       "idNsx": 123,
       "cateId": 202,
+      "parent_cateId": 200,
       "bestSeller": true
     },
     {
@@ -281,6 +290,7 @@
       "discount": 5000,
       "idNsx": 123,
       "cateId": 202,
+      "parent_cateId": 200,
       "bestSeller": false
     },
     {
@@ -291,6 +301,7 @@
       "discount": 5000,
       "idNsx": 123,
       "cateId": 202,
+      "parent_cateId": 200,
       "bestSeller": true
     },
     {
@@ -301,6 +312,7 @@
       "discount": 5000,
       "idNsx": 124,
       "cateId": 202,
+      "parent_cateId": 200,
       "bestSeller": true
     },
     {
@@ -311,6 +323,7 @@
       "discount": 5000,
       "idNsx": 125,
       "cateId": 202,
+      "parent_cateId": 200,
       "bestSeller": false
     },
     {
@@ -321,6 +334,7 @@
       "discount": 5000,
       "idNsx": 1001,
       "cateId": 202,
+      "parent_cateId": 200,
       "bestSeller": false
     },
     {
@@ -331,6 +345,7 @@
       "discount": 5000,
       "idNsx": 1001,
       "cateId": 202,
+      "parent_cateId": 200,
       "bestSeller": true
     },
     {
@@ -341,6 +356,7 @@
       "discount": 5000,
       "idNsx": 125,
       "cateId": 203,
+      "parent_cateId": 200,
       "bestSeller": true
     },
     {
@@ -351,6 +367,7 @@
       "discount": 5000,
       "idNsx": 123,
       "cateId": 203,
+      "parent_cateId": 200,
       "bestSeller": false
     },
     {
@@ -361,6 +378,7 @@
       "discount": 5000,
       "idNsx": 123,
       "cateId": 203,
+      "parent_cateId": 200,
       "bestSeller": true
     },
     {
@@ -371,6 +389,7 @@
       "discount": 5000,
       "idNsx": 123,
       "cateId": 203,
+      "parent_cateId": 200,
       "bestSeller": true
     },
     {
@@ -381,6 +400,7 @@
       "discount": 5000,
       "idNsx": 123,
       "cateId": 301,
+      "parent_cateId": 300,
       "bestSeller": false
     },
     {
@@ -391,6 +411,7 @@
       "discount": 5000,
       "idNsx": 123,
       "cateId": 302,
+      "parent_cateId": 300,
       "bestSeller": true
     },
     {
@@ -401,6 +422,7 @@
       "discount": 5000,
       "idNsx": 123,
       "cateId": 302,
+      "parent_cateId": 300,
       "bestSeller": true
     },
     {
@@ -410,7 +432,8 @@
       "price": 250000,
       "discount": 10,
       "idNsx": 1006,
-      "cateId": 300,
+      "cateId":400,
+      "parent_cateId": 400,
       "bestSeller": true
     },
     {
@@ -420,7 +443,8 @@
       "price": 250000,
       "discount": 10,
       "idNsx": 1006,
-      "cateId": 300,
+      "cateId": 400,
+      "parent_cateId": 400,
       "bestSeller": true
     },
     {
@@ -430,7 +454,8 @@
       "price": 250000,
       "discount": 10,
       "idNsx": 1006,
-      "cateId": 300,
+      "cateId": 400,
+      "parent_cateId": 400,
       "bestSeller": true
     },
     {
@@ -440,7 +465,8 @@
       "price": 250000,
       "discount": 10,
       "idNsx": 1006,
-      "cateId": 300,
+      "cateId": 400,
+      "parent_cateId": 400,
       "bestSeller": false
     },
     {
@@ -450,7 +476,8 @@
       "price": 250000,
       "discount": 10,
       "idNsx": 1006,
-      "cateId": 300,
+      "cateId": 400,
+      "parent_cateId": 400,
       "bestSeller": true
     },
     {
@@ -460,7 +487,8 @@
       "price": 260000,
       "discount": 5,
       "idNsx": 1006,
-      "cateId": 300,
+      "cateId": 400,
+      "parent_cateId": 400,
       "bestSeller": true
     },
     {
@@ -470,7 +498,8 @@
       "price": 260000,
       "discount": 5,
       "idNsx": 1006,
-      "cateId": 300,
+      "cateId": 400,
+      "parent_cateId": 400,
       "bestSeller": false
     },
     {
@@ -481,6 +510,7 @@
       "discount": 5,
       "idNsx": 1006,
       "cateId": 400,
+      "parent_cateId": 400,
       "bestSeller": true
     },
     {
@@ -491,6 +521,7 @@
       "discount": 5,
       "idNsx": 1006,
       "cateId": 400,
+      "parent_cateId": 400,
       "bestSeller": true
     },
     {
@@ -501,6 +532,7 @@
       "discount": 5,
       "idNsx": 1006,
       "cateId": 400,
+      "parent_cateId": 400,
       "bestSeller": true
     },
     {
@@ -511,6 +543,7 @@
       "discount": 5,
       "idNsx": 1006,
       "cateId": 400,
+      "parent_cateId": 400,
       "bestSeller": true
     },
     {
@@ -521,6 +554,7 @@
       "discount": 0,
       "idNsx": 1002,
       "cateId": 400,
+      "parent_cateId": 400,
       "bestSeller": false
     }
   ],

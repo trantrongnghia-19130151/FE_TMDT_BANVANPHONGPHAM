@@ -7,10 +7,11 @@ export class Product {
   private _discount: number;
   private _idNsx: number;
   private _cateId: number;
+  private _parent_cateId: number;
   private _bestSeller: boolean;
   private _inputDay:string;
 
-  constructor(id: string, name: string, img: string, price: number, discount: number, idNsx: number, cateId: number, bestSeller:boolean, inputDay:string ) {
+  constructor(id: string, name: string, img: string, price: number, discount: number, idNsx: number, cateId: number, bestSeller:boolean, inputDay:string, parent_cateId:number) {
     this._id = id;
     this._name = name;
     this._img = img;
@@ -20,6 +21,7 @@ export class Product {
     this._cateId = cateId;
     this._bestSeller = bestSeller;
     this._inputDay = inputDay;
+    this._parent_cateId = parent_cateId;
   }
 
   get id(): string {
@@ -94,5 +96,13 @@ export class Product {
 
   set inputDay(value: string) {
     this._inputDay = value;
+  }
+
+  get parent_cateId(): number {
+    return this._parent_cateId;
+  }
+
+  set parent_cateId(value: number) {
+    this._parent_cateId = value;
   }
 }

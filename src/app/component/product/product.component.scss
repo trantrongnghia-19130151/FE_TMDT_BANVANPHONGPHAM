@@ -9,6 +9,9 @@
 .fillter {
   position: sticky;
   top: 120px;
+  a{
+    cursor: pointer;
+  }
 }
 
 .sticky::after {
@@ -21,22 +24,43 @@
   color: black;
 
 }
-.add__cart{
-  background-color: rgba(220, 220, 220, 0.27);
-  display: block;
-  width: 100%;
-  text-align: center;
-  padding: 5px 0;
-  height: 40px;
-  a{
-    width: 100%;
-    color: black;
-    font-weight: 500;
-    font-size: 17px;
+.product__card{
+  .card{
+    border-radius: 19px;
+    overflow: hidden;
+    .bg-image {
+      img {
+        transition: all 0.5s;
+      }
+      .mask{
+        transition: all 0.5s;
+      }
+    }
+    .bg-image:hover img{
+      transform: scale(1.2);
+    }
+    .bg-image:hover .mask{
+      z-index: 100;
+      background-color: rgba(117, 117, 117, 0.47);
+    }
+    .card__content{
+      .add__cart{
+        color: #818181;
+        border-radius: 50%;
+        background-color: rgba(231, 231, 231, 0.59);
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        transition: all .5s;
+        cursor: pointer;
+      }
+      .add__cart:hover{
+        color: white;
+        background-color: black;
+      }
+    }
+
 
   }
+}
 
-}
-.cart{
-  border-radius: 19px;
-}
