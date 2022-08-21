@@ -6,6 +6,7 @@ import {NgForm} from "@angular/forms";
 import {CartService} from "../../service/cart.service";
 import {Authentication} from "../../service/authentication";
 
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -62,11 +63,24 @@ isLogin(){
   reset(form: NgForm) {
      this.name= "";
     form.reset();
-    console.log("hello")
   }
 
   closeReesult() {
     this.name=""
 
+  }
+
+  getCate(event:any) {
+    this.service.getProductByParentCateId(event[0]).subscribe((res:any)=>{
+      this.product = res;
+      this.service.subjectProductByCateId.next(this.product);
+    })
+  }
+
+  getSubCate(event:any) {
+    this.service.getProductByCateId(event[0]).subscribe((res:any)=>{
+      this.product = res;
+      this.service.subjectProductByCateId.next(this.product);
+    })
   }
 }
