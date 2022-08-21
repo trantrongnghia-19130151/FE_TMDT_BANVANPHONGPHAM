@@ -15,7 +15,7 @@ export class ProductComponent implements OnInit {
   @Input() product : Product[] = [];
    category: Category[] = [];
    nsx : Manufactur[] =[];
-
+name:any;
 
   options = [
     { value: '1', label: 'Sản phẩm mới nhất' },
@@ -33,13 +33,19 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
     this.getCategory();
     this.getManufactur();
-    this.getProduct();
+     this.getProduct();
+
 
 
   }
   getProduct(){
-    this.service.getAllProduct().subscribe(res => {
-      this.product = res;
+    this.service.subjectProduct.subscribe(res => {
+      this.name = res;
+      this.service.getProductWithSearch(this.name).subscribe(res=>{
+        this.product = res;
+
+
+      })
     })
 
   }
