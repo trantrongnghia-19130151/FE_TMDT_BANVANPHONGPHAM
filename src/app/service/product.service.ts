@@ -1,21 +1,19 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {BehaviorSubject, Observable} from "rxjs";
-import {Product} from "../model/product";
 import {HeaderComponent} from "../component/header/header.component";
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-
   // @ts-ignore
   private value :HeaderComponent = new HeaderComponent();
   subjectProduct: BehaviorSubject<string> = new BehaviorSubject<string>("");
 
   constructor(private http: HttpClient) {
-
-  }
+}
 
   getProductById(id: string) : Observable<any>{
     return this.http.get<any>("http://localhost:3000/product/" + id);

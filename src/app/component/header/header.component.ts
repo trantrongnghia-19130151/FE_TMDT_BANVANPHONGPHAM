@@ -4,6 +4,7 @@ import {ProductService} from "../../service/product.service";
 import {Product} from "../../model/product";
 import {NgForm} from "@angular/forms";
 import {CartService} from "../../service/cart.service";
+import {Authentication} from "../../service/authentication";
 
 
 @Component({
@@ -17,32 +18,45 @@ export class HeaderComponent implements OnInit {
   name:any;
   pName: any;
   quantity = 0;
+  fullName='';
 
-   constructor(private service: ProductService, private  cartService: CartService) { }
+   constructor(private service: ProductService, private  cartService: CartService, private auth: Authentication) { }
 
   ngOnInit(): void {
     this.getCategory();
     this.cartService.subjectItem.subscribe(resp =>{
       this.quantity = resp.length
     });
+    this.fullName;
+    console.log(this.auth.getFullName().fName + " " + this.auth.getFullName().lName);
   }
 getCategory(){
     this.service.getAllCategory().subscribe(res => {
       this.category = res;
+      this.fullName = this.auth.getFullName().fName + " " + this.auth.getFullName().lName
     })
 
 }
-  change(event: any){
-if(event.target.value) {
-  this.name = event.target.value;
-  this.service.subjectProduct.next(this.name);
-  this.service.getProductWithSearch(event.target.value).subscribe(res =>{
-    this.product = res;
+  change(event: any) {
+    if (event.target.value) {
+      this.name = event.target.value;
+      this.service.subjectProduct.next(this.name);
+      this.service.getProductWithSearch(event.target.value).subscribe(res => {
+        this.product = res;
 
-  });
-}else{
-  this.product=[]
+      });
+    } else {
+      this.product = []
+    }
+  }
+isLogin(){
+     return this.auth.isLogin();
+
 }
+
+  logOut() {
+    this.auth.logout();
+
 
 }
 
@@ -53,5 +67,6 @@ if(event.target.value) {
 
   closeReesult() {
     this.name=""
+
   }
 }
