@@ -14,12 +14,7 @@ import {Authentication} from "../../service/authentication";
 export class HeaderComponent implements OnInit {
   category: Category[] = [];
   product: Product[] = [];
-name:any;
-   constructor(private service: ProductService) { }
-
-  ngOnInit(): void {
-    this.getCategory();
-
+  name:any;
   pName: any;
   quantity = 0;
   fullName='';
@@ -41,18 +36,18 @@ getCategory(){
     })
 
 }
-  change(event: any){
-if(event.target.value) {
-  this.name = event.target.value;
-  this.service.subjectProduct.next(this.name);
-  this.service.getProductWithSearch(event.target.value).subscribe(res =>{
-    this.product = res;
+  change(event: any) {
+    if (event.target.value) {
+      this.name = event.target.value;
+      this.service.subjectProduct.next(this.name);
+      this.service.getProductWithSearch(event.target.value).subscribe(res => {
+        this.product = res;
 
-  });
-}else{
-  this.product=[]
-}
-
+      });
+    } else {
+      this.product = []
+    }
+  }
 isLogin(){
      return this.auth.isLogin();
 
