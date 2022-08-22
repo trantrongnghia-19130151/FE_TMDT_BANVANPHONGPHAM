@@ -123,7 +123,8 @@
       "idNsx": 1000,
       "cateId": 102,
       "parent_cateId": 100,
-      "bestSeller": true
+      "bestSeller": true,
+      "inputDay": "2022-06-08"
     },
     {
       "id": 5,
@@ -134,7 +135,8 @@
       "idNsx": 1000,
       "cateId": 102,
       "parent_cateId": 100,
-      "bestSeller": true
+      "bestSeller": true,
+      "inputDay": "2022-07-08"
     },
     {
       "id": 6,
@@ -145,7 +147,8 @@
       "idNsx": 1000,
       "cateId": 103,
       "parent_cateId": 100,
-      "bestSeller": true
+      "bestSeller": true,
+      "inputDay": "2022-07-06"
     },
     {
       "id": 7,
@@ -156,7 +159,8 @@
       "idNsx": 123,
       "cateId": 103,
       "parent_cateId": 100,
-      "bestSeller": true
+      "bestSeller": true,
+      "inputDay": "2022-06-07"
     },
     {
       "id": 8,
@@ -167,7 +171,8 @@
       "idNsx": 1009,
       "cateId": 104,
       "parent_cateId": 100,
-      "bestSeller": true
+      "bestSeller": true,
+      "inputDay": "2022-08-08"
     },
     {
       "id": 9,
@@ -178,7 +183,8 @@
       "idNsx": 1008,
       "cateId": 104,
       "parent_cateId": 100,
-      "bestSeller": true
+      "bestSeller": true,
+      "inputDay": "2022-08-19"
     },
     {
       "id": 10,
@@ -189,7 +195,8 @@
       "idNsx": 1001,
       "cateId": 104,
       "parent_cateId": 100,
-      "bestSeller": true
+      "bestSeller": true,
+      "inputDay": "2022-08-08"
     },
     {
       "id": 11,
@@ -200,7 +207,8 @@
       "idNsx": 1007,
       "cateId": 201,
       "parent_cateId": 200,
-      "bestSeller": true
+      "bestSeller": true,
+      "inputDay": "2022-06-08"
     },
     {
       "id": 12,
@@ -211,7 +219,8 @@
       "idNsx": 1007,
       "cateId": 201,
       "parent_cateId": 200,
-      "bestSeller": true
+      "bestSeller": true,
+      "inputDay": "2022-07-08"
     },
     {
       "id": 13,
@@ -222,7 +231,8 @@
       "idNsx": 1007,
       "cateId": 201,
       "parent_cateId": 200,
-      "bestSeller": true
+      "bestSeller": true,
+      "inputDay": "2022-03-08"
     },
     {
       "id": 14,
@@ -244,7 +254,8 @@
       "idNsx": 1001,
       "cateId": 201,
       "parent_cateId": 200,
-      "bestSeller": false
+      "bestSeller": false,
+      "inputDay": "2022-05-02"
     },
     {
       "id": 16,
@@ -255,7 +266,8 @@
       "idNsx": 1001,
       "cateId": 201,
       "parent_cateId": 200,
-      "bestSeller": false
+      "bestSeller": false,
+      "inputDay": "2022-06-08"
     },
     {
       "id": 17,
@@ -266,7 +278,8 @@
       "idNsx": 1009,
       "cateId": 201,
       "parent_cateId": 200,
-      "bestSeller": false
+      "bestSeller": false,
+      "inputDay": "2022-05-01"
     },
     {
       "id": 18,
@@ -277,7 +290,8 @@
       "idNsx": 1009,
       "cateId": 202,
       "parent_cateId": 200,
-      "bestSeller": false
+      "bestSeller": false,
+      "inputDay": "2022-03-08"
     },
     {
       "id": 19,
@@ -288,7 +302,8 @@
       "idNsx": 1008,
       "cateId": 202,
       "parent_cateId": 200,
-      "bestSeller": true
+      "bestSeller": true,
+      "inputDay": "2022-06-09"
     },
     {
       "id": 20,
@@ -299,7 +314,8 @@
       "idNsx": 1000,
       "cateId": 202,
       "parent_cateId": 200,
-      "bestSeller": false
+      "bestSeller": false,
+      "inputDay": "2022-01-08"
     },
     {
       "id": 21,
@@ -310,7 +326,8 @@
       "idNsx": 1005,
       "cateId": 202,
       "parent_cateId": 200,
-      "bestSeller": true
+      "bestSeller": true,
+      "inputDay": "2022-01-08"
     },
     {
       "id": 22,
@@ -321,7 +338,8 @@
       "idNsx": 1005,
       "cateId": 202,
       "parent_cateId": 200,
-      "bestSeller": true
+      "bestSeller": true,
+      "inputDay": "2022-01-08"
     },
     {
       "id": 23,
@@ -332,7 +350,8 @@
       "idNsx": 1004,
       "cateId": 202,
       "parent_cateId": 200,
-      "bestSeller": false
+      "bestSeller": false,
+      "inputDay": "2022-01-08"
     },
     {
       "id": 24,
@@ -343,7 +362,8 @@
       "idNsx": 1001,
       "cateId": 202,
       "parent_cateId": 200,
-      "bestSeller": false
+      "bestSeller": false,
+      "inputDay": "2022-01-08"
     },
     {
       "id": 25,
@@ -354,7 +374,8 @@
       "idNsx": 1001,
       "cateId": 202,
       "parent_cateId": 200,
-      "bestSeller": true
+      "bestSeller": true,
+      "inputDay": "2022-01-08"
     },
     {
       "id": 26,
@@ -365,7 +386,8 @@
       "idNsx": 1001,
       "cateId": 203,
       "parent_cateId": 200,
-      "bestSeller": true
+      "bestSeller": true,
+      "inputDay": "2022-01-08"
     },
     {
       "id": 27,
@@ -376,7 +398,8 @@
       "idNsx": 1002,
       "cateId": 203,
       "parent_cateId": 200,
-      "bestSeller": false
+      "bestSeller": false,
+      "inputDay": "2022-01-08"
     },
     {
       "id": 28,
@@ -387,7 +410,8 @@
       "idNsx": 1002,
       "cateId": 203,
       "parent_cateId": 200,
-      "bestSeller": true
+      "bestSeller": true,
+      "inputDay": "2022-01-08"
     },
     {
       "id": 29,
@@ -398,7 +422,8 @@
       "idNsx": 1002,
       "cateId": 203,
       "parent_cateId": 200,
-      "bestSeller": true
+      "bestSeller": true,
+      "inputDay": "2022-04-08"
     },
     {
       "id": 30,
@@ -409,7 +434,8 @@
       "idNsx": 1004,
       "cateId": 301,
       "parent_cateId": 300,
-      "bestSeller": false
+      "bestSeller": false,
+      "inputDay": "2022-04-08"
     },
     {
       "id": 31,
@@ -420,7 +446,8 @@
       "idNsx": 1003,
       "cateId": 302,
       "parent_cateId": 300,
-      "bestSeller": true
+      "bestSeller": true,
+      "inputDay": "2022-04-08"
     },
     {
       "id": 32,
@@ -431,7 +458,8 @@
       "idNsx": 1003,
       "cateId": 302,
       "parent_cateId": 300,
-      "bestSeller": true
+      "bestSeller": true,
+      "inputDay": "2022-04-08"
     },
     {
       "id": 33,
@@ -442,7 +470,8 @@
       "idNsx": 1006,
       "cateId": 400,
       "parent_cateId": 400,
-      "bestSeller": true
+      "bestSeller": true,
+      "inputDay": "2022-04-08"
     },
     {
       "id": 34,
@@ -453,7 +482,8 @@
       "idNsx": 1006,
       "cateId": 400,
       "parent_cateId": 400,
-      "bestSeller": true
+      "bestSeller": true,
+      "inputDay": "2022-04-08"
     },
     {
       "id": 35,
@@ -464,7 +494,8 @@
       "idNsx": 1006,
       "cateId": 400,
       "parent_cateId": 400,
-      "bestSeller": true
+      "bestSeller": true,
+      "inputDay": "2022-04-08"
     },
     {
       "id": 36,
@@ -475,7 +506,8 @@
       "idNsx": 1006,
       "cateId": 400,
       "parent_cateId": 400,
-      "bestSeller": false
+      "bestSeller": false,
+      "inputDay": "2022-04-08"
     },
     {
       "id": 37,
@@ -486,7 +518,8 @@
       "idNsx": 1002,
       "cateId": 400,
       "parent_cateId": 400,
-      "bestSeller": true
+      "bestSeller": true,
+      "inputDay": "2022-04-08"
     },
     {
       "id": 38,
@@ -497,7 +530,8 @@
       "idNsx": 1006,
       "cateId": 400,
       "parent_cateId": 400,
-      "bestSeller": true
+      "bestSeller": true,
+      "inputDay": "2022-04-08"
     },
     {
       "id": 39,
@@ -508,7 +542,8 @@
       "idNsx": 1006,
       "cateId": 400,
       "parent_cateId": 400,
-      "bestSeller": false
+      "bestSeller": false,
+      "inputDay": "2022-04-08"
     },
     {
       "id": 40,
@@ -519,7 +554,8 @@
       "idNsx": 1006,
       "cateId": 400,
       "parent_cateId": 400,
-      "bestSeller": true
+      "bestSeller": true,
+      "inputDay": "2022-04-08"
     },
     {
       "id": 41,
@@ -530,7 +566,8 @@
       "idNsx": 1006,
       "cateId": 400,
       "parent_cateId": 400,
-      "bestSeller": true
+      "bestSeller": true,
+      "inputDay": "2022-04-08"
     },
     {
       "id": 42,
@@ -541,7 +578,8 @@
       "idNsx": 1006,
       "cateId": 400,
       "parent_cateId": 400,
-      "bestSeller": true
+      "bestSeller": true,
+      "inputDay": "2022-04-08"
     },
     {
       "id": 43,
@@ -552,7 +590,8 @@
       "idNsx": 1006,
       "cateId": 400,
       "parent_cateId": 400,
-      "bestSeller": true
+      "bestSeller": true,
+      "inputDay": "2022-04-08"
     },
     {
       "id": 44,
@@ -563,7 +602,8 @@
       "idNsx": 1006,
       "cateId": 400,
       "parent_cateId": 400,
-      "bestSeller": false
+      "bestSeller": false,
+      "inputDay": "2022-04-08"
     }
   ],
   "manufactur": [
