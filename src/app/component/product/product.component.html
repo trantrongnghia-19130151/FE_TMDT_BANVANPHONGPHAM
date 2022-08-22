@@ -174,7 +174,7 @@
 
           </div>
         </section>
-        <p class="text-center" *ngIf="firstArray.length == 0 && product.length==0">Không có sản phẩm nào được tìm thấy</p>
+        <p class="text-center" *ngIf="arrays.length == 0 || product.length==0">Không có sản phẩm nào được tìm thấy</p>
         <!-- Section: Products -->
 
         <pagination-controls class="pagination pagination-circle  mb-0 justify-content-end" (pageChange)="p = $event"></pagination-controls>
