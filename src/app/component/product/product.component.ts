@@ -11,7 +11,7 @@ import {CartService} from "../../service/cart.service";
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
-  @Input() product : Product[] = [];
+  @Input() product: Product[] = [];
 
    category: Category[] = [];
    nsx : Manufactur[] =[];
@@ -22,22 +22,23 @@ export class ProductComponent implements OnInit {
    firstArray:any =[];
     p: number =1;
 
+
   options = [
-    { value: 1, label: 'Tất cả sản phẩm' },
-    { value: 2, label: 'Sản phẩm mới nhất' },
-    { value: 3, label: 'Sản phẩm giảm giá' },
-    { value: 4, label: 'Sản phẩm bán chạy' },
-    { value: 5, label: 'Giá giảm dần' },
-    { value: 6, label: 'Giá tăng dần' },
+    {value: 1, label: 'Tất cả sản phẩm'},
+    {value: 2, label: 'Sản phẩm mới nhất'},
+    {value: 3, label: 'Sản phẩm giảm giá'},
+    {value: 4, label: 'Sản phẩm bán chạy'},
+    {value: 5, label: 'Giá giảm dần'},
+    {value: 6, label: 'Giá tăng dần'},
   ];
+
 
   constructor(private service: ProductService, private cartService: CartService) { }
 
   ngOnInit(): void {
     this.getCategory();
     this.getManufactur();
-     this.getProduct();
-
+    this.getProduct();
 
 
   }
@@ -49,8 +50,13 @@ export class ProductComponent implements OnInit {
       })
 
     })
+    this.service.subjectProductByCateId.subscribe(res => {
+      this.product = res;
+    })
+
 
   }
+
   getCategory(){
     this.service.getAllCategory().subscribe(res => {
       this.category = res;

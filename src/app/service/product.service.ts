@@ -13,7 +13,6 @@ export class ProductService {
   private value :HeaderComponent = new HeaderComponent();
   product:Product[]=[];
   subjectProduct: BehaviorSubject<string> = new BehaviorSubject<string>("");
-  subject:BehaviorSubject<Product[]> = new BehaviorSubject<Product[]>([]);
   constructor(private http: HttpClient) {
 }
 
