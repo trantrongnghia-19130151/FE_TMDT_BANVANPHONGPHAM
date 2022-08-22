@@ -17,8 +17,6 @@ export class ProductComponent implements OnInit {
   nsx: Manufactur[] = [];
   name: any;
   arrays: Product[] = [];
-  tempArray: any = [];
-  newArray: any = [];
   firstArray: any = [];
   p: number = 1;
 
@@ -48,12 +46,14 @@ export class ProductComponent implements OnInit {
         case 'bestSeller' : {
           this.service.getAllProductBestSell().subscribe(resp => {
             this.product = resp;
+            this.arrays = resp;
           })
           break;
         }
         case 'discount' : {
           this.service.getAllProductByDiscount().subscribe(resp => {
             this.product = resp;
+            this.arrays = resp;
             console.log(this.product)
           })
           break;
@@ -61,6 +61,7 @@ export class ProductComponent implements OnInit {
         default: {
           this.service.getProductWithSearch(this.name).subscribe(resp => {
             this.product = resp;
+            this.arrays = resp;
           })
           break;
         }
@@ -68,6 +69,7 @@ export class ProductComponent implements OnInit {
     })
     this.service.subject.subscribe(res=>{
       this.product=res;
+      this.arrays=res;
     })
 
   }
@@ -107,7 +109,8 @@ export class ProductComponent implements OnInit {
     if (event[0] == 2) {
       let d = new Date();
       this.arrays = this.product.filter((value: any) => (value.inputDay != undefined));
-      this.arrays = this.arrays.filter((value : any) => (d.getDate()- Number.parseInt(value.inputDay.slice(8, 10)) <= 10 && d.getMonth()+1 == Number.parseInt(value.inputDay.slice(5, 7)) && d.getFullYear() == Number.parseInt(value.inputDay.slice(0,4))))
+      this.arrays = this.arrays.filter((value : any) => (d.getDate()- Number.parseInt(value.inputDay.slice(8, 10)) <= 10 && d.getMonth()+1 == Number.parseInt(value.inputDay.slice(5, 7)) && d.getFullYear() == Number.parseInt(value.inputDay.slice(0,4))));
+      console.log(this.arrays)
     }
     if (event[0] == 3) {
       this.arrays = this.product.filter((value: any) => value.discount > 0);

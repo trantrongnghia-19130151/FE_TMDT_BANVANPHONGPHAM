@@ -49,7 +49,7 @@ isLogin(){
      return this.auth.isLogin();
 
 }
-async getUsername(){
+ getUsername(){
   const fullName = localStorage.getItem("user");
   const str:any = fullName != null ?  JSON.parse(fullName): [];
     this.fullName = str.fName + " " + str.lName
