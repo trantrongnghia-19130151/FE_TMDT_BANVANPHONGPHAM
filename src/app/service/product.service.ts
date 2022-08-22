@@ -11,9 +11,8 @@ import {Product} from "../model/product";
 export class ProductService {
   // @ts-ignore
   private value :HeaderComponent = new HeaderComponent();
+  product:Product[]=[];
   subjectProduct: BehaviorSubject<string> = new BehaviorSubject<string>("");
-  product: Product[]=[];
-  subjectProductByCateId: BehaviorSubject<Product[]> = new BehaviorSubject<Product[]>([]);
   constructor(private http: HttpClient) {
 }
 
@@ -47,5 +46,6 @@ export class ProductService {
   getCategoryById(cateId : string) : Observable<any>{
     return this.http.get<any>("http://localhost:3000/category?cateId=" + cateId );
   }
+
 
 }
