@@ -50,9 +50,7 @@ export class ProductComponent implements OnInit {
       })
 
     })
-    this.service.subjectProductByCateId.subscribe(res => {
-      this.product = res;
-    })
+
 
 
   }
