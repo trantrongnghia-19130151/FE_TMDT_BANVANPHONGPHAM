@@ -10,17 +10,23 @@
             <h1 class="mb-2">Đăng kí</h1>
             <form id="registerForm" (ngSubmit)="onSubmit(authForm)" #authForm="ngForm">
               <div class="row">
-                <div class="col-md-6">
-                  <mdb-form-control class="w-100 mb-3">
+                <div class="col-md-6 mb-3">
+                  <mdb-form-control class="w-100">
                     <input mdbInput type="Text" id="fname" ngModel name="fname" required #fname="ngModel" class="form-control"/>
                     <label mdbLabel class="form-label" for="fname">Họ</label>
                   </mdb-form-control>
+                  <small id="hoVal" class="text-danger mb-3" *ngIf="!fname?.valid && (fname?.dirty || fname?.touched)">
+                    *Họ không được để trống
+                  </small>
                 </div>
-                <div class="col-md-6">
-                  <mdb-form-control class="w-100 mb-3">
+                <div class="col-md-6 mb-3">
+                  <mdb-form-control class="w-100">
                     <input mdbInput type="text" id="lname" class="form-control" required ngModel name="lname" #lname="ngModel"/>
                     <label mdbLabel class="form-label" for="lname">Tên</label>
                   </mdb-form-control>
+                  <small id="tenVal" class="text-danger mb-3" *ngIf="!lname?.valid && (lname?.dirty || lname?.touched)">
+                    *Tên không được để trống
+                  </small>
                 </div>
               </div>
               <!-- Email input -->
@@ -48,12 +54,12 @@
                 <input mdbInput type="password" id="repassword" ngModel name="rePassword" required #rePassword="ngModel" minlength="6" class="form-control"/>
                 <label mdbLabel class="form-label" for="repassword">Nhập lại mật khẩu</label>
               </mdb-form-control>
-                <small id="rePassVal" class="text-danger mb-3" *ngIf="!rePassword?.valid && (rePassword?.dirty||rePassword?.touched) || !checkPass(password?.value, rePassword?.value) && authForm.valid ">
+                <small id="rePassVal" class="text-danger mb-3" *ngIf="!rePassword?.valid && (rePassword?.dirty||rePassword?.touched)">
                   *Mật khẩu không hợp lệ
                 </small>
               </div>
               <!-- Submit button -->
-              <button type="submit" class="btn btn-danger btn-block mb-4" [disabled]="!authForm.valid &&  (rePassword?.dirty||rePassword?.touched) ||  !checkPass(password?.value, rePassword?.value)">
+              <button type="submit" class="btn btn-danger btn-block mb-4" [disabled]="!authForm.valid ||  !checkPass(password?.value, rePassword?.value)">
                 Đăng kí
               </button>
              <div class="text-center mb-4">

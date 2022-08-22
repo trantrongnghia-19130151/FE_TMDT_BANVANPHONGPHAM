@@ -4,6 +4,7 @@ import * as moment from 'moment';
 import {Authentication} from "../../service/authentication";
 import {Router} from "@angular/router";
 import {ProductService} from "../../service/product.service";
+import {HomeComponent} from "../home/home.component";
 
 @Component({
   selector: 'app-login',
@@ -28,8 +29,9 @@ loginForm!: NgForm;
       });
       if(user){
         form.reset();
-        this.router.navigateByUrl("/");
+
         localStorage.setItem("user", JSON.stringify(user));
+        this.router.navigateByUrl("/");
       }else{
         alert("Không tồn tại người dùng này");
       }
