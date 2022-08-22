@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {BehaviorSubject, Observable} from "rxjs";
 import {HeaderComponent} from "../component/header/header.component";
+import {Product} from "../model/product";
 
 
 @Injectable({
@@ -10,8 +11,9 @@ import {HeaderComponent} from "../component/header/header.component";
 export class ProductService {
   // @ts-ignore
   private value :HeaderComponent = new HeaderComponent();
+  product:Product[]=[];
   subjectProduct: BehaviorSubject<string> = new BehaviorSubject<string>("");
-
+  subject:BehaviorSubject<Product[]> = new BehaviorSubject<Product[]>([]);
   constructor(private http: HttpClient) {
 }
 
@@ -45,5 +47,6 @@ export class ProductService {
   getCategoryById(cateId : string) : Observable<any>{
     return this.http.get<any>("http://localhost:3000/category?cateId=" + cateId );
   }
+
 
 }

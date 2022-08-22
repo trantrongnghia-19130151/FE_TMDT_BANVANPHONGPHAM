@@ -28,18 +28,6 @@
           </section>
           <!-- Section: Categories -->
 
-          <!-- Section: Condition -->
-          <section class="mb-5" data-mdb-filter="manufacture">
-            <h5 class="fw-bold mb-4">Hãng sản xuất</h5>
-
-
-            <div *ngFor="let nsx of nsx index as i" [id]="nsx.id "  class="form-check mb-3">
-              <input class="form-check-input" type="checkbox" value="{{nsx.id}}" (change)="onChange($event)" id="condition{{i}}" />
-
-              <label class="form-check-label" for="condition{{i}}"> {{nsx.name}} </label>
-            </div>
-          </section>
-          <!-- Section: Condition -->
 
           <!-- Section: Price - radio -->
           <section class="mb-5" data-mdb-filter="price">
@@ -125,7 +113,7 @@
             <div class="col-4">
               <mdb-form-control>
                 <mdb-select class="select">
-                  <mdb-option *ngFor="let option of options index as i"  [value]="option.value" >
+                  <mdb-option *ngFor="let option of options index as i" [value]="option.value" >
 <!--                    <input class="d-none w-100" type="text" id="sort{{i}}" value="{{option.value}}" (click)="sort($event)">-->
 <!--                    <label for="sort{{i}}">{{-->
 <!--                      option.label-->
@@ -186,6 +174,7 @@
 
           </div>
         </section>
+        <p class="text-center" *ngIf="firstArray.length == 0 && product.length==0">Không có sản phẩm nào được tìm thấy</p>
         <!-- Section: Products -->
 
         <pagination-controls class="pagination pagination-circle  mb-0 justify-content-end" (pageChange)="p = $event"></pagination-controls>

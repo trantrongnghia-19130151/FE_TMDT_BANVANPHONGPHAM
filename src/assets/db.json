@@ -528,9 +528,9 @@
       "id": 42,
       "name": "Bộ sách giáo khoa lớp 10",
       "img": "https://cf.shopee.vn/file/85e1d7808ef6a57a60e6d3902abf76ee",
-      "price": 280000,
+      "price": 50000,
       "discount": 5,
-      "idNsx": 1006,
+      "idNsx": 1002,
       "cateId": 400,
       "parent_cateId": 400,
       "bestSeller": true
@@ -541,7 +541,7 @@
       "img": "https://img.websosanh.vn/v10/users/review/images/60bz9hs1k8pgt/sach-giao-khoa-lop-11.jpg?compress=85",
       "price": 290000,
       "discount": 5,
-      "idNsx": 1006,
+      "idNsx": 1001,
       "cateId": 400,
       "parent_cateId": 400,
       "bestSeller": true

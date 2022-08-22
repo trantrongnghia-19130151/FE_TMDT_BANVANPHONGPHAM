@@ -15,7 +15,6 @@ export class HeaderComponent implements OnInit {
   category: Category[] = [];
   product: Product[] = [];
   name:any;
-  pName: any;
   quantity = 0;
   fullName='';
 
@@ -26,8 +25,8 @@ export class HeaderComponent implements OnInit {
     this.cartService.subjectItem.subscribe(resp =>{
       this.quantity = resp.length
     });
-    this.fullName;
-    console.log(this.auth.getFullName().fName + " " + this.auth.getFullName().lName);
+    this.fullName = this.auth.getFullName().fName + " " + this.auth.getFullName().lName
+
   }
 getCategory(){
     this.service.getAllCategory().subscribe(res => {
@@ -50,7 +49,9 @@ getCategory(){
   }
 isLogin(){
      return this.auth.isLogin();
-
+if(this.isLogin()){
+  this.fullName = this.auth.getFullName().fName + " " + this.auth.getFullName().lName
+}
 }
 
   logOut() {
@@ -62,7 +63,7 @@ isLogin(){
   reset(form: NgForm) {
      this.name= "";
     form.reset();
-    console.log("hello")
+
   }
 
   closeReesult() {
