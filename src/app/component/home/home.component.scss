@@ -9,13 +9,50 @@
         h2{
         color: Black;
         }
+        .view__all{
+          curson: pointer;
+        }
       }
+
     }
     .row{
       flex-wrap: nowrap;
-      .cart{
+      .card{
         border-radius: 19px;
+        overflow: hidden;
+        .bg-image {
+          img{
+            transition: all 0.5s;
+          }
+          .mask{
+            transition: all 0.5s;
+          }
+        }
+        .bg-image:hover img{
+          transform: scale(1.2);
+        }
+        .bg-image:hover .mask{
+          z-index: 100;
+          background-color: rgba(117, 117, 117, 0.47);
+        }
+        .card__content{
+          .add__cart{
+            color: #818181;
+            border-radius: 50%;
+            background-color: rgba(231, 231, 231, 0.59);
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            transition: all .5s;
+            cursor: pointer;
+          }
+          .add__cart:hover{
+            color: white;
+            background-color: black;
+          }
+        }
       }
+
     }
   }
 }
