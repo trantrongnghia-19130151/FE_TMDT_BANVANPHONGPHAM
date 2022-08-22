@@ -16,7 +16,6 @@ export class HeaderComponent implements OnInit {
   category: Category[] = [];
   product: Product[] = [];
   name:any;
-  pName: any;
   quantity = 0;
   fullName='';
 
@@ -27,7 +26,6 @@ export class HeaderComponent implements OnInit {
     this.cartService.subjectItem.subscribe(resp =>{
       this.quantity = resp.length
     });
-    console.log(this.auth.getFullName().fName + " " + this.auth.getFullName().lName);
   }
 getCategory(){
     this.service.getAllCategory().subscribe(res => {
@@ -49,7 +47,9 @@ getCategory(){
   }
 isLogin(){
      return this.auth.isLogin();
-
+if(this.isLogin()){
+  this.fullName = this.auth.getFullName().fName + " " + this.auth.getFullName().lName
+}
 }
 
   logOut() {
@@ -72,6 +72,7 @@ isLogin(){
     this.service.getProductByParentCateId(event[0]).subscribe((res:any)=>{
       this.product = res;
       this.service.subject.next(this.product);
+
     })
   }
 
@@ -79,6 +80,7 @@ isLogin(){
     this.service.getProductByCateId(event[0]).subscribe((res:any)=>{
       this.product = res;
       this.service.subject.next(this.product);
+
     })
   }
 }

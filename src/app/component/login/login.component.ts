@@ -22,9 +22,7 @@ loginForm!: NgForm;
   onSubmit(form: NgForm) {
     let email = form.value.email;
     let pass = form.value.password;
-    console.log(email, pass)
     this.authService.login().subscribe(res=>{
-      console.log(res);
       const user = res.find((a:any)=>{
         return a.email === email && a.password === pass;
       });

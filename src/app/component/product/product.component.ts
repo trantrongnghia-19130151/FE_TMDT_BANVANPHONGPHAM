@@ -13,13 +13,15 @@ import {CartService} from "../../service/cart.service";
 export class ProductComponent implements OnInit {
   @Input() product: Product[] = [];
 
-  category: Category[] = [];
-  nsx: Manufactur[] = [];
-  name: any;
-  arrays: any = [];
-  tempArray: any = [];
-  newArray: any = [];
-  p: number = 1;
+   category: Category[] = [];
+   nsx : Manufactur[] =[];
+   name:any;
+   arrays: any = [];
+   tempArray:any =[];
+   newArray: any = [];
+   firstArray:any =[];
+    p: number =1;
+
 
   options = [
     {value: 1, label: 'Tất cả sản phẩm'},
@@ -30,15 +32,14 @@ export class ProductComponent implements OnInit {
     {value: 6, label: 'Giá tăng dần'},
   ];
 
-  constructor(private service: ProductService, private cartService: CartService) {
-  }
+
+  constructor(private service: ProductService, private cartService: CartService) { }
 
   ngOnInit(): void {
     this.getCategory();
     this.getManufactur();
     this.getProduct();
   }
-
   getProduct() {
     this.service.subjectProduct.subscribe(res => {
       this.name = res;
@@ -67,6 +68,7 @@ export class ProductComponent implements OnInit {
     this.service.subject.subscribe(res=>{
       this.product=res;
     })
+
   }
   getCategory() {
     this.service.getAllCategory().subscribe(res => {
@@ -83,33 +85,38 @@ export class ProductComponent implements OnInit {
 
   onChange(event:any) {
 
-
     if (event.target.checked) {
-      this.tempArray = this.product.filter((e: any) => ( e.idNsx == event.target.value || (e.price - (e.price * e.discount / 100) <= event.target.max && e.price - (e.price * e.discount / 100) >= event.target.min)));
+    let value = event.target.value;
+    let max = event.target.max;
+    let min = event.target.min;
+    console.log(value);
+      this.tempArray = this.product.filter((e: any) => ((e.price - (e.price * e.discount / 100) <= max && e.price - (e.price * e.discount / 100) >= min)));
       this.product= [];
-      // this.newArray=[];
-      this.newArray.push(this.tempArray);
-      for (let i = 0; i < this.newArray.length; i++) {
-        var firstArray = this.newArray[i];
-        for (let i = 0; i < firstArray.length; i++) {
-          var obj = firstArray[i];
-           this.product.push(obj);
-
-        }
-      }
+       this.newArray=[];
+       // this.newArray.push(this.tempArray);
+      this.newArray = this.tempArray;
+      this.product = this.newArray;
+      // for (let i = 0; i < this.newArray.length; i++) {
+      //    this.firstArray = this.newArray[i];
+      //   for (let i = 0; i < this.firstArray.length; i++) {
+      //     var obj = this.firstArray[i];
+      //      this.product.push(obj);
+      //
+      //   }
+      // }
     } else {
+      this.tempArray = this.product.filter((e: any) => ( (e.price - (e.price * e.discount / 100) > event.target.max || e.price - (e.price * e.discount / 100) < event.target.min)));
 
-      this.tempArray = this.product.filter((e: any) => ( e.idNsx != event.target.value && (e.price - (e.price * e.discount / 100) > event.target.max || e.price - (e.price * e.discount / 100) < event.target.min)));
       this.newArray = [];
       this.product = [];
       this.newArray.push(this.tempArray);
       for (let i = 0; i < this.newArray.length; i++) {
-        var firstArray = this.newArray[i];
-        for (let i = 0; i < firstArray.length; i++) {
-          var obj = firstArray[i];
+        this.firstArray = this.newArray[i];
+        for (let i = 0; i < this.firstArray.length; i++) {
+          var obj = this.firstArray[i];
           this.product.push(obj);
         }
-        if (firstArray.length === 0 || !event.target.value) {
+        if (this.firstArray.length === 0 || !event.target.value) {
            this.product = this.arrays;
         }
       }
@@ -135,9 +142,9 @@ addToCart(p : Product){
       this.newArray=[];
       this.newArray.push(this.tempArray);
       for (let i = 0; i < this.newArray.length; i++) {
-        var firstArray = this.newArray[i];
-        for (let i = 0; i < firstArray.length; i++) {
-          var obj = firstArray[i];
+        this.firstArray = this.newArray[i];
+        for (let i = 0; i < this.firstArray.length; i++) {
+          var obj = this.firstArray[i];
           if(d.getDate()-obj.inputDay.slice(8, 10) <= 10 && d.getMonth()+1 == Number.parseInt(obj.inputDay.slice(5, 7)) && d.getFullYear() == Number.parseInt(obj.inputDay.slice(0,4))){
             this.product.push(obj);
           }
@@ -151,7 +158,7 @@ addToCart(p : Product){
 
     }
     if(event[0]==4) {
-      this.product =  this.product.filter((value:any)=> value.bestSeller == false);
+      this.product =  this.product.filter((value:any)=> value.bestSeller == true);
 
     }
     if(event[0]==5){
@@ -171,12 +178,14 @@ addToCart(p : Product){
   getCate(event:any) {
     this.service.getProductByParentCateId(event[0]).subscribe((res:any)=>{
       this.product = res;
+      this.arrays =res;
     })
   }
 
   getSubCate(event:any) {
     this.service.getProductByCateId(event[0]).subscribe((res:any)=>{
       this.product = res;
+      this.arrays =res;
     })
   }
 }

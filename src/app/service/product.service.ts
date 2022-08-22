@@ -9,9 +9,9 @@ import {Product} from "../model/product";
 })
 export class ProductService {
   // @ts-ignore
-  product:Product[]=[];
   subjectProduct: BehaviorSubject<string> = new BehaviorSubject<string>("");
   subject: BehaviorSubject<Product[]> = new BehaviorSubject<Product[]>([]);
+
   constructor(private http: HttpClient) {
 }
 
@@ -60,5 +60,6 @@ getAllProductLimit():Observable<any>{
     return this.http.get<any>("http://localhost:3000/product?discount_gte=1")
 
 }
+
 
 }

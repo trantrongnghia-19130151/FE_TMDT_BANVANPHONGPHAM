@@ -56,14 +56,13 @@
 
             <div mdbDropdown class="dropdown">
               <a
-                class="btn btn-light dropdown-toggle"
+                class="btn btn-light p-2 dropdown-toggle"
                 role="button"
                 id="dropdownMenuLink"
                 mdbDropdownToggle
                 aria-expanded="false"
                 [hidden]="!isLogin()"
-              >
-                Xin chào {{fullName}}
+              >{{fullName}}
               </a>
               <ul mdbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                 <li><a class="dropdown-item"  (click)="logOut()">Đăng xuất</a></li>
