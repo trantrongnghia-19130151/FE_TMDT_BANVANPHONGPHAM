@@ -3,7 +3,7 @@ import {User} from "./user";
 
 export class Order {
   id: number = 0;
-  userId : string = "";
+  user!: User;
   firstName: string = '';
   lastName: string = '';
   city: string = '';

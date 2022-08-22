@@ -27,7 +27,6 @@ export class HeaderComponent implements OnInit {
       this.quantity = resp.length
     });
     this.getUsername();
-
   }
   getCategory(){
     this.service.getAllCategory().subscribe(res => {
@@ -41,7 +40,6 @@ export class HeaderComponent implements OnInit {
       this.service.subjectProduct.next(this.name);
       this.service.getProductWithSearch(event.target.value).subscribe(res => {
         this.product = res;
-
       });
     } else {
       this.product = []
@@ -66,6 +64,8 @@ async getUsername(){
   getCate(event:any) {
     this.service.getProductByParentCateId(event[0]).subscribe((res:any)=>{
       this.product = res;
+      this.service.subject.next(this.product);
+
 
     })
   }
@@ -73,6 +73,7 @@ async getUsername(){
   getSubCate(event:any) {
     this.service.getProductByCateId(event[0]).subscribe((res:any)=>{
       this.product = res;
+      this.service.subject.next(this.product);
 
     })
   }

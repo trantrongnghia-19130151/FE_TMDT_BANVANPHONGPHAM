@@ -40,21 +40,37 @@ export class ProductComponent implements OnInit {
     this.getCategory();
     this.getManufactur();
     this.getProduct();
-
-
   }
   getProduct() {
     this.service.subjectProduct.subscribe(res => {
       this.name = res;
-      this.service.getProductWithSearch(this.name).subscribe(res => {
-        this.product = res;
-        this.arrays = res;
-      })
-
+      switch (this.name) {
+        case 'bestSeller' : {
+          this.service.getAllProductBestSell().subscribe(resp => {
+            this.product = resp;
+          })
+          break;
+        }
+        case 'discount' : {
+          this.service.getAllProductByDiscount().subscribe(resp => {
+            this.product = resp;
+            console.log(this.product)
+          })
+          break;
+        }
+        default: {
+          this.service.getProductWithSearch(this.name).subscribe(resp => {
+            this.product = resp;
+          })
+          break;
+        }
+      }
+    })
+    this.service.subject.subscribe(res=>{
+      this.product=res;
     })
 
   }
-
   getCategory() {
     this.service.getAllCategory().subscribe(res => {
       this.category = res;
