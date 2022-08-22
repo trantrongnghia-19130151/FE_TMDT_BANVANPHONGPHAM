@@ -20,7 +20,7 @@
         <!--          <div class="row">-->
 
         <div class="col-3 search input-group md-form form-sm form-2 pl-0">
-          <form (ngSubmit)="reset(searchForm)" #searchForm="ngForm" class="d-flex input-group w-auto" >
+          <form (ngSubmit)="closeReesult()" class="d-flex input-group w-auto" >
             <input
               type="search"
               class="form-control rounded"
@@ -64,8 +64,8 @@
         <!--        shopping cart, signup, login-->
         <div class="col-4 text-center right">
           <div class="header-top-right d-flex">
-            <a type="button" routerLink="/login" *ngIf="!isLogin()">Đăng nhập |</a>
-            <a type="button" routerLink="/register" *ngIf="!isLogin()">Đăng ký</a>
+            <a type="button" class="login" routerLink="/login" *ngIf="!isLogin()">Đăng nhập |</a>
+            <a type="button"  class="login" routerLink="/register" *ngIf="!isLogin()">Đăng ký</a>
 
             <div mdbDropdown class="dropdown">
               <a

@@ -46,22 +46,6 @@
         justify-content: center;
         align-items: center;
 
-        .shopping__card {
-          position: relative;
-          color: #363636;
-          padding-left: 5px;
-          transition: all .5s;
-          .badge{
-            position: absolute;
-            top: 2px;
-            right: -15px;
-          }
-        }
-
-        .shopping__card:hover {
-          color: red;
-        }
-
         a:last-child {
           i {
             font-size: 22px;
@@ -75,8 +59,13 @@
           }
         }
 
-        a:first-child {
+        .login {
           padding-right: 5px;
+          color: #313131;
+          transition: all 0.5s;
+        }
+        .login:hover{
+          color: red;
         }
         i{
           position: relative;

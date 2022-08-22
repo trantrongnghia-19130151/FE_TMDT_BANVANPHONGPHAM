@@ -13,14 +13,14 @@ import {CartService} from "../../service/cart.service";
 export class ProductComponent implements OnInit {
   @Input() product: Product[] = [];
 
-   category: Category[] = [];
-   nsx : Manufactur[] =[];
-   name:any;
-   arrays: any = [];
-   tempArray:any =[];
-   newArray: any = [];
-   firstArray:any =[];
-    p: number =1;
+  category: Category[] = [];
+  nsx: Manufactur[] = [];
+  name: any;
+  arrays: Product[] = [];
+  tempArray: any = [];
+  newArray: any = [];
+  firstArray: any = [];
+  p: number = 1;
 
 
   options = [
@@ -33,7 +33,8 @@ export class ProductComponent implements OnInit {
   ];
 
 
-  constructor(private service: ProductService, private cartService: CartService) { }
+  constructor(private service: ProductService, private cartService: CartService) {
+  }
 
   ngOnInit(): void {
     this.getCategory();
@@ -42,137 +43,88 @@ export class ProductComponent implements OnInit {
 
 
   }
-  getProduct(){
-    this.service.subjectProduct.subscribe(resp =>{
-      this.name = resp;
-      this.service.getProductWithSearch(this.name).subscribe(resp => {
-        this.product = resp;
+  getProduct() {
+    this.service.subjectProduct.subscribe(res => {
+      this.name = res;
+      this.service.getProductWithSearch(this.name).subscribe(res => {
+        this.product = res;
+        this.arrays = res;
       })
 
     })
-    this.service.subjectProductByCateId.subscribe(res => {
-      this.product = res;
-    })
-
 
   }
 
-  getCategory(){
+  getCategory() {
     this.service.getAllCategory().subscribe(res => {
       this.category = res;
 
     })
   }
-  getManufactur(){
+
+  getManufactur() {
     this.service.getAllManufacture().subscribe(res => {
       this.nsx = res;
     })
   }
 
 
-  onChange(event:any) {
-
-    if (event.target.checked) {
-    let value = event.target.value;
+  onChange(event: any) {
     let max = event.target.max;
     let min = event.target.min;
-    console.log(value);
-      this.tempArray = this.product.filter((e: any) => ((e.price - (e.price * e.discount / 100) <= max && e.price - (e.price * e.discount / 100) >= min)));
-      this.product= [];
-       this.newArray=[];
-       // this.newArray.push(this.tempArray);
-      this.newArray = this.tempArray;
-      this.product = this.newArray;
-      // for (let i = 0; i < this.newArray.length; i++) {
-      //    this.firstArray = this.newArray[i];
-      //   for (let i = 0; i < this.firstArray.length; i++) {
-      //     var obj = this.firstArray[i];
-      //      this.product.push(obj);
-      //
-      //   }
-      // }
+    if (event.target.checked) {
+      this.arrays = this.product.filter((e: any) => ((e.price - (e.price * e.discount / 100) <= max && e.price - (e.price * e.discount / 100) >= min)));
     } else {
-      this.tempArray = this.product.filter((e: any) => ( (e.price - (e.price * e.discount / 100) > event.target.max || e.price - (e.price * e.discount / 100) < event.target.min)));
-
-      this.newArray = [];
-      this.product = [];
-      this.newArray.push(this.tempArray);
-      for (let i = 0; i < this.newArray.length; i++) {
-        this.firstArray = this.newArray[i];
-        for (let i = 0; i < this.firstArray.length; i++) {
-          var obj = this.firstArray[i];
-          this.product.push(obj);
-        }
-        if (this.firstArray.length === 0 || !event.target.value) {
-           this.product = this.arrays;
-        }
-      }
+      this.arrays = this.product;
     }
   }
-addToCart(p : Product){
+  addToCart(p: Product) {
     this.cartService.addToCart(p, 1);
-}
+  }
+
   // @ts-ignore
-  sort(event:any){
-    console.log(event[0]);
-    if(event[0]==1) {
-      this.service.getAllProduct().subscribe(res => {
-        this.product = res;
+  sort(event: any) {
 
-      })
+    if (event[0] == 1) {
+      this.arrays = this.product
     }
-    if(event[0]==2) {
-       let d = new Date();
-
-      this.tempArray =  this.product.filter((value:any)=>(value.inputDay != undefined));
-      this.product=[];
-      this.newArray=[];
-      this.newArray.push(this.tempArray);
-      for (let i = 0; i < this.newArray.length; i++) {
-        this.firstArray = this.newArray[i];
-        for (let i = 0; i < this.firstArray.length; i++) {
-          var obj = this.firstArray[i];
-          if(d.getDate()-obj.inputDay.slice(8, 10) <= 10 && d.getMonth()+1 == Number.parseInt(obj.inputDay.slice(5, 7)) && d.getFullYear() == Number.parseInt(obj.inputDay.slice(0,4))){
-            this.product.push(obj);
-          }
-
-        }
-      }
+    if (event[0] == 2) {
+      let d = new Date();
+      this.arrays = this.product.filter((value: any) => (value.inputDay != undefined));
+      this.arrays = this.arrays.filter((value : any) => (d.getDate()- Number.parseInt(value.inputDay.slice(8, 10)) <= 10 && d.getMonth()+1 == Number.parseInt(value.inputDay.slice(5, 7)) && d.getFullYear() == Number.parseInt(value.inputDay.slice(0,4))))
+    }
+    if (event[0] == 3) {
+      this.arrays = this.product.filter((value: any) => value.discount > 0);
+    }
+    if (event[0] == 4) {
+      this.arrays = this.product.filter((value: any) => value.bestSeller == true);
 
     }
-    if(event[0]==3) {
-      this.product =  this.product.filter((value:any)=> value.discount > 0);
+    if (event[0] == 5) {
+      this.arrays.sort((a, b) => (a.price > b.price) ? -1 : 1);
 
     }
-    if(event[0]==4) {
-      this.product =  this.product.filter((value:any)=> value.bestSeller == true);
+    if (event[0] == 6) {
+      this.arrays.sort((a, b) => (a.price > b.price) ? 1 : -1);
 
     }
-    if(event[0]==5){
-     this.product.sort((a,b)=>(a.price > b.price)? -1:1);
+  }
 
-    }
-    if(event[0]==6) {
-      this.product.sort((a,b)=>(a.price > b.price)? 1:-1);
-
-    }
-}
-
-  stopPropagation(event:any) {
+  stopPropagation(event: any) {
     event.stopPropagation()
   }
 
-  getCate(event:any) {
-    this.service.getProductByParentCateId(event[0]).subscribe((res:any)=>{
+  getCate(event: any) {
+    this.service.getProductByParentCateId(event[0]).subscribe((res: any) => {
       this.product = res;
-      this.arrays =res;
+      this.arrays = res;
     })
   }
 
-  getSubCate(event:any) {
-    this.service.getProductByCateId(event[0]).subscribe((res:any)=>{
+  getSubCate(event: any) {
+    this.service.getProductByCateId(event[0]).subscribe((res: any) => {
       this.product = res;
-      this.arrays =res;
+      this.arrays = res;
     })
   }
 }
