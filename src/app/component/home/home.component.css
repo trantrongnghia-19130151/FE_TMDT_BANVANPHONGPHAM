@@ -5,11 +5,42 @@
 .wrapper .container .featured__products .featured__title h2 {
   color: Black;
 }
+.wrapper .container .featured__products .featured__title .view__all {
+  curson: pointer;
+}
 .wrapper .container .row {
   flex-wrap: nowrap;
 }
-.wrapper .container .row .cart {
+.wrapper .container .row .card {
   border-radius: 19px;
+  overflow: hidden;
+}
+.wrapper .container .row .card .bg-image img {
+  transition: all 0.5s;
+}
+.wrapper .container .row .card .bg-image .mask {
+  transition: all 0.5s;
+}
+.wrapper .container .row .card .bg-image:hover img {
+  transform: scale(1.2);
+}
+.wrapper .container .row .card .bg-image:hover .mask {
+  z-index: 100;
+  background-color: rgba(117, 117, 117, 0.47);
+}
+.wrapper .container .row .card .card__content .add__cart {
+  color: #818181;
+  border-radius: 50%;
+  background-color: rgba(231, 231, 231, 0.59);
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.wrapper .container .row .card .card__content .add__cart:hover {
+  color: white;
+  background-color: black;
 }
 
 /*# sourceMappingURL=home.component.css.map */

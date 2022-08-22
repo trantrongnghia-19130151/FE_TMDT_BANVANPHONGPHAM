@@ -37,28 +37,38 @@ export class ProductComponent implements OnInit {
     this.getCategory();
     this.getManufactur();
     this.getProduct();
-
-
   }
 
   getProduct() {
-
     this.service.subjectProduct.subscribe(res => {
       this.name = res;
-
-      this.service.getProductWithSearch(this.name).subscribe(res => {
-        this.product = res;
-        this.arrays = res;
-      });
+      switch (this.name) {
+        case 'bestSeller' : {
+          this.service.getAllProductBestSell().subscribe(resp => {
+            this.product = resp;
+          })
+          break;
+        }
+        case 'discount' : {
+          this.service.getAllProductByDiscount().subscribe(resp => {
+            this.product = resp;
+            console.log(this.product)
+          })
+          break;
+        }
+        default: {
+          this.service.getProductWithSearch(this.name).subscribe(resp => {
+            this.product = resp;
+          })
+          break;
+        }
+      }
     })
-    this.service.subjectProductByCateId.subscribe(res => {
-      this.product = res;
+    this.service.subject.subscribe(res=>{
+      this.product=res;
     })
-
-
   }
-
-  getCategory(){
+  getCategory() {
     this.service.getAllCategory().subscribe(res => {
       this.category = res;
 
@@ -75,10 +85,9 @@ export class ProductComponent implements OnInit {
 
 
     if (event.target.checked) {
-
       this.tempArray = this.product.filter((e: any) => ( e.idNsx == event.target.value || (e.price - (e.price * e.discount / 100) <= event.target.max && e.price - (e.price * e.discount / 100) >= event.target.min)));
       this.product= [];
-      this.newArray=[];
+      // this.newArray=[];
       this.newArray.push(this.tempArray);
       for (let i = 0; i < this.newArray.length; i++) {
         var firstArray = this.newArray[i];

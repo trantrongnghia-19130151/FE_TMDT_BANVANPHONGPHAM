@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {BehaviorSubject, Observable} from "rxjs";
-import {HeaderComponent} from "../component/header/header.component";
 import {Product} from "../model/product";
 
 
@@ -10,10 +9,9 @@ import {Product} from "../model/product";
 })
 export class ProductService {
   // @ts-ignore
-  private value :HeaderComponent = new HeaderComponent();
+  product:Product[]=[];
   subjectProduct: BehaviorSubject<string> = new BehaviorSubject<string>("");
-  product: Product[]=[];
-  subjectProductByCateId: BehaviorSubject<Product[]> = new BehaviorSubject<Product[]>([]);
+  subject: BehaviorSubject<Product[]> = new BehaviorSubject<Product[]>([]);
   constructor(private http: HttpClient) {
 }
 
@@ -35,7 +33,9 @@ export class ProductService {
   getAllProduct():Observable<any>{
     return this.http.get<any>("http://localhost:3000/product/");
   }
-
+getAllProductLimit():Observable<any>{
+    return this.http.get<any>("http://localhost:3000/product?_start=0&_end=4")
+}
   getAllManufacture():Observable<any>{
     return this.http.get<any>("http://localhost:3000/manufactur/");
   }
@@ -47,5 +47,18 @@ export class ProductService {
   getCategoryById(cateId : string) : Observable<any>{
     return this.http.get<any>("http://localhost:3000/category?cateId=" + cateId );
   }
+  getProductByBestSell():Observable<any>{
+    return this.http.get<any>("http://localhost:3000/product?bestSeller=true&_start=0&_end=4")
+  }
+  getProductByDiscount():Observable<any> {
+    return this.http.get<any>("http://localhost:3000/product?discount_gte=1&_start=0&_limit=4")
+  }
+    getAllProductBestSell():Observable<any>{
+    return this.http.get<any>("http://localhost:3000/product?bestSeller=true")
+  }
+    getAllProductByDiscount(): Observable<any>{
+    return this.http.get<any>("http://localhost:3000/product?discount_gte=1")
+
+}
 
 }
