@@ -174,7 +174,7 @@
       "name": "Thướt kẻ vuông",
       "img": "https://cf.shopee.vn/file/47f0a8d58b52e2821fc44aac88494cb2",
       "price": 13000,
-      "discount":0,
+      "discount": 0,
       "idNsx": 1008,
       "cateId": 104,
       "parent_cateId": 100,
@@ -535,10 +535,8 @@
     {
       "id": 42,
       "name": "Bộ sách giáo khoa lớp 10",
-
       "img": "https://cf.shopee.vn/file/85e1d7808ef6a57a60e6d3902abf76ee",
       "price": 50000,
-
       "discount": 5,
       "idNsx": 1002,
       "cateId": 400,
@@ -613,87 +611,38 @@
   "order": [
     {
       "id": 1,
-      "userId": 1,
       "firstName": "Nguyễn Hồng",
       "lastName": "Nhuận",
       "city": "Da Nang",
       "address": "Tổ 16, ấp Ba Xoài, xã An Cư, huyện Tịnh Biên, tỉnh An Giang",
       "phone": 385613088,
-      "message": "ádagsrgfjhtgk",
-      "date": "2022-08-21T07:40:33.465Z",
+      "message": "",
+      "date": "2022-08-22T07:44:00.283Z",
       "items": [
         {
           "_product": {
             "id": 1,
-            "name": "kim bấm cỡ nhỏ",
-            "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
-            "price": 13000,
-            "discount": 50,
-            "idNsx": 123,
-            "cateId": 101,
-            "bestSeller": true,
-            "inputDay": "2022-08-18"
-          },
-          "_quantity": 2
-        },
-        {
-          "_product": {
-            "id": 2,
-            "name": "Kim bấm cỡ lớn",
-            "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
-            "price": 13000,
+            "name": "Kim bấm cỡ nhỏ",
+            "img": "./assets/img/kimbam.jpg",
+            "price": 20000,
             "discount": 5,
-            "idNsx": 124,
+            "idNsx": 1001,
             "cateId": 101,
-            "bestSeller": false,
-            "inputDay": "2022-08-11"
+            "parent_cateId": 100,
+            "bestSeller": true,
+            "inputDay": "2022-07-06"
           },
           "_quantity": 1
         }
-      ]
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "firstName": "Trần",
-      "lastName": "Nghĩa",
-      "city": "TP.Hồ Chí Minh",
-      "address": "103,đường số 4, khu phố 3, linh xuân, thủ đức,tp. hcm",
-      "phone": 124545645,
-      "message": "",
-      "date": "2022-08-21T14:43:29.585Z",
-      "items": [
-        {
-          "_product": {
-            "id": 2,
-            "name": "Kim bấm cỡ lớn",
-            "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
-            "price": 13000,
-            "discount": 5,
-            "idNsx": 124,
-            "cateId": 101,
-            "parent_cateId": 100,
-            "bestSeller": false,
-            "inputDay": "2022-08-11"
-          },
-          "_quantity": 2
-        },
-        {
-          "_product": {
-            "id": 3,
-            "name": "Kéo cắt giấy",
-            "img": "https://lzd-img-global.slatic.net/g/p/5d49a8cfaac7ad824f486b808daa042e.png_400x400q75.jpg_.webp",
-            "price": 13000,
-            "discount": 15,
-            "idNsx": 125,
-            "cateId": 102,
-            "parent_cateId": 100,
-            "bestSeller": true,
-            "inputDay": "2022-08-16"
-          },
-          "_quantity": 1
-        }
-      ]
+      ],
+      "user": {
+        "id": 1,
+        "fName": "Trần",
+        "lName": "Nghĩa",
+        "email": "nghiatran.150101@gmail.com",
+        "password": "123456",
+        "rePassword": "123456"
+      }
     }
   ]
 }
